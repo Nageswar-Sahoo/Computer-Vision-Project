@@ -203,8 +203,102 @@ Step 9 :
         this is slightly lesser than the high accuracy we achieve of 99.53 with
         param 10k . This is expected due to reduced model capacity .
 
-## Tech Stack
+Traing and Test Logs :  
 
-Client: Python, Pytorch, Numpy
+                               
+      1 Best Test Accuracy logs With 10k Param :
+       
+          EPOCH: 0
 
-  
+           Loss=0.07584894448518753 Batch_id=468 Accuracy=93.28: 100%|██████████| 469/469 [00:22<00:00, 20.74it/s]
+
+           Test set: Average loss: 0.0614, Accuracy: 9807/10000 (98.07%)
+
+          EPOCH: 1
+
+          Loss=0.05673813819885254 Batch_id=468 Accuracy=98.08: 100%|██████████| 469/469 [00:22<00:00, 20.82it/s]
+
+          Test set: Average loss: 0.0361, Accuracy: 9881/10000 (98.81%)
+
+          EPOCH: 2
+           Loss=0.07445203512907028 Batch_id=468 Accuracy=98.70: 100%|██████████| 469/469 [00:22<00:00, 20.52it/s]
+
+           Test set: Average loss: 0.0256, Accuracy: 9921/10000 (99.21%)
+ 
+          EPOCH: 3
+
+           Loss=0.0026412748266011477 Batch_id=468 Accuracy=98.89: 100%|██████████| 469/469 [00:22<00:00, 20.70it/s]
+
+           Test set: Average loss: 0.0294, Accuracy: 9907/10000 (99.07%)
+
+          EPOCH: 4
+
+           Loss=0.00681330868974328 Batch_id=468 Accuracy=99.02: 100%|██████████| 469/469 [00:22<00:00, 20.61it/s]
+
+           Test set: Average loss: 0.0227, Accuracy: 9930/10000 (99.30%)
+
+          EPOCH: 5
+
+           Loss=0.020798491314053535 Batch_id=468 Accuracy=99.13: 100%|██████████| 469/469 [00:22<00:00, 20.84it/s]
+
+           Test set: Average loss: 0.0231, Accuracy: 9924/10000 (99.24%)
+
+          EPOCH: 6
+
+            Loss=0.005443560425192118 Batch_id=468 Accuracy=99.25: 100%|██████████| 469/469 [00:22<00:00, 20.46it/s]
+
+            Test set: Average loss: 0.0188, Accuracy: 9941/10000 (99.41%)
+
+          EPOCH: 7
+
+           Loss=0.006054149940609932 Batch_id=468 Accuracy=99.27: 100%|██████████| 469/469 [00:22<00:00, 20.87it/s]
+
+           Test set: Average loss: 0.0175, Accuracy: 9946/10000 (99.46%)
+
+          EPOCH: 8
+
+           Loss=0.022747160866856575 Batch_id=468 Accuracy=99.31: 100%|██████████| 469/469 [00:22<00:00, 20.64it/s]
+
+           Test set: Average loss: 0.0180, Accuracy: 9945/10000 (99.45%)
+
+          EPOCH: 9
+
+           Loss=0.010960395447909832 Batch_id=468 Accuracy=99.34: 100%|██████████| 469/469 [00:22<00:00, 20.76it/s]
+
+           Test set: Average loss: 0.0171, Accuracy: 9947/10000 (99.47%)
+
+          EPOCH: 10
+
+            Loss=0.04422583803534508 Batch_id=468 Accuracy=99.36: 100%|██████████| 469/469 [00:22<00:00, 20.76it/s]
+
+            Test set: Average loss: 0.0170, Accuracy: 9943/10000 (99.43%)
+
+          EPOCH: 11
+
+            Loss=0.0024763590190559626 Batch_id=468 Accuracy=99.36: 100%|██████████| 469/469 [00:22<00:00, 20.83it/s]
+
+            Test set: Average loss: 0.0157, Accuracy: 9951/10000 (99.51%)
+
+          EPOCH: 12
+
+           Loss=0.0008387898560613394 Batch_id=468 Accuracy=99.44: 100%|██████████| 469/469 [00:22<00:00, 20.70it/s]
+
+            Test set: Average loss: 0.0163, Accuracy: 9953/10000 (99.53%)
+
+          EPOCH: 13
+            
+           Loss=0.0013749400386586785 Batch_id=468 Accuracy=99.42: 100%|██████████| 469/469 [00:22<00:00, 20.66it/s]
+
+           Test set: Average loss: 0.0164, Accuracy: 9951/10000 (99.51%)
+
+          EPOCH: 14
+
+           Loss=0.009129290468990803 Batch_id=468 Accuracy=99.44: 100%|██████████| 469/469 [00:22<00:00, 20.70it/s]
+
+           Test set: Average loss: 0.0159, Accuracy: 9951/10000 (99.51%)
+
+   
+       
+         
+
+
