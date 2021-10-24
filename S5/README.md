@@ -91,7 +91,8 @@ Step 4 :
          3 - Best Test Accuracy: 99.28
     3 - Analysis:
 
-         1 - We could see Regularization helps us in reducing overfitting . We could see the model perform slightly better on test data .
+         1 - We could see Regularization helps us in reducing overfitting . 
+             We could see the model perform slightly better on test data .
          2 - If we push this model further there is a high chance we can achieve the target of 99.4
          3 - We are also not using GAP, but depending on a BIG sized kernel at the last layer 
 
