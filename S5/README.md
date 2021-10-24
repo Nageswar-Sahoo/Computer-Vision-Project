@@ -350,7 +350,7 @@ Model Summary And Training Test Logs :
 
      Test set: Average loss: 0.0194, Accuracy: 9941/10000 (99.41%)
 
--   EPOCH: 12
+    EPOCH: 12
 
      Loss=0.023406578227877617 Batch_id=468 Accuracy=99.16: 100%|██████████| 469/469 [00:21<00:00, 21.47it/s]
 
@@ -521,5 +521,6 @@ Model Summary And Training Test Logs :
 ## Tech Stack
 
 Client: Python, Pytorch, Numpy
+
 
   
