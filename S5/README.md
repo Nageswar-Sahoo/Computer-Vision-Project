@@ -208,7 +208,7 @@ Step 9 :
 
 Step 10 :
 
-    1 - Target: 
+    1 - Target: Make Lighter Model 2
     
         1 - Achive High Accuracy with less then 5K Parameters
 
