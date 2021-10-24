@@ -117,7 +117,7 @@ Step 6 :
 
      1 - Target:
 
-         1 - Increase model capacity. Add more layers at the end.
+         1 - Increase model capacity. Add more layers at the end And Increase the Number of kernel.
 
      2 - Results:
 
