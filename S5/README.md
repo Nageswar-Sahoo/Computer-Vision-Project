@@ -166,6 +166,7 @@ Step 8 :
 
    
      1 - Target: 
+     
         1 - Try LR Scheduler to Achive High Accuracy
 
      2 - Results:
@@ -190,6 +191,7 @@ Step 9 :
 
      
     1 - Target: Make Lighter Model 1
+    
         1 - Achive High Accuracy with less then 8K Parameters
 
     2 - Results:
@@ -207,6 +209,7 @@ Step 9 :
 Step 10 :
 
     1 - Target: 
+    
         1 - Achive High Accuracy with less then 5K Parameters
 
     2 - Results:
