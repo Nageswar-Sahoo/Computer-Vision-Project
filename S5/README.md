@@ -225,7 +225,7 @@ Step 10 :
         param 10k . This is expected due to reduced model capacity .
 
 
-Model Summary And Traing Test Logs :  
+Model Summary And Training Test Logs :  
 
 
    With 5k Param :
