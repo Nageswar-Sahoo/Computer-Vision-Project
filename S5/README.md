@@ -294,13 +294,8 @@ Step 4 :
          0. 1 . We have tried to make it effective by  reducing LR by 0.6 after
          the 2th  epoch.  Above Learning rate with Scheduler help us to achieve
          the highest test  accuracy of 99.46.
+         
+     5- The model shows consistant 99.4% accuracy for last few epochs
 
-
-
-  
-
-## Tech Stack
-
-Client: Python, Pytorch, Numpy
 
   
