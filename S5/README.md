@@ -128,7 +128,8 @@ Step 2 :
     3 - Analysis:
 
              1 - We could see batch-norm help us in enhancing the model efficiency 
-             2 - We could see Regularization helps us in reducing overfitting . We could see the model perform slightly better on test data .
+             2 - We could see Regularization helps us in reducing overfitting . 
+                 We could see the model perform slightly better on test data .
              3 - If we push this model further there is a high chance we can achieve the target of 99.4
              4 - We are also not using GAP, but depending on a BIG sized kernel at the last layer we will fix this in next step .
 
@@ -294,8 +295,7 @@ Step 4 :
          0. 1 . We have tried to make it effective by  reducing LR by 0.6 after
          the 2th  epoch.  Above Learning rate with Scheduler help us to achieve
          the highest test  accuracy of 99.46.
-         
+ 
      5- The model shows consistant 99.4% accuracy for last few epochs
-
 
   
