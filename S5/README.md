@@ -21,7 +21,7 @@ Step 1:
        
 
 
-     1 - Target:
+     1 - Changes done:
 
         1 - Get the basic setup
 
@@ -68,7 +68,7 @@ Step 1:
          2 - Best Training Accuracy: 99.16
          3 - Best Test Accuracy: 98.72
 
-     6 - Analysis:
+     6 - Inference:
 
          1 - Model Parameters is more and it's a heavy model . 
          2 - Model is over-fitting , we will make our model lighter in next step
@@ -77,10 +77,11 @@ Step 1:
 Step 2 : 
     
 
-    1 - Target:
+    1 - Changes done:
 
          1 - Add Batch-norm to increase model efficiency and make learning easier.
-            if there is overfitting, Add Regularization with the help of  Dropout , which interns help us in reducing overfitting
+             There is overfitting, hence added Regularization with the help of  Dropout , which interns help us in reducing overfitting
+
            Model Summary : 
     
         Layer (type)               Output Shape         Param #
@@ -125,7 +126,7 @@ Step 2 :
          2 - Best Training Accuracy: 99.02
          3 - Best Test Accuracy: 99.28
 
-    3 - Analysis:
+    3 - Inference:
 
              1 - We could see batch-norm help us in enhancing the model efficiency 
              2 - We could see Regularization helps us in reducing overfitting . 
@@ -137,7 +138,7 @@ Step 2 :
 Step 3 : 
 
 
-     1 - Target:
+     1 - Changes done:
 
          1 - Add GAP and remove the last BIG size kernel And then Increase model capacity by Adding more layers at the end.
 
@@ -189,7 +190,7 @@ Step 3 :
      Params size (MB): 0.03
      Estimated Total Size (MB): 0.50
 
-     2 - Results:
+     2 - Changes done:
 
          1 - Parameters: 8008
 
@@ -197,7 +198,7 @@ Step 3 :
 
          3 - Best Test Accuracy: 99.37 (At EPOCH -14)
 
-     3 - Analysis:
+     3 - Inference:
 
          1 - Adding Global Average Pooling reduces model parameters i.e interns
              reduced model capacity , hence a reduction in performance is expected.
@@ -213,7 +214,7 @@ Step 3 :
 
 Step 4 :
    
-    1 - Target: 
+    1 - Changes done: 
      
         1 - IMAGE AUGMENTATION can help us generate more data set , hence we have
          added rotation to the image
@@ -275,7 +276,7 @@ Step 4 :
         2 - Best Train Accuracy: 99.32 (At EPOCH - 14 , StepLR step_size=2, gamma=0.6)
         3 - Best Test Accuracy: 99.46  (At EPOCH - 11 , StepLR step_size=2, gamma=0.6)
 
-    3 - Analysis: 
+    3 - Inference: 
      
      1- The model is under-fitting now. This is fine, as we know we have made
         our train data harder by adding image augmentation
@@ -297,5 +298,6 @@ Step 4 :
          the highest test  accuracy of 99.46.
  
      5- The model shows consistant 99.4% accuracy for last few epochs
+
 
   
