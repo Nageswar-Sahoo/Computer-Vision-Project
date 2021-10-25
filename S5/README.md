@@ -20,13 +20,6 @@ Step 1:
    
        
 
-     Total params: 75,828
-     Trainable params: 75,828
-     Non-trainable params: 0
-     Input size (MB): 0.00
-     Forward/backward pass size (MB): 1.14
-     Params size (MB): 0.29
-     Estimated Total Size (MB): 1.43
 
      1 - Target:
 
@@ -54,7 +47,14 @@ Step 1:
            Conv2d-14             [-1, 10, 7, 7]             640
              ReLU-15             [-1, 10, 7, 7]               0
            Conv2d-16             [-1, 10, 1, 1]           4,900
-
+ 
+     Total params: 75,828
+     Trainable params: 75,828
+     Non-trainable params: 0
+     Input size (MB): 0.00
+     Forward/backward pass size (MB): 1.14
+     Params size (MB): 0.29
+     Estimated Total Size (MB): 1.43
 
      2 - Set Data Loader
 
@@ -211,9 +211,6 @@ Step 3 :
            
 
 Step 4 :
-
-
-
    
     1 - Target: 
      
@@ -261,14 +258,14 @@ Step 4 :
         AvgPool2d-34             [-1, 50, 1, 1]               0
            Conv2d-35             [-1, 10, 1, 1]             500
 
-Total params: 7,852
-Trainable params: 7,852
-Non-trainable params: 0
+    Total params: 7,852
+    Trainable params: 7,852
+    Non-trainable params: 0
 
-Input size (MB): 0.00
-Forward/backward pass size (MB): 0.55
-Params size (MB): 0.03
-Estimated Total Size (MB): 0.59
+    Input size (MB): 0.00
+    Forward/backward pass size (MB): 0.55
+    Params size (MB): 0.03
+    Estimated Total Size (MB): 0.59
    
 
     2 - Results:
