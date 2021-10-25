@@ -19,7 +19,22 @@ MNIST ("Modified National Institute of Standards and Technology") dataset of com
 Step 1: 
    
        
-     Model Summary : 
+
+     Total params: 75,828
+     Trainable params: 75,828
+     Non-trainable params: 0
+     Input size (MB): 0.00
+     Forward/backward pass size (MB): 1.14
+     Params size (MB): 0.29
+     Estimated Total Size (MB): 1.43
+
+     1 - Target:
+
+        1 - Get the basic setup
+
+        2 - Set Transforms
+
+             Model Summary : 
        
         Layer (type)               Output Shape         Param #
 
@@ -40,19 +55,6 @@ Step 1:
              ReLU-15             [-1, 10, 7, 7]               0
            Conv2d-16             [-1, 10, 1, 1]           4,900
 
-     Total params: 75,828
-     Trainable params: 75,828
-     Non-trainable params: 0
-     Input size (MB): 0.00
-     Forward/backward pass size (MB): 1.14
-     Params size (MB): 0.29
-     Estimated Total Size (MB): 1.43
-
-     1 - Target:
-
-        1 - Get the basic setup
-
-        2 - Set Transforms
 
      2 - Set Data Loader
 
@@ -65,6 +67,7 @@ Step 1:
          1 - Parameters: 75,828
          2 - Best Training Accuracy: 99.16
          3 - Best Test Accuracy: 98.72
+
      6 - Analysis:
 
          1 - Model Parameters is more and it's a heavy model . 
@@ -73,7 +76,12 @@ Step 1:
 
 Step 2 : 
     
-     Model Summary : 
+
+    1 - Target:
+
+         1 - Add Batch-norm to increase model efficiency and make learning easier.
+            if there is overfitting, Add Regularization with the help of  Dropout , which interns help us in reducing overfitting
+           Model Summary : 
     
         Layer (type)               Output Shape         Param #
 
@@ -111,16 +119,12 @@ Step 2 :
     Estimated Total Size (MB): 0.44
 
 
-    1 - Target:
-
-         1 - Add Batch-norm to increase model efficiency and make learning easier.
-            if there is overfitting, Add Regularization with the help of  Dropout , which interns help us in reducing overfitting
-
     2 - Results:
 
          1 - Parameters: 6,864
          2 - Best Training Accuracy: 99.02
          3 - Best Test Accuracy: 99.28
+
     3 - Analysis:
 
              1 - We could see batch-norm help us in enhancing the model efficiency 
@@ -130,8 +134,11 @@ Step 2 :
 
 
 Step 3 : 
-      
 
+
+     1 - Target:
+
+         1 - Add GAP and remove the last BIG size kernel And then Increase model capacity by Adding more layers at the end.
 
       Model Summary : 
 
@@ -181,10 +188,6 @@ Step 3 :
      Params size (MB): 0.03
      Estimated Total Size (MB): 0.50
 
-     1 - Target:
-
-         1 - Add GAP and remove the last BIG size kernel And then Increase model capacity by Adding more layers at the end.
-
      2 - Results:
 
          1 - Parameters: 8008
@@ -192,6 +195,7 @@ Step 3 :
          2 - Best Training Accuracy: 99.40 (At EPOCH -14)
 
          3 - Best Test Accuracy: 99.37 (At EPOCH -14)
+
      3 - Analysis:
 
          1 - Adding Global Average Pooling reduces model parameters i.e interns
@@ -208,7 +212,16 @@ Step 3 :
 
 Step 4 :
 
-     Model Summary : 
+
+
+   
+    1 - Target: 
+     
+        1 - IMAGE AUGMENTATION can help us generate more data set , hence we have
+         added rotation to the image
+        2 - Try LR Scheduler to Achive High Accuracy
+
+             Model Summary : 
 
         Layer (type)               Output Shape         Param #
 
@@ -256,14 +269,7 @@ Input size (MB): 0.00
 Forward/backward pass size (MB): 0.55
 Params size (MB): 0.03
 Estimated Total Size (MB): 0.59
-
-
    
-    1 - Target: 
-     
-        1 - IMAGE AUGMENTATION can help us generate more data set , hence we have
-         added rotation to the image
-        2 - Try LR Scheduler to Achive High Accuracy
 
     2 - Results:
 
@@ -293,14 +299,11 @@ Estimated Total Size (MB): 0.59
          the highest test  accuracy of 99.46.
 
 
-   
-         
 
-
+  
 
 ## Tech Stack
 
 Client: Python, Pytorch, Numpy
-
 
   
