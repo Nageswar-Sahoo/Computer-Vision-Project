@@ -301,3 +301,9 @@ Step 4 :
 
 
   
+
+## Tech Stack
+
+Client: Python, Pytorch, Numpy
+
+  
