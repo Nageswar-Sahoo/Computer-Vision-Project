@@ -79,7 +79,7 @@ Step 2 :
 
     1 - Changes done:
 
-         1 - Add Batch-norm to increase model efficiency and make learning easier.
+         1 - Added Batch-norm to increase model efficiency and make learning easier.
              There is overfitting, hence added Regularization with the help of  Dropout , which interns help us in reducing overfitting
 
            Model Summary : 
@@ -129,7 +129,7 @@ Step 2 :
     3 - Inference:
 
              1 - We could see batch-norm help us in enhancing the model efficiency 
-             2 - We could see Regularization helps us in reducing overfitting . 
+             2 - We could see dropout helps us in reducing overfitting . 
                  We could see the model perform slightly better on test data .
              3 - If we push this model further there is a high chance we can achieve the target of 99.4
              4 - We are also not using GAP, but depending on a BIG sized kernel at the last layer we will fix this in next step .
@@ -140,7 +140,7 @@ Step 3 :
 
      1 - Changes done:
 
-         1 - Add GAP and remove the last BIG size kernel And then Increase model capacity by Adding more layers at the end.
+         1 - Added GAP and remove the last gig size kernel And then Increase model capacity by adding more layers at the end.
 
       Model Summary : 
 
@@ -216,7 +216,7 @@ Step 4 :
    
     1 - Changes done: 
      
-        1 - IMAGE AUGMENTATION can help us generate more data set , hence we have
+        1 - Image augmentation can help us generate more data set , hence we have
          added rotation to the image
         2 - Try LR Scheduler to Achive High Accuracy
 
