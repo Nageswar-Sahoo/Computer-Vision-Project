@@ -23,7 +23,7 @@ Different type of Normalization :
  3 - GroupNorm
 
 
-1 - BatchNorm 
+BatchNorm 
 
 Batch normalization works for each filter seperately using all the output of that filter 
 i.e Batch normalization is a method that normalizes activations in a network across the mini-batch of definite size
@@ -107,7 +107,7 @@ Ex :
          2 - Model is over-fitting , we will make our model lighter in next step
 
 
-2 - LayerNorm
+LayerNorm
 
 
 
@@ -185,7 +185,7 @@ The mean and standard deviation is calculated from all activations of a single s
          2 - Model is over-fitting , we will make our model lighter in next step
 
 
-  3 -  GroupNorm
+  GroupNorm
 
 
   Group Normalization(GN) divides the channels of your inputs into smaller sub groups and normalizes these values based on their mean and variance. Since GN works on a single example this technique is batchsize independent.
