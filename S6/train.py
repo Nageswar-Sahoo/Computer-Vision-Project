@@ -56,7 +56,7 @@ def main(config, normalizationtype='Layer'):
                       data_loader=data_loader,
                       valid_data_loader=valid_data_loader,
                       type=normalizationtype,
-                      lambda_l1=2.0,
+                      lambda_l1=.01,
                       lr_scheduler=lr_scheduler)
 
     trainer.train()

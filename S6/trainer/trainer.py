@@ -57,8 +57,6 @@ class Trainer(BaseTrainer):
             loss = self.criterion(output, target)
 
             if self.type.upper().__eq__('BATCH'):
-                print('Batch with L1')
-                print(self.lambda_l1)
                 loss_l1 = 0.0
                 for p in self.model.parameters():
                     loss_l1 += p.norm(p=1)
