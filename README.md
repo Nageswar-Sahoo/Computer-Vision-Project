@@ -17,7 +17,8 @@ The basic idea behind these layers is to normalize the output of an activation l
 
 1 - BatchNorm: 
 
-Batch normalization is a method that normalizes activations in a network across the mini-batch of definite size
+Batch normalization works for each filter seperately using all the output of that filter 
+i.e Batch normalization is a method that normalizes activations in a network across the mini-batch of definite size
 ![1](https://user-images.githubusercontent.com/70502759/139624272-8ecc8dbf-dec7-4769-9658-c8defec4f760.png)
 
 
@@ -143,7 +144,7 @@ Batch normalization is a method that normalizes activations in a network across 
 
 ![3](https://user-images.githubusercontent.com/70502759/139624298-69fe4231-843c-4e9c-9d34-7da88dcf3770.png)
 
-
+Layer Normalization work for each input seperately using output of all the filter for that input
 Layer Normalization is special case of group normalization where the group size is 1.
 The mean and standard deviation is calculated from all activations of a single sample.
 
@@ -203,6 +204,12 @@ The mean and standard deviation is calculated from all activations of a single s
 
 
 
+
+  
+
+## Tech Stack
+
+Client: Python, Pytorch, Numpy
 
   
 
