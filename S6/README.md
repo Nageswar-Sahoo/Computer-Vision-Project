@@ -98,13 +98,10 @@ The mean and standard deviation is calculated from all activations of a single s
 
 
 
-Comparision of Accuracy and Loss across the train and test dataset
 
-![image](https://user-images.githubusercontent.com/70502759/139662428-412e49ae-0eea-49a3-87cd-e949367e9012.png)
 
 Inference 
 
-Batch Norm with L1
 
 1>Training loss : Layer normalization has slightly high loss, at the same time Group and Batch normalization has similar loss 
 
