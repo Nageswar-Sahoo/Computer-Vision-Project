@@ -11,7 +11,7 @@ class Trainer(BaseTrainer):
     """
 
     def __init__(self, model, criterion, metric_ftns, optimizer, config, device,
-                 data_loader, valid_data_loader=None, lr_scheduler=None, len_epoch=None):
+                 data_loader, valid_data_loader=None, lr_scheduler=None, len_epoch=None, type='Batch', lambda_l1=1.0):
         super().__init__(model, criterion, metric_ftns, optimizer, config)
         self.config = config
         self.device = device
@@ -34,6 +34,9 @@ class Trainer(BaseTrainer):
         self.test_losses = []
         self.train_acc = []
         self.test_acc = []
+        self.type=type
+        self.lambda_l1=lambda_l1
+
 
     def _train_epoch(self, epoch):
         """
@@ -53,7 +56,17 @@ class Trainer(BaseTrainer):
             output = self.model(data)
             loss = self.criterion(output, target)
 
-            loss.backward()
+            if self.type.upper().__eq__('BATCH'):
+                print('Batch with L1')
+                print(self.lambda_l1)
+                loss_l1 = 0.0
+                for p in self.model.parameters():
+                    loss_l1 += p.norm(p=1)
+                loss_l1 = loss + self.lambda_l1 * loss_l1
+                loss_l1.backward()
+            else:
+                loss.backward()
+
             self.optimizer.step()
 
             self.writer.set_step((epoch - 1) * self.len_epoch + batch_idx)

@@ -1,7 +1,7 @@
 {
     "name": "Mnist_LeNet",
     "trainer": {
-        "epochs": 20,
+        "epochs": 1,
 
         "save_dir": "saved/",
         "save_period": 1,

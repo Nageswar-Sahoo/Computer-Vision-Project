@@ -7,17 +7,13 @@ from normalization import norm
 class MnistModel(BaseModel):
     def __init__(self, num_classes=10, normalizationtype='Layer', dropout=.01):
         super().__init__()
-        # Input Block
         self.convblock1 = nn.Sequential(
             nn.Conv2d(in_channels=1, out_channels=8, kernel_size=(3, 3), padding=0, bias=False),
-            # nn.BatchNorm2d(8),
-            # nn.LayerNorm((8, 26, 26)),
             norm(type=normalizationtype, channels=8, group=2, hight=26, width=26),
             nn.Dropout(dropout),
             nn.ReLU()
         )  # output_size = 26  receptive field  : 3
 
-        # Input Block
         self.convblock2 = nn.Sequential(
             nn.Conv2d(in_channels=8, out_channels=8, kernel_size=(3, 3), padding=0, bias=False),
             norm(type=normalizationtype, channels=8, group=2, hight=24, width=24),
@@ -32,7 +28,6 @@ class MnistModel(BaseModel):
             nn.ReLU()
         )  # output_size = 22 receptive field  : 7
 
-        # TRANSITION BLOCK 1
         self.pool1 = nn.MaxPool2d(2, 2)  # output_size = 11 receptive field  : 8
 
         self.convblock4 = nn.Sequential(
@@ -49,14 +44,12 @@ class MnistModel(BaseModel):
             nn.ReLU()
         )  # output_size = 7 receptive field  : 16
 
-        # OUTPUT BLOCK
         self.convblock6 = nn.Sequential(
             nn.Conv2d(in_channels=14, out_channels=8, kernel_size=(1, 1), padding=0, bias=False),
             norm(type=normalizationtype, channels=8, group=2, hight=7, width=7),
             nn.Dropout(dropout),
             nn.ReLU()
         )  # output_size = 7 receptive field  : 16
-        # OUTPUT BLOCK
         self.convblock7 = nn.Sequential(
             nn.Conv2d(in_channels=8, out_channels=26, kernel_size=(3, 3), padding=0, bias=False),
             norm(type=normalizationtype, channels=26, group=2, hight=5, width=5),

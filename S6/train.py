@@ -15,7 +15,6 @@ import torch.optim as optim
 from torch.optim.lr_scheduler import StepLR
 import logging
 
-# fix random seeds for reproducibility
 SEED = 123
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
@@ -56,6 +55,8 @@ def main(config, normalizationtype='Layer'):
                       device=device,
                       data_loader=data_loader,
                       valid_data_loader=valid_data_loader,
+                      type=normalizationtype,
+                      lambda_l1=2.0,
                       lr_scheduler=lr_scheduler)
 
     trainer.train()
@@ -76,7 +77,6 @@ if __name__ == '__main__':
     trainer_batch = main(config, 'Batch')
     trainer_group = main(config, 'Group')
     metrics = [module_metric.accuracy]
-
     print('Accuracy  List ')
     fig, axs = plt.subplots(2, 2, figsize=(15, 10))
     axs[0, 0].plot(trainer_batch.train_losses, color='r', label='BatchNorm')
@@ -87,17 +87,21 @@ if __name__ == '__main__':
     axs[1, 0].plot(trainer_batch.train_acc, color='r', label='BatchNorm')
     axs[1, 0].plot(trainer_layer.train_acc, color='g', label='LayerNorm')
     axs[1, 0].plot(trainer_group.train_acc, color='b', label='GroupNorm')
-    axs[1, 0].set_title("Training right")
-    axs[1, 0].legend(loc='upper left')
+    axs[1, 0].set_title("Training accuracy")
+    axs[1, 0].legend(loc='lower right')
     axs[0, 1].plot(trainer_batch.test_losses, color='r', label='BatchNorm')
     axs[0, 1].plot(trainer_layer.test_losses, color='g', label='LayerNorm')
     axs[0, 1].plot(trainer_group.test_losses, color='b', label='GroupNorm')
-    axs[0, 1].set_title("Test right")
+    axs[0, 1].set_title("Test Loss")
     axs[0, 1].legend(loc='upper right')
     axs[1, 1].plot(trainer_batch.test_acc, color='r', label='BatchNorm')
     axs[1, 1].plot(trainer_layer.test_acc, color='g', label='LayerNorm')
     axs[1, 1].plot(trainer_group.test_acc, color='b', label='GroupNorm')
     axs[1, 1].set_title("Test Accuracy")
-    axs[1, 1].legend(loc='upper right')
+    axs[1, 1].legend(loc='lower right')
     plt.legend()
     plt.show()
+
+
+
+
