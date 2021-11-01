@@ -41,61 +41,6 @@ Ex :
     Above mean and std can be used to normalize the output along with 8 learnable params 
 
 
-
-   
-    1 -  Model Summary
-      
-        
-        Layer (type)               Output Shape         Param #
- 
-            Conv2d-1            [-1, 8, 26, 26]              72
-       BatchNorm2d-2            [-1, 8, 26, 26]              16
-           Dropout-3            [-1, 8, 26, 26]               0
-              ReLU-4            [-1, 8, 26, 26]               0
-            Conv2d-5            [-1, 8, 24, 24]             576
-       BatchNorm2d-6            [-1, 8, 24, 24]              16
-           Dropout-7            [-1, 8, 24, 24]               0
-              ReLU-8            [-1, 8, 24, 24]               0
-            Conv2d-9            [-1, 8, 22, 22]             576
-      BatchNorm2d-10            [-1, 8, 22, 22]              16
-          Dropout-11            [-1, 8, 22, 22]               0
-             ReLU-12            [-1, 8, 22, 22]               0
-        MaxPool2d-13            [-1, 8, 11, 11]               0
-           Conv2d-14             [-1, 12, 9, 9]             864
-      BatchNorm2d-15             [-1, 12, 9, 9]              24
-          Dropout-16             [-1, 12, 9, 9]               0
-             ReLU-17             [-1, 12, 9, 9]               0
-           Conv2d-18             [-1, 14, 7, 7]           1,512
-      BatchNorm2d-19             [-1, 14, 7, 7]              28
-          Dropout-20             [-1, 14, 7, 7]               0
-             ReLU-21             [-1, 14, 7, 7]               0
-           Conv2d-22              [-1, 8, 7, 7]             112
-      BatchNorm2d-23              [-1, 8, 7, 7]              16
-          Dropout-24              [-1, 8, 7, 7]               0
-             ReLU-25              [-1, 8, 7, 7]               0
-           Conv2d-26             [-1, 26, 5, 5]           1,872
-      BatchNorm2d-27             [-1, 26, 5, 5]              52
-          Dropout-28             [-1, 26, 5, 5]               0
-             ReLU-29             [-1, 26, 5, 5]               0
-           Conv2d-30             [-1, 50, 5, 5]           1,300
-      BatchNorm2d-31             [-1, 50, 5, 5]             100
-          Dropout-32             [-1, 50, 5, 5]               0
-             ReLU-33             [-1, 50, 5, 5]               0
-        AvgPool2d-34             [-1, 50, 1, 1]               0
-           Conv2d-35             [-1, 10, 1, 1]             500
- 
-       Total params: 7,652
-       Trainable params: 7,652
-       Non-trainable params: 0
-
-       Input size (MB): 0.00
-       Forward/backward pass size (MB): 0.55
-       Params size (MB): 0.03
-       Estimated Total Size (MB): 0.58
-
- 
-
-
 LayerNorm
 
 
@@ -118,54 +63,7 @@ The mean and standard deviation is calculated from all activations of a single s
      𝜎3 = std(1, 2, 3, 4, 5, 6, 7, 8) = 2.29
 
     Above mean and std can be used to normalize the output along with 6 learnable params 
-   
-    1 -  Model Summary
-      
-        Layer (type)               Output Shape         Param #
-            Conv2d-1            [-1, 8, 26, 26]              72
-         LayerNorm-2            [-1, 8, 26, 26]              52
-           Dropout-3            [-1, 8, 26, 26]               0
-              ReLU-4            [-1, 8, 26, 26]               0
-            Conv2d-5            [-1, 8, 24, 24]             576
-         LayerNorm-6            [-1, 8, 24, 24]              48
-           Dropout-7            [-1, 8, 24, 24]               0
-              ReLU-8            [-1, 8, 24, 24]               0
-            Conv2d-9            [-1, 8, 22, 22]             576
-        LayerNorm-10            [-1, 8, 22, 22]              44
-          Dropout-11            [-1, 8, 22, 22]               0
-             ReLU-12            [-1, 8, 22, 22]               0
-        MaxPool2d-13            [-1, 8, 11, 11]               0
-           Conv2d-14             [-1, 12, 9, 9]             864
-        LayerNorm-15             [-1, 12, 9, 9]              18
-          Dropout-16             [-1, 12, 9, 9]               0
-             ReLU-17             [-1, 12, 9, 9]               0
-           Conv2d-18             [-1, 14, 7, 7]           1,512
-        LayerNorm-19             [-1, 14, 7, 7]              14
-          Dropout-20             [-1, 14, 7, 7]               0
-             ReLU-21             [-1, 14, 7, 7]               0
-           Conv2d-22              [-1, 8, 7, 7]             112
-        LayerNorm-23              [-1, 8, 7, 7]              14
-          Dropout-24              [-1, 8, 7, 7]               0
-             ReLU-25              [-1, 8, 7, 7]               0
-           Conv2d-26             [-1, 26, 5, 5]           1,872
-        LayerNorm-27             [-1, 26, 5, 5]              10
-          Dropout-28             [-1, 26, 5, 5]               0
-             ReLU-29             [-1, 26, 5, 5]               0
-           Conv2d-30             [-1, 50, 5, 5]           1,300
-        LayerNorm-31             [-1, 50, 5, 5]              10
-          Dropout-32             [-1, 50, 5, 5]               0
-             ReLU-33             [-1, 50, 5, 5]               0
-        AvgPool2d-34             [-1, 50, 1, 1]               0
-           Conv2d-35             [-1, 10, 1, 1]             500
 
-        Total params: 7,594
-        Trainable params: 7,594
-        Non-trainable params: 0
-
-        Input size (MB): 0.00
-        Forward/backward pass size (MB): 0.55
-        Params size (MB): 0.03
-        Estimated Total Size (MB): 0.58
 
 
   GroupNorm
@@ -191,55 +89,7 @@ The mean and standard deviation is calculated from all activations of a single s
      𝜇6 = mean( 5, 6, 7, 8) = 6.5
      𝜎6 = var( 5, 6, 7, 8) = 1.11
 
-    Above mean and std can be used to normalize the output along with 12 learnable params 
 
-
-        Layer (type)               Output Shape         Param #
-
-            Conv2d-1            [-1, 8, 26, 26]              72
-         GroupNorm-2            [-1, 8, 26, 26]              16
-           Dropout-3            [-1, 8, 26, 26]               0
-              ReLU-4            [-1, 8, 26, 26]               0
-            Conv2d-5            [-1, 8, 24, 24]             576
-         GroupNorm-6            [-1, 8, 24, 24]              16
-           Dropout-7            [-1, 8, 24, 24]               0
-              ReLU-8            [-1, 8, 24, 24]               0
-            Conv2d-9            [-1, 8, 22, 22]             576
-        GroupNorm-10            [-1, 8, 22, 22]              16
-          Dropout-11            [-1, 8, 22, 22]               0
-             ReLU-12            [-1, 8, 22, 22]               0
-        MaxPool2d-13            [-1, 8, 11, 11]               0
-           Conv2d-14             [-1, 12, 9, 9]             864
-        GroupNorm-15             [-1, 12, 9, 9]              24
-          Dropout-16             [-1, 12, 9, 9]               0
-             ReLU-17             [-1, 12, 9, 9]               0
-           Conv2d-18             [-1, 14, 7, 7]           1,512
-        GroupNorm-19             [-1, 14, 7, 7]              28
-          Dropout-20             [-1, 14, 7, 7]               0
-             ReLU-21             [-1, 14, 7, 7]               0
-           Conv2d-22              [-1, 8, 7, 7]             112
-        GroupNorm-23              [-1, 8, 7, 7]              16
-          Dropout-24              [-1, 8, 7, 7]               0
-             ReLU-25              [-1, 8, 7, 7]               0
-           Conv2d-26             [-1, 26, 5, 5]           1,872
-        GroupNorm-27             [-1, 26, 5, 5]              52
-          Dropout-28             [-1, 26, 5, 5]               0
-             ReLU-29             [-1, 26, 5, 5]               0
-           Conv2d-30             [-1, 50, 5, 5]           1,300
-        GroupNorm-31             [-1, 50, 5, 5]             100
-          Dropout-32             [-1, 50, 5, 5]               0
-             ReLU-33             [-1, 50, 5, 5]               0
-        AvgPool2d-34             [-1, 50, 1, 1]               0
-           Conv2d-35             [-1, 10, 1, 1]             500
-
-       Total params: 7,652
-       Trainable params: 7,652
-       Non-trainable params: 0
-
-       Input size (MB): 0.00
-       Forward/backward pass size (MB): 0.55
-       Params size (MB): 0.03
-       Estimated Total Size (MB): 0.58
 
 
 
@@ -267,16 +117,7 @@ Batch Norm with L1
 so overall Layer normalization is slightly worse than batch normalization and group normalization .
 Group  normalization is somewhere in between 
 
-Batch Norm without L1
 
-
-Misclassified Images
-
-Batch Norm 
-
-Layer Norm
-
-Group Norm 
   
 
 ## Tech Stack
