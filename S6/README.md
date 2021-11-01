@@ -171,7 +171,7 @@ The mean and standard deviation is calculated from all activations of a single s
   GroupNorm
 
 
-  Group Normalization(GN) divides the channels of your inputs into smaller sub groups and normalizes these values based on their mean and variance. Since GN works on a single example this technique is batchsize independent.
+  Group Normalization(GN) divides the channels of your inputs into smaller sub groups and normalizes these values based on their mean and variance. 
 
      image1 = [ [[2, 3]], [[5, 7]], [[11, 13]], [[17, 19]] ]
      image2 = [ [[0, 1]], [[1, 2]], [[3, 5]], [[8, 13]] ]
