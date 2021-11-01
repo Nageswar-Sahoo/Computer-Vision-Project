@@ -292,7 +292,7 @@ Estimated Total Size (MB): 0.47
 
 ### Test/Validation Loss for all 3 models together
 
-https://github.com/GL-MPP/EVA-7/blob/main/Images/S6_Images/Loss_Curve.jpg
+![](/Images/S6_Images/Loss_Curve.jpg)
 
 
 ### Test/Validation Accuracy for all 3 models together
