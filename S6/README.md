@@ -254,6 +254,8 @@ Comparision of Accuracy and Loss across the train and test dataset
 
 Inference 
 
+Batch Norm with L1
+
 1>Training loss : Layer normalization has slightly high loss, at the same time Group and Batch normalization has similar loss 
 
 2>Test Loss : Layer normalization has high loss followed by Group Norm. BatchNorm has low loss . 
@@ -264,6 +266,8 @@ Inference
   
 so overall Layer normalization is slightly worse than batch normalization and group normalization .
 Group  normalization is somewhere in between 
+
+Batch Norm without L1
 
 
 Misclassified Images
@@ -277,12 +281,4 @@ Group Norm
 
 ## Tech Stack
 
-Client: Python, Pytorch, Numpy
-
-  
-
-## Tech Stack
-
-Client: Python, Pytorch, Numpy
-
-  
+Client: Python, Pytorch, Numpy  
