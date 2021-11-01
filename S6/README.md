@@ -1,4 +1,4 @@
-# S6
+# Session - 6 Assignment
 
 Normalization
 
