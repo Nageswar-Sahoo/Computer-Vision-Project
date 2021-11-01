@@ -16,11 +16,13 @@ Also normalization reduces Internal Covariate Shift. It is the change in the dis
 
 Different type of Normalization :
 
- 1 - BatchNorm
+ 1 - BatchNormalization
  
- 2 - LayerNorm
+ 2 - LayerNormalization
  
- 3 - GroupNorm
+ 3 - GroupNormalization
+ 
+ 4 - InstaceNormalization
 
 
 BatchNorm 
@@ -263,6 +265,7 @@ The mean and standard deviation is calculated from all activations of a single s
          2 - Model is over-fitting , we will make our model lighter in next step
 
 
+![batch1](https://user-images.githubusercontent.com/70502759/139661480-f50e7cdd-b595-4001-9f1e-2ff0b41718e9.png)
 
 
 
