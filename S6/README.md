@@ -11,7 +11,7 @@ MNIST ("Modified National Institute of Standards and Technology") dataset of com
 
 Normalization
 
-The basic idea behind these layers is to normalize the output of an activation layer to improve the convergence during training.
+The basic idea behind normalization is to normalize the output of an activation layer to improve the convergence during training.
 Also normalization reduces Internal Covariate Shift. It is the change in the distribution of network activations due to the change in network parameters during training. To improve the training, we seek to reduce the internal covariate shift.
 
 Different type of Normalization :
