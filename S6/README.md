@@ -15,8 +15,11 @@ The basic idea behind normalization is to normalize the output of an activation 
 Also normalization reduces Internal Covariate Shift. It is the change in the distribution of network activations due to the change in network parameters during training. To improve the training, we seek to reduce the internal covariate shift.
 
 Different type of Normalization :
+
  1 - BatchNorm
+ 
  2 - LayerNorm
+ 
  3 - GroupNorm
 
 
