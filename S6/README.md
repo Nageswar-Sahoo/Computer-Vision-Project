@@ -102,10 +102,7 @@ Ex :
        Params size (MB): 0.03
        Estimated Total Size (MB): 0.58
 
-    2 - Inference:
-
-         1 - Model Parameters is more and it's a heavy model . 
-         2 - Model is over-fitting , we will make our model lighter in next step
+ 
 
 
 LayerNorm
@@ -178,11 +175,6 @@ The mean and standard deviation is calculated from all activations of a single s
         Forward/backward pass size (MB): 0.55
         Params size (MB): 0.03
         Estimated Total Size (MB): 0.58
-
-    2 - Inference:
-
-         1 - Model Parameters is more and it's a heavy model . 
-         2 - Model is over-fitting , we will make our model lighter in next step
 
 
   GroupNorm
@@ -259,18 +251,18 @@ The mean and standard deviation is calculated from all activations of a single s
        Estimated Total Size (MB): 0.58
 
 
-    2 - Inference:
-
-         1 - Model Parameters is more and it's a heavy model . 
-         2 - Model is over-fitting , we will make our model lighter in next step
-
 
 ![batch1](https://user-images.githubusercontent.com/70502759/139661480-f50e7cdd-b595-4001-9f1e-2ff0b41718e9.png)
 
 
 
 
-Comparision of Accuracy and Loss across the train and test dataset 
+Comparision of Accuracy and Loss across the train and test dataset
+
+![image](https://user-images.githubusercontent.com/70502759/139662428-412e49ae-0eea-49a3-87cd-e949367e9012.png)
+
+
+
 
 Misclassified Images
 Batch Norm 
