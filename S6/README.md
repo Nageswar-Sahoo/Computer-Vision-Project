@@ -255,8 +255,11 @@ Comparision of Accuracy and Loss across the train and test dataset
 Inference 
 
 1>Training loss : Layer normalization has slightly high loss, at the same time Group and Batch normalization has similar loss 
+
 2>Test Loss : Layer normalization has high loss followed by Group Norm. BatchNorm has low loss . 
+
 3>Training accuracy : BatchNorm and GroupNorm reach to high accuracy bit faster compared to LayerNorm 
+
 4> Test accuracy : Batch norm has high accuracy followed by Group Norm . Layer norm has slightly less . 
   
 so overall Layer normalization is slightly worse than batch normalization and group normalization .
