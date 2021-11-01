@@ -45,8 +45,7 @@ Ex :
      𝜎3 = std(11, 13, 3, 5, 5, 6) = 3.57
      𝜎4 = std(17, 19, 8, 13, 7, 8) = 4.6
 
-    Above mean and std can be used to normalize the 
-    output along with 8 learnable params 
+    Above mean and std can be used to normalize the output along with 8 learnable params 
 
 
 
@@ -128,8 +127,7 @@ The mean and standard deviation is calculated from all activations of a single s
      𝜎2 = std(0, 1, 1, 2, 3, 5, 8, 13) = 4.13
      𝜎3 = std(1, 2, 3, 4, 5, 6, 7, 8) = 2.29
 
-    Above mean and std can be used to normalize the 
-    output along with 6 learnable params 
+    Above mean and std can be used to normalize the output along with 6 learnable params 
    
     1 -  Model Summary
       
@@ -208,8 +206,7 @@ The mean and standard deviation is calculated from all activations of a single s
      𝜇6 = mean( 5, 6, 7, 8) = 6.5
      𝜎6 = var( 5, 6, 7, 8) = 1.11
 
-    Above mean and std can be used to normalize the 
-    output along with 12 learnable params 
+    Above mean and std can be used to normalize the output along with 12 learnable params 
 
 
         Layer (type)               Output Shape         Param #
