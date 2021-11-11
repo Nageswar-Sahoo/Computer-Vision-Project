@@ -4,7 +4,7 @@ from transformation import trsfm
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
-from transformation.CIFR10Dataset import CIFR10Dataset
+from transformation.Albumentations import Albumentations
 
 
 class CIFRDataLoader(BaseDataLoader):
@@ -17,6 +17,6 @@ class CIFRDataLoader(BaseDataLoader):
 
         transformation = trsfm(training)
         self.data_dir = data_dir
-        # self.dataset = CIFR10Dataset(images_filepaths=data_dir, transform=val_transform)
-        self.dataset = CIFR10Dataset(self.data_dir, train=training, download=True, transform=transformation)
+        # self.dataset = Albumentations(images_filepaths=data_dir, transform=val_transform)
+        self.dataset = Albumentations(self.data_dir, train=training, download=True, transform=transformation)
         super().__init__(self.dataset, batch_size, shuffle, validation_split, num_workers)

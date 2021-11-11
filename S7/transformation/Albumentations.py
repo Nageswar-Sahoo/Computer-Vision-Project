@@ -1,14 +1,12 @@
 from typing import Tuple, Any
 
-import cv2
 import numpy as np
 
 
-from PIL import Image
 from torchvision.datasets import CIFAR10
 
 
-class CIFR10Dataset(CIFAR10):
+class Albumentations(CIFAR10):
     """__init__ and __len__ functions are the same as in TorchvisionDataset"""
 
     def __getitem__(self, index: int) -> Tuple[Any, Any]:

@@ -47,8 +47,8 @@ def main():
     metrics = [module_metric.accuracy]
 
     # build optimizer, learning rate scheduler. delete every lines containing lr_scheduler for disabling scheduler
-    optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
-    lr_scheduler = StepLR(optimizer, step_size=3, gamma=0.1)
+    optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
+    lr_scheduler = StepLR(optimizer, step_size=2, gamma=0.5)
     trainer = Trainer(model, criterion, metrics, optimizer,
                       config=config,
                       device=device,
