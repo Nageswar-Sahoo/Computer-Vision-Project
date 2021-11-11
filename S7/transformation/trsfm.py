@@ -1,20 +1,23 @@
 from torchvision import transforms
+import albumentations as A
+from albumentations.pytorch import ToTensorV2
 
 
 def trsfm(training):
     if training:
-       return   transforms.Compose([
-            #  transforms.Resize((28, 28)),
-            #  transforms.ColorJitter(brightness=0.10, contrast=0.1, saturation=0.10, hue=0.1),
-            transforms.ToTensor(),
-            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-            # The mean and std have to be sequences (e.g., tuples), therefore you should add a comma after the values.
-            # Note the difference between (0.1307) and (0.1307,)
-        ])
+        return A.Compose(
+            [
+                A.HorizontalFlip(p=0.5),
+                A.ShiftScaleRotate(shift_limit=0.05, scale_limit=0.05, rotate_limit=15, p=0.5),
+                A.CoarseDropout(max_holes = 1, max_height=16, max_width=16, min_holes = 1, min_height=16, min_width=1, fill_value=(0.485, 0.456, 0.406)),
+                A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
+                ToTensorV2(),
+            ]
+        )
     else:
-        return transforms.Compose([
-            #  transforms.Resize((28, 28)),
-            #  transforms.ColorJitter(brightness=0.10, contrast=0.1, saturation=0.10, hue=0.1),
-            transforms.ToTensor(),
-            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-        ])
+        return A.Compose(
+            [
+                A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
+                ToTensorV2(),
+            ]
+        )
