@@ -57,5 +57,6 @@ class CIFRModel(BaseModel):
             x = self.convblock3(x)
             x = self.convblock4(x)
             x = self.gap(x)
-            # x = x.reshape(-1, 10 * 1 * 1)
+            x = x.reshape(-1, 10 * 1 * 1)
+
             return F.log_softmax(x, dim=-1)
