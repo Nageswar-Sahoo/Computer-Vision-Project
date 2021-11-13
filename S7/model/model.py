@@ -1,15 +1,10 @@
 import torch.nn as nn
 import torch.nn.functional as F
 from base import BaseModel
-from normalization import norm
 
 
 class CIFRModel(BaseModel):
-    # epoch: 8
-    # loss: 0.73457906589928
-    # accuracy: 75.11097301136364
-    # val_loss: 0.7309541015685359
-    # val_accuracy: 74.72310126582279
+
 
 
 
@@ -42,7 +37,7 @@ class CIFRModel(BaseModel):
         # Input Block
 
         self.convblock3 = nn.Sequential(
-            nn.Conv2d(in_channels=50, out_channels=128, kernel_size=(3, 3), padding=1, bias=False, dilation=3),
+            nn.ConvTranspose2d(in_channels=50, out_channels=128, kernel_size=(3, 3), padding=0, bias=False, dilation=8),
             nn.BatchNorm2d(128),
             #nn.Dropout(.05),
             nn.ReLU(),
@@ -50,13 +45,13 @@ class CIFRModel(BaseModel):
         )  # output_size = 26 receptive field  : 7
 
         self.convblock4 = nn.Sequential(
-            nn.Conv2d(in_channels=128, out_channels=10, kernel_size=(3, 3), padding=0, bias=False, dilation=8),
+            nn.Conv2d(in_channels=128, out_channels=10, kernel_size=(3, 3), padding=0, bias=False, dilation=16),
             nn.BatchNorm2d(10),
             nn.ReLU()
         )  # output_size = 20 receptive field  : 12
 
         self.gap = nn.Sequential(
-            nn.AvgPool2d(kernel_size=8)
+            nn.AvgPool2d(kernel_size=14)
         )  # output_size = 20 receptive field  : 28
 
     def forward(self, x):

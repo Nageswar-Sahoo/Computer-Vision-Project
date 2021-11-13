@@ -46,9 +46,9 @@ def main():
     criterion = module_loss.crossentropyloss
     metrics = [module_metric.accuracy]
 
-    # build optimizer, learning rate scheduler. delete every lines containing lr_scheduler for disabling scheduler
     optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
-    lr_scheduler = StepLR(optimizer, step_size=20, gamma=0.1)
+    # optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
+    lr_scheduler = StepLR(optimizer, step_size=30, gamma=0.1)
     trainer = Trainer(model, criterion, metrics, optimizer,
                       config=config,
                       device=device,
