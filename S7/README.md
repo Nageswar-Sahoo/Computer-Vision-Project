@@ -30,7 +30,7 @@ The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6
 The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class.
 
 Here are the classes in the dataset, as well as 10 random images from each:
-![image](https://user-images.githubusercontent.com/70502759/141685396-db03c9d6-fe2b-48cd-8429-2440bb1bcaf2.png)
+![image](https://user-images.githubusercontent.com/70502759/141685456-8ffb5662-c6cd-4b21-990f-77e1b06d654e.png)
 
 
 ## Tech Stack
