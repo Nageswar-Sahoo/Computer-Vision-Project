@@ -41,12 +41,21 @@ kernel of size 1x1.
 
 ![image](https://user-images.githubusercontent.com/70502759/141686285-365b3806-f195-4c07-a77c-33e3a4e95779.png)
 
+![image](https://user-images.githubusercontent.com/70502759/141687691-6529046f-4426-4bb7-9dbb-ceba64481c0b.png)
+
+
 inorder to achive receptive field of 54 we have used transpose convolution for upsampling the image . 
 transpose convolution can be used when we want to do  image-to-image mapping, like image or instance segmentation, or super-resolution
 
 ![image](https://user-images.githubusercontent.com/70502759/141686377-39282168-3372-4399-9b78-b763c28226af.png)
 
 
+
+Atrous convolution or Dilated convolution is akin to the standard convolution except that
+the weights of an atrous convolution kernel are spaced r locations apart
+Dilated convolution is a way of increasing receptive view (global view) of the network exponentially and linear parameter accretion.
+
+![image](https://user-images.githubusercontent.com/70502759/141687747-9763f03d-0e7a-4b8a-93a7-02ea1d1d3f63.png)
 
 
 
