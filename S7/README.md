@@ -9,7 +9,8 @@ Design Nenural newtwork architecture with following constarint :
     6>use albumentation library and apply:
       1>horizontal flip
       2>shiftScaleRotate 
-      3>coarseDropout (max_holes = 1, max_height=16px, max_width=1, min_holes = 1, min_height=16px, min_width=16px, fill_value=(mean of your dataset), mask_fill_value = None)  
+      3>coarseDropout (max_holes = 1, max_height=16px, max_width=1, min_holes = 1, min_height=16px, min_width=16px, 
+                         fill_value=(mean of your dataset), mask_fill_value = None)  
       4>grayscale
     7>achieve 87% accuracy, as many epochs as you want. Total Params to be less than 100k.
 
@@ -56,6 +57,8 @@ its is akin to the standard convolution except that the weights of an atrous con
 Dilated convolution is a way of increasing receptive view (global view) of the network exponentially and linear parameter accretion.
 
 ![image](https://user-images.githubusercontent.com/70502759/141687747-9763f03d-0e7a-4b8a-93a7-02ea1d1d3f63.png)
+
+Albumentations
 
 Albumentations is a computer vision tool that boosts the performance of deep convolutional neural networks with the help of Image augmentation.
 Image augmentation is used in deep learning and computer vision tasks to increase the quality of trained models. 
