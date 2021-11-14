@@ -35,18 +35,17 @@ in depthwise separable convolutions we have convolution per channel.
 ![image](https://user-images.githubusercontent.com/70502759/141686156-63d62ab4-cea0-49e3-ac17-72bdedec5542.png)
 
 
-Afterwards we have maps that model 
-the spatial interactions independently of channels, so we apply another convolution that then models the 
-channel interactions. This second operation is often called a pointwise convolution, because it uses a 
-kernel of size 1x1.
+Afterwards we have maps that model the spatial interactions independently of channels, so we apply another convolution that then models the 
+channel interactions. This second operation is often called a pointwise convolution, because it uses a kernel of size 1x1.
 
 ![image](https://user-images.githubusercontent.com/70502759/141686285-365b3806-f195-4c07-a77c-33e3a4e95779.png)
 
 ![image](https://user-images.githubusercontent.com/70502759/141687691-6529046f-4426-4bb7-9dbb-ceba64481c0b.png)
 
+Transpose convolution
 
-inorder to achive receptive field of 54 we have used transpose convolution for upsampling the image . 
-transpose convolution can be used when we want to do  image-to-image mapping, like image or instance segmentation, or super-resolution
+Inorder to achive receptive field of 54 we have used transpose convolution for upsampling the image . 
+Transpose convolution can be used when we want to do  image-to-image mapping, like image or instance segmentation, or super-resolution where we need upsampling of the image inorder to map with original image resolution . 
 
 ![image](https://user-images.githubusercontent.com/70502759/141686377-39282168-3372-4399-9b78-b763c28226af.png)
 
@@ -67,7 +66,6 @@ Albumentations is fast compared to other image augmentation
 
 Repective Field 
 Model Summery
-
 Highest Test and Train accuracy achived 
 
 
