@@ -50,12 +50,23 @@ transpose convolution can be used when we want to do  image-to-image mapping, li
 ![image](https://user-images.githubusercontent.com/70502759/141686377-39282168-3372-4399-9b78-b763c28226af.png)
 
 
+Atrous convolution or Dilated convolution
 
-Atrous convolution or Dilated convolution is akin to the standard convolution except that
-the weights of an atrous convolution kernel are spaced r locations apart
+its is akin to the standard convolution except that the weights of an atrous convolution kernel are spaced r locations apart
 Dilated convolution is a way of increasing receptive view (global view) of the network exponentially and linear parameter accretion.
 
 ![image](https://user-images.githubusercontent.com/70502759/141687747-9763f03d-0e7a-4b8a-93a7-02ea1d1d3f63.png)
+
+Albumentations is a computer vision tool that boosts the performance of deep convolutional neural networks with the help of Image augmentation.
+Image augmentation is used in deep learning and computer vision tasks to increase the quality of trained models. 
+The purpose of image augmentation is to create new training samples from the existing data.
+Albumentations is fast compared to other image augmentation
+
+Repective Field 
+Model Summery
+
+Highest Test and Train accuracy achived 
+
 
 
 
