@@ -10,8 +10,6 @@ class CIFRModel(BaseModel):
     # val_loss: 0.7309541015685359
     # val_accuracy: 74.72310126582279
 
-
-
     def __init__(self, num_classes=10, normalizationtype='Layer', dropout=.01):
         super().__init__()
         # Input Block
@@ -19,43 +17,45 @@ class CIFRModel(BaseModel):
         self.depthwise_separable_conv1 = nn.Sequential(
             nn.Conv2d(in_channels=3, out_channels=3, kernel_size=3, groups=3, padding=1, bias=False),
             nn.BatchNorm2d(3),
-            #nn.Dropout(.05),
+            # nn.Dropout(.05),
             nn.ReLU(),
             nn.Conv2d(in_channels=3, out_channels=256, kernel_size=1, bias=False),
             nn.BatchNorm2d(256),
-            #nn.Dropout(.05),
+            # nn.Dropout(.05),
             nn.ReLU(),
         )  # output_size = 28 receptive field  : 5
 
         # Input Block
         self.depthwise_separable_conv2 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=3, groups=256, padding=1,dilation=1, bias=False),
+            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=3, groups=256, padding=1, dilation=1,
+                      bias=False),
             nn.BatchNorm2d(256),
-           #nn.Dropout(.05),
+            # nn.Dropout(.05),
             nn.ReLU(),
-            nn.Conv2d(in_channels=256, out_channels=35, kernel_size=1, bias=False),
-            nn.BatchNorm2d(35),
-            #nn.Dropout(.05),
+            nn.Conv2d(in_channels=256, out_channels=40, kernel_size=1, bias=False),
+            nn.BatchNorm2d(40),
+            # nn.Dropout(.05),
             nn.ReLU(),
         )  # output_size = 28 receptive field  : 5
         # Input Block
 
         self.convblock3 = nn.Sequential(
-            nn.ConvTranspose2d(in_channels=35, out_channels=128, kernel_size=(3, 3), padding=0, bias=False, dilation=8),
-            nn.BatchNorm2d(128),
-            #nn.Dropout(.05),
+            nn.ConvTranspose2d(in_channels=40, out_channels=185, kernel_size=(3, 3), padding=0, bias=False,
+                               dilation=8),
+            nn.BatchNorm2d(185),
+            # nn.Dropout(.05),
             nn.ReLU(),
 
         )  # output_size = 26 receptive field  : 7
 
         self.convblock4 = nn.Sequential(
-            nn.Conv2d(in_channels=128, out_channels=10, kernel_size=(3, 3), padding=0, bias=False, dilation=16),
+            nn.Conv2d(in_channels=185, out_channels=10, kernel_size=(3, 3), padding=0, bias=False, dilation=16),
             nn.BatchNorm2d(10),
             nn.ReLU()
         )  # output_size = 20 receptive field  : 12
 
         self.gap = nn.Sequential(
-            nn.AvgPool2d(kernel_size=14)
+            nn.AvgPool2d(kernel_size=16)
         )  # output_size = 20 receptive field  : 28
 
     def forward(self, x):
