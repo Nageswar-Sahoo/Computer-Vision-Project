@@ -38,7 +38,6 @@ in depthwise separable convolutions we have convolution per channel.
 Afterwards we have maps that model the spatial interactions independently of channels, so we apply another convolution that then models the 
 channel interactions. This second operation is often called a pointwise convolution, because it uses a kernel of size 1x1.
 
-![image](https://user-images.githubusercontent.com/70502759/141686285-365b3806-f195-4c07-a77c-33e3a4e95779.png)
 
 ![image](https://user-images.githubusercontent.com/70502759/141687691-6529046f-4426-4bb7-9dbb-ceba64481c0b.png)
 
