@@ -38,7 +38,6 @@ in depthwise separable convolutions we have convolution per channel.
 Afterwards we have maps that model the spatial interactions independently of channels, so we apply another convolution that then models the 
 channel interactions. This second operation is often called a pointwise convolution, because it uses a kernel of size 1x1.
 
-![image](https://user-images.githubusercontent.com/70502759/141686285-365b3806-f195-4c07-a77c-33e3a4e95779.png)
 
 ![image](https://user-images.githubusercontent.com/70502759/141687691-6529046f-4426-4bb7-9dbb-ceba64481c0b.png)
 
@@ -64,21 +63,131 @@ Image augmentation is used in deep learning and computer vision tasks to increas
 The purpose of image augmentation is to create new training samples from the existing data.
 Albumentations is fast compared to other image augmentation
 
-Repective Field 
+
 Model Summery
-Highest Test and Train accuracy achived 
 
 
+        Layer (type)               Output Shape         Param #
+            Conv2d-1            [-1, 3, 32, 32]              27
+       BatchNorm2d-2            [-1, 3, 32, 32]               6
+              ReLU-3            [-1, 3, 32, 32]               0
+            Conv2d-4          [-1, 256, 32, 32]             768
+       BatchNorm2d-5          [-1, 256, 32, 32]             512
+              ReLU-6          [-1, 256, 32, 32]               0
+            Conv2d-7          [-1, 256, 32, 32]           2,304
+       BatchNorm2d-8          [-1, 256, 32, 32]             512
+              ReLU-9          [-1, 256, 32, 32]               0
+           Conv2d-10           [-1, 40, 32, 32]          10,240
+      BatchNorm2d-11           [-1, 40, 32, 32]              80
+             ReLU-12           [-1, 40, 32, 32]               0
+      ConvTranspose2d-13      [-1, 185, 48, 48]          66,600
+      BatchNorm2d-14          [-1, 185, 48, 48]             370
+             ReLU-15          [-1, 185, 48, 48]               0
+           Conv2d-16           [-1, 10, 16, 16]          16,650
+      BatchNorm2d-17           [-1, 10, 16, 16]              20
+             ReLU-18           [-1, 10, 16, 16]               0
+        AvgPool2d-19             [-1, 10, 1, 1]               0
+       
+       Total params: 98,089
+       Trainable params: 98,089
+       Non-trainable params: 0
+       Input size (MB): 0.01
+       Forward/backward pass size (MB): 22.82
+       Params size (MB): 0.37
+       Estimated Total Size (MB): 23.21
 
+Repective Field
+
+![receptivefield](https://user-images.githubusercontent.com/70502759/141752462-ab9373db-e000-45f5-bd90-a7d9d3e72b9d.PNG)
+
+
+Highest Train accuracy 87.18483664772727
+
+Highest Test accuracy  81.94224683544304
+
+Traing Logs from last few Epoch :
+           
+    epoch          : 101
+    loss           : 0.3735793466383422
+    accuracy       : 87.20037286931819
+    val_loss       : 0.5666442566280123
+    val_accuracy   : 80.89398734177215
+
+    epoch          : 102
+    loss           : 0.37442579463293607
+    accuracy       : 87.17595880681819
+    val_loss       : 0.5710155354647697
+    val_accuracy   : 81.21044303797468
+
+    epoch          : 103
+    loss           : 0.3774511387190697
+    accuracy       : 86.99840198863636
+    val_loss       : 0.5720348908931394
+    val_accuracy   : 80.85443037974683
+
+    epoch          : 104
+    loss           : 0.37464344304647634
+    accuracy       : 87.17151988636364
+    val_loss       : 0.5637746902206277
+    val_accuracy   : 80.69620253164557
+
+    epoch          : 105
+    loss           : 0.37160827770871535
+    accuracy       : 87.24920099431819
+    val_loss       : 0.558854008022743
+    val_accuracy   : 80.67642405063292
+
+    epoch          : 106
+    loss           : 0.37279849736527965
+    accuracy       : 87.18483664772727
+    val_loss       : 0.5401198875300491
+    val_accuracy   : 81.94224683544304
+
+    epoch          : 107
+    loss           : 0.37206681455824187
+    accuracy       : 87.06720525568181
+    val_loss       : 0.5739287771756136
+    val_accuracy   : 80.65664556962025
+
+    epoch          : 108
+    loss           : 0.375405817207965
+    accuracy       : 86.98952414772727
+    val_loss       : 0.5642091514943521
+    val_accuracy   : 81.28955696202532
+
+    epoch          : 109
+    loss           : 0.37125248658809473
+    accuracy       : 87.39124644886364
+    val_loss       : 0.5463553806648979
+    val_accuracy   : 81.40822784810126
+
+    epoch          : 110
+    loss           : 0.3708342405840416
+    accuracy       : 87.3046875
+    val_loss       : 0.5684251975786837
+    val_accuracy   : 81.54667721518987
+
+    epoch          : 111
+    loss           : 0.3698449735106392
+    accuracy       : 87.39790482954545
+    val_loss       : 0.5811776005769078
+    val_accuracy   : 80.59731012658227
+
+    epoch          : 112
+    loss           : 0.36853508521083067
+    accuracy       : 87.29137073863636
+    val_loss       : 0.5633809627800048
+    val_accuracy   : 81.03243670886076
+
+    epoch          : 113
+    loss           : 0.37019252675500786
+    accuracy       : 87.3202237215909
+    val_loss       : 0.5690334782570223
+    val_accuracy   : 81.23022151898734
+   
 
 ## Tech Stack
 
 Client: Python, Pytorch, Numpy
 
-  
-
-## Tech Stack
-
-Client: Python, Pytorch, Numpy
-
-  
+  ****
