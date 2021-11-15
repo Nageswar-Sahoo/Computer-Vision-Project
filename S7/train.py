@@ -10,13 +10,17 @@ import model.model as module_arch
 import torch.optim as optim
 from torch.optim.lr_scheduler import StepLR
 import logging
+
 SEED = 123
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 np.random.seed(SEED)
 
+
 ##Reference Template used for the project : https://github.com/victoresque/pytorch-template
+# https://colab.research.google.com/drive/1z6OOQep6vQhSk65tXUbyqF2s6S-_Kz-C#scrollTo=VcqfrY6NQ5ye
+
 
 def main():
     # added logger to track change
@@ -45,7 +49,7 @@ def main():
     metrics = [module_metric.accuracy]
 
     optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
-    lr_scheduler = StepLR(optimizer, step_size=30, gamma=0.1)
+    lr_scheduler = StepLR(optimizer, step_size=120, gamma=0.1)
     trainer = Trainer(model, criterion, metrics, optimizer,
                       config=config,
                       device=device,
