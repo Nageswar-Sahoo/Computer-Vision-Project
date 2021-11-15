@@ -105,8 +105,9 @@ Highest Train accuracy 87.18483664772727
 
 Highest Test accuracy  81.94224683544304
 
-Traing Logs from last Training Epoch :
-           epoch          : 101
+Traing Logs from last few Epoch :
+           
+    epoch          : 101
     loss           : 0.3735793466383422
     accuracy       : 87.20037286931819
     val_loss       : 0.5666442566280123
