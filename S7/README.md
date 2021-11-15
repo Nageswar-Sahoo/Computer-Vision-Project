@@ -190,4 +190,13 @@ Traing Logs from last few Epoch :
 
 Client: Python, Pytorch, Numpy
 
-  ****
+## Team Members
+Member 1: Moulipriya Pal
+
+Member 2: Rahul Tyagi
+
+Member 3: Vyas Dhruv
+
+Member 4: Nageswar Sahoo
+
+  
