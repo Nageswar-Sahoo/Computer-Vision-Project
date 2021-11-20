@@ -30,9 +30,7 @@ class Trainer(BaseTrainer):
 
         self.train_metrics = MetricTracker('loss', *[m.__name__ for m in self.metric_ftns], writer=self.writer)
         self.valid_metrics = MetricTracker('loss', *[m.__name__ for m in self.metric_ftns], writer=self.writer)
-        self.missclassifiedimage = []
-        self.missclassifiedimage_actual_label = []
-        self.missclassifiedimage_predicted_label = []
+
 
     def _train_epoch(self, epoch):
         """
@@ -82,9 +80,7 @@ class Trainer(BaseTrainer):
 
     def _valid_epoch(self, epoch):
         # Resetting so that we can take only last value
-        self.missclassifiedimage = []
-        self.missclassifiedimage_actual_label = []
-        self.missclassifiedimage_predicted_label = []
+
         """
         Validate after training an epoch
 
@@ -110,16 +106,7 @@ class Trainer(BaseTrainer):
                     self.valid_metrics.update(met.__name__, met(output, target))
                 self.writer.add_image('input', make_grid(data.cpu(), nrow=8, normalize=True))
                 pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
-                target=target.view_as(pred).squeeze().numpy()
-                pred=pred.numpy()
-                print(pred)
-                print(target)
-                print("Loop Starting ")
-                for i in range(len(target)):
-                    if pred[i] != target[i]:
-                        self.missclassifiedimage.append(data[i])
-                        self.missclassifiedimage_actual_label.append(target[i])
-                        self.missclassifiedimage_predicted_label.append(pred[i][0])
+
 
         # add histogram of model parameters to the tensorboard
         for name, p in self.model.named_parameters():

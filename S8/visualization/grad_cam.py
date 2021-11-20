@@ -4,10 +4,10 @@ import numpy as np
 from torch.autograd import Function
 import torch
 from torchvision import models
-
+import model.model as module_arch
 
 class FeatureExtractor():
-    """ Class for extracting activations and 
+    """ Class for extracting activations and
     registering gradients from targetted intermediate layers """
 
     def __init__(self, model, blob_name, target_layers):
@@ -22,18 +22,21 @@ class FeatureExtractor():
     def __call__(self, x):
         outputs = []
         self.gradients = []
-        for idx, module in self.model._modules.items():
+        print("Before Loop")
+        print(self.model._modules)
+        for idx, module in self.model._modules['model']._modules.items():
             if idx != self.blob_name:
                 try:
                     x = module(x)
-                except Exception  as ex:
+                except Exception as ex:
                     print(ex)
                     x = x.view(x.size(0), -1)
                     x = module(x)
             else:
-                for name, block in enumerate(getattr(self.model, self.blob_name)):
+                for name, block in enumerate(getattr(self.model._modules['model'], self.blob_name)):
                     x = block(x)
                     if str(name) in self.target_layers:
+                        print("Inside the Hook")
                         x.register_hook(self.save_gradient)
                         outputs += [x]
         return outputs, x
@@ -52,10 +55,12 @@ def show_cams(img, mask_dic):
 
 
 def show_cam_on_image(img, mask, name):
-    heatmap = cv2.applyColorMap(np.uint8(255 * mask), cv2.COLORMAP_JET)
+    heatmap = np.moveaxis(cv2.applyColorMap(np.uint8(255 * mask), cv2.COLORMAP_JET), -1, 0)
     heatmap = np.float32(heatmap) / 255
     cam = heatmap + np.float32(img)
     cam = cam / np.max(cam)
+    cam = np.moveaxis(cam, 0, 2)
+    print(cam.shape)
     cv2.imwrite("cam{}.jpg".format(name), np.uint8(255 * cam))
 
 
@@ -88,6 +93,7 @@ class GradCam:
         self.model.zero_grad()
         one_hot.backward()
         self.model.zero_grad()
+        print(features)
         for idx, feature in enumerate(features):
             grads_val = self.extractor.gradients[len(features) - 1 - idx].cpu().data.numpy()
             target = features[idx]
@@ -233,12 +239,7 @@ def show_gbs(inputs, gb_model, target_index, mask_dic):
 def grad_invoke(trainer_layer):
     grad_cam = GradCam(model=trainer_layer.model, blob_name='layer2', target_layer_names=['0'], use_cuda=False)
     print("inside grade Cam")
-    print(trainer_layer.missclassifiedimage[0].shape)
     img = trainer_layer.missclassifiedimage[0].numpy()
-    y = np.moveaxis(img, -1, 0)
-    print(y.shape)
-
-    cv2.imwrite("cam{}.jpg".format('cifr'), np.uint8(255 * y))
     print(img.shape)
     inputs = preprocess_image(img)
     print(inputs.shape)
@@ -248,24 +249,22 @@ def grad_invoke(trainer_layer):
     mask_dic = grad_cam(inputs, target_index)
     print(mask_dic)
     show_cams(img, mask_dic)
-    gb_model = GuidedBackpropReLUModel(model=model, activation_layer_name='ReLU', use_cuda=False)
+    gb_model = GuidedBackpropReLUModel(model=trainer_layer.model, activation_layer_name='ReLU', use_cuda=False)
     show_gbs(inputs, gb_model, target_index, mask_dic)
 
+
 if __name__ == '__main__':
-    model = models.resnet34(pretrained=True)
+    model = module_arch.CIFRModel()
     grad_cam = GradCam(model=model, blob_name='layer2', target_layer_names=['0'], use_cuda=False)
     img = cv2.imread('C:/Users/NSA301/Desktop/AI_Latest/image/dog.jpg', 1)
     print(img.shape)
     img = np.float32(cv2.resize(img, (32, 32))) / 255
+    img = np.moveaxis(img, -1, 0)
     inputs = preprocess_image(img)
     # If Non-e, returns the map for the highest scoring category.
     # Otherwise, targets the requested index.
     target_index = None
     mask_dic = grad_cam(inputs, target_index)
-    print(mask_dic)
     show_cams(img, mask_dic)
     gb_model = GuidedBackpropReLUModel(model=model, activation_layer_name='ReLU', use_cuda=False)
     show_gbs(inputs, gb_model, target_index, mask_dic)
-
-
-

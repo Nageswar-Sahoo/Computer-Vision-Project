@@ -1,4 +1,3 @@
-import torch.nn as nn
 import torch.nn.functional as F
 from base import BaseModel
 
@@ -9,14 +8,11 @@ import torch.nn as nn
 class CIFRModel(BaseModel):
 
     def __init__(self):
+        super(CIFRModel, self).__init__()
 
-        super().__init__()
-        self.model_ft = models.resnet34(pretrained=True)
-        num_ftrs = self.model_ft.fc.in_features
-    # Here the size of each output sample is set to 2.
-    # Alternatively, it can be generalized to nn.Linear(num_ftrs, len(class_names)).
-        self.model_ft.fc = nn.Linear(num_ftrs, 10)
+        self.model = models.resnet34(pretrained=True)
+        self.model.fc.in_features = nn.Linear(64, 10)
 
     def forward(self, x):
-        x = self.model_ft(x)
+        x = self.model(x)
         return F.log_softmax(x, dim=-1)
