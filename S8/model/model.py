@@ -11,7 +11,7 @@ class CIFRModel(BaseModel):
         super(CIFRModel, self).__init__()
 
         self.model = models.resnet34(pretrained=True)
-        self.model.fc = nn.Linear(64, 10)
+        self.model.fc = nn.Linear(512, 10)
 
     def forward(self, x):
         x = self.model(x)
