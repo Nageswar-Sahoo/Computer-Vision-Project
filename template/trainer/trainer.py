@@ -89,7 +89,6 @@ class Trainer(BaseTrainer):
         """
         self.model.eval()
         self.valid_metrics.reset()
-        print("Target Compasrision" + str(epoch))
 
         with torch.no_grad():
             for batch_idx, (data, target) in enumerate(self.valid_data_loader):
@@ -97,9 +96,6 @@ class Trainer(BaseTrainer):
 
                 output = self.model(data)
                 loss = self.criterion(output, target)
-                print("data")
-                print(data.shape)
-
                 self.writer.set_step((epoch - 1) * len(self.valid_data_loader) + batch_idx, 'valid')
                 self.valid_metrics.update('loss', loss.item())
                 for met in self.metric_ftns:
