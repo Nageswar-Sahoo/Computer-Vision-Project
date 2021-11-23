@@ -58,7 +58,7 @@ def showandcam_missclassifiedimage(trainer):
         img_r = np.moveaxis(img, -1, 0)
         preprocessed_img = torch.from_numpy(img_r)
         preprocessed_img.unsqueeze_(0)
-        cam = GradCAM(model=model, target_layers=target_layers, use_cuda=False)
+        cam = GradCAM(model=model, target_layers=target_layers, use_cuda=True)
         grayscale_cam = cam(input_tensor=preprocessed_img, target_category=target_category)
         grayscale_cam = grayscale_cam[0, :]
         cam_image_op = show_cam_on_image(img, grayscale_cam, use_rgb=False)
