@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import cv2
 import numpy as np
 import torch
-#https://maersk-tools.atlassian.net/browse/OME-9537
+# https://maersk-tools.atlassian.net/browse/OME-9537
 from .grad_cam import GradCAM
 from .image import show_cam_on_image
 
@@ -17,15 +17,29 @@ torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 np.random.seed(SEED)
 
+
 def ensure_dir(dirname):
     dirname = Path(dirname)
     if not dirname.is_dir():
         dirname.mkdir(parents=True, exist_ok=False)
 
+
 def read_json(fname):
     fname = Path(fname)
     with fname.open('rt') as handle:
         return json.load(handle, object_hook=OrderedDict)
+
+
+def showaccuracy_and_loss_curve(trainer):
+    fig, axs = plt.subplots(2, 2, figsize=(15, 10))
+    axs[0, 0].plot(trainer.trainloss)
+    axs[0, 0].set_title("Training Loss")
+    axs[1, 0].plot(trainer.trainaccuracy)
+    axs[1, 0].set_title("Training Accuracy")
+    axs[0, 1].plot(trainer.testloss)
+    axs[0, 1].set_title("Test Loss")
+    axs[1, 1].plot(trainer.testaccuracy)
+    axs[1, 1].set_title("Test Accuracy")
 
 
 def showandcam_missclassifiedimage(trainer):
@@ -85,10 +99,12 @@ def write_json(content, fname):
     with fname.open('wt') as handle:
         json.dump(content, handle, indent=4, sort_keys=False)
 
+
 def inf_loop(data_loader):
     ''' wrapper function for endless data loader. '''
     for loader in repeat(data_loader):
         yield from loader
+
 
 def prepare_device(n_gpu_use):
     """
@@ -106,6 +122,7 @@ def prepare_device(n_gpu_use):
     device = torch.device('cuda:0' if n_gpu_use > 0 else 'cpu')
     list_ids = list(range(n_gpu_use))
     return device, list_ids
+
 
 class MetricTracker:
     def __init__(self, *keys, writer=None):
@@ -129,4 +146,3 @@ class MetricTracker:
 
     def result(self):
         return dict(self._data.average)
-
