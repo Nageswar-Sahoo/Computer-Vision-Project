@@ -39,7 +39,7 @@ def main():
     print(data_loader.valid_sampler)
 
     # build model architecture, then print to console
-    model = module_arch.resnet34()
+    model = module_arch.ResNet18()
     logger.info(model)
 
     # prepare for (multi-device) GPU training
