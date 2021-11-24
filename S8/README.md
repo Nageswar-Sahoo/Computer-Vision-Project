@@ -78,15 +78,47 @@ Misclassified and GradCam Images Gallery
 ![image](https://user-images.githubusercontent.com/70502759/143198134-1f9588a6-16e8-4b2e-bed8-46f2a9d3116b.png)
 
 ![image](https://user-images.githubusercontent.com/70502759/143198221-60eb79c1-3734-4d5b-aca9-980714ab28fb.png)
+
 ![image](https://user-images.githubusercontent.com/70502759/143198248-e1f07ffd-7b9b-48da-8cff-597d939d0066.png)
+
 ![image](https://user-images.githubusercontent.com/70502759/143198348-173c20bd-de65-45ad-8260-ad287b71111d.png)
+
 ![image](https://user-images.githubusercontent.com/70502759/143198411-2f1ecfe7-901f-4bab-970a-f48ee369699a.png)
+
 ![image](https://user-images.githubusercontent.com/70502759/143198457-397b698f-e64d-45d1-b189-6fb4e866ddb2.png)
+
 ![image](https://user-images.githubusercontent.com/70502759/143198485-6152c2d4-49d4-472b-b385-210e34738281.png)
+
 ![image](https://user-images.githubusercontent.com/70502759/143198548-d069b37e-281e-47a6-9492-d9f0a5c74864.png)
+
 ![image](https://user-images.githubusercontent.com/70502759/143198650-83a7193c-453b-4ac6-baf8-f673027ee81d.png)
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/70502759/143198939-3ed132b0-0fd2-4ca0-a6db-df5768f6b217.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199037-5ca5055c-6398-42ac-a6a0-b45102e6785a.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199093-7b4e275c-97dd-4f3f-9476-5e8c7de8075d.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199133-bffd7b83-b886-4fc9-a86b-275fce750ebb.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199164-a8782f8e-0b09-4458-a97c-d014b44a0ecc.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199194-7491a2d4-9538-497f-910f-7a4c916b06ef.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199243-1745a5dc-00a3-47b0-b705-25f86d8b0664.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199314-085aeacb-c7ad-4af7-8719-4faa31f43c9b.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199449-915f805e-53b9-4999-a29c-3a6a875d70c9.png)
+![image](https://user-images.githubusercontent.com/70502759/143199489-529b87c2-4768-4132-a408-3518fcacba21.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199542-9736a31f-9dc6-4ae3-9834-126bd99ed008.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199568-9588ac44-972a-4276-9cd6-02ee9cb6364b.png)
+
+![image](https://user-images.githubusercontent.com/70502759/143199589-9f7a5246-cb84-471d-8f8e-8cea1b8be563.png)
+
+
 
 
 
