@@ -11,7 +11,7 @@ The dataset is divided into five training batches and one test batch, each with 
 Here are the classes in the dataset, as well as 10 random images from each:
 ![image](https://user-images.githubusercontent.com/70502759/141685528-79bce9e3-7de7-4613-8beb-b13d1e59d79d.png)
 
-Model Overview : 
+Resnet 18 Model Overview : 
 
       
         Layer (type)               Output Shape         Param #
