@@ -64,14 +64,14 @@ Model Overview :
       BatchNorm2d-47            [-1, 512, 4, 4]           1,024
        BasicBlock-48            [-1, 512, 4, 4]               0
            Linear-49                   [-1, 10]           5,130
-Total params: 11,173,962
-Trainable params: 11,173,962
-Non-trainable params: 0
+    Total params: 11,173,962  
+    Trainable params: 11,173,962
+    Non-trainable params: 0
 
-Input size (MB): 0.01
-Forward/backward pass size (MB): 11.25
-Params size (MB): 42.63
-Estimated Total Size (MB): 53.89
+    Input size (MB): 0.01
+    Forward/backward pass size (MB): 11.25
+    Params size (MB): 42.63
+    Estimated Total Size (MB): 53.89
 
 Misclassified and GradCam Images Gallery
 
