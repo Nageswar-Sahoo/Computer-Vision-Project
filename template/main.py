@@ -53,8 +53,8 @@ def main():
     criterion = module_loss.crossentropyloss
     metrics = [module_metric.accuracy]
 
-    optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
-    lr_scheduler = StepLR(optimizer, step_size=120, gamma=0.1)
+    optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+    lr_scheduler = StepLR(optimizer, step_size=20, gamma=0.1)
     trainer = Trainer(model, criterion, metrics, optimizer,
                       config=config,
                       device=device,
@@ -64,14 +64,6 @@ def main():
 
     trainer.train()
     return trainer
-
-
-def imshow(img):
-    img = img / 2 + 0.5  # unnormalize
-    npimg = img.numpy()
-    plt.imshow(np.transpose(npimg, (1, 2, 0)))
-    plt.show()
-
 
 if __name__ == '__main__':
     trainer = main()

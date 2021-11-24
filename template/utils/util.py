@@ -58,7 +58,7 @@ def showandcam_missclassifiedimage(trainer):
         img_r = np.moveaxis(img, -1, 0)
         preprocessed_img = torch.from_numpy(img_r)
         preprocessed_img.unsqueeze_(0)
-        cam = GradCAM(model=model, target_layers=target_layers, use_cuda=True)
+        cam = GradCAM(model=model, target_layers=target_layers, use_cuda=False)
         grayscale_cam = cam(input_tensor=preprocessed_img, target_category=target_category)
         grayscale_cam = grayscale_cam[0, :]
         cam_image_op = show_cam_on_image(img, grayscale_cam, use_rgb=False)
@@ -75,9 +75,9 @@ def showandcam_missclassifiedimage(trainer):
         ax1[0].imshow(cv2.cvtColor(im_resized, cv2.COLOR_BGR2RGB))
         ax1[0].title.set_text(
             str('Actual Lable ') + classes[missclassifiedimage_actual_label[idx]] + str('\nPredicted Lable ') +
-            classes[
-                missclassifiedimage_predicted_label[idx]])
+            classes[missclassifiedimage_predicted_label[idx]])
         ax1[1].imshow(cv2.cvtColor(cam_im_resized, cv2.COLOR_BGR2RGB))
+        plt.show()
 
 
 def write_json(content, fname):
