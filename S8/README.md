@@ -76,8 +76,11 @@ Resnet 18 Model Overview :
 Result
 The model was trained for 20 epochs -
 
-Highest Training Accuracy achieved - 92.43%
-Highest Test Accuracy achieved - 50.23 at epoch 14.    
+Highest Training Accuracy achieved - 82.86%
+Highest Test Accuracy achieved - 80.63 
+
+![image](https://user-images.githubusercontent.com/70502759/143260076-c895aafd-2e71-49df-a869-8b93358c9c60.png)
+
 
 Misclassified and GradCam Images Gallery
 
