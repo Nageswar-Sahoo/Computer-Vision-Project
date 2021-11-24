@@ -30,6 +30,11 @@ class Trainer(BaseTrainer):
 
         self.train_metrics = MetricTracker('loss', *[m.__name__ for m in self.metric_ftns], writer=self.writer)
         self.valid_metrics = MetricTracker('loss', *[m.__name__ for m in self.metric_ftns], writer=self.writer)
+        self.trainloss=[]
+        self.testloss=[]
+        self.trainaccuracy=[]
+        self.testaccuracy=[]
+
 
 
     def _train_epoch(self, epoch):
@@ -55,9 +60,11 @@ class Trainer(BaseTrainer):
 
             self.writer.set_step((epoch - 1) * self.len_epoch + batch_idx)
             self.train_metrics.update('loss', loss.item())
+            self.trainloss.append(loss.item())
 
             for met in self.metric_ftns:
                 self.train_metrics.update(met.__name__, met(output, target))
+                self.trainaccuracy.append(met(output, target))
 
             if batch_idx % self.log_step == 0:
                 self.logger.debug('Train Epoch: {} {} Loss: {:.6f}'.format(
@@ -98,8 +105,10 @@ class Trainer(BaseTrainer):
                 loss = self.criterion(output, target)
                 self.writer.set_step((epoch - 1) * len(self.valid_data_loader) + batch_idx, 'valid')
                 self.valid_metrics.update('loss', loss.item())
+
                 for met in self.metric_ftns:
                     self.valid_metrics.update(met.__name__, met(output, target))
+
                 self.writer.add_image('input', make_grid(data.cpu(), nrow=8, normalize=True))
                 pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
 
@@ -108,6 +117,9 @@ class Trainer(BaseTrainer):
         for name, p in self.model.named_parameters():
             self.writer.add_histogram(name, p, bins='auto')
 
+        self.testloss.append(self.valid_metrics.avg("loss"))
+        self.testaccuracy.append(self.valid_metrics.avg("accuracy"))
+        print(self.valid_metrics)
         return self.valid_metrics.result()
 
     def _progress(self, batch_idx):
