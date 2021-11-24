@@ -72,8 +72,18 @@ Model Overview :
     Forward/backward pass size (MB): 11.25
     Params size (MB): 42.63
     Estimated Total Size (MB): 53.89
+    
+Result
+The model was trained for 20 epochs -
+
+Highest Training Accuracy achieved - 92.43%
+Highest Test Accuracy achieved - 50.23 at epoch 14.    
 
 Misclassified and GradCam Images Gallery
+
+Misclassified images were generated and for each misclassified image a gradcam image was generated for the misclassified class the model predicted.
+
+
 
 ![image](https://user-images.githubusercontent.com/70502759/143198134-1f9588a6-16e8-4b2e-bed8-46f2a9d3116b.png)
 
