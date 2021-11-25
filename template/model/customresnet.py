@@ -1,10 +1,7 @@
-import torch
-import torch.nn as nn
 
 
-import torch
+
 import torch.nn as nn
-import torch.nn.functional as F
 
 
 # Residual block
@@ -25,7 +22,7 @@ class ResidualBlock(nn.Module):
         out = self.conv2(out)
         out = self.bn2(out)
         out = self.relu(out)
-        out += residual
+        out = residual + out
         out = self.relu(out)
         return out
 
@@ -34,7 +31,6 @@ class ResidualBlock(nn.Module):
 class ResNet(nn.Module):
     def __init__(self, block, num_classes=10):
         super(ResNet, self).__init__()
-        self.in_channels = 64
         self.preplayer = nn.Sequential(
             nn.Conv2d(in_channels=3, out_channels=64, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.BatchNorm2d(64),
