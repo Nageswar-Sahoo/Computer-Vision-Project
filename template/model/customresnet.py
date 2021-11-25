@@ -66,7 +66,7 @@ class ResNet(nn.Module):
         out = self.conv_X2(out)
         out = self.layer3(out)
         out = self.avg_pool(out)
-        out = out.view(512, -1)
+        out = out.view(out.size(0), -1)
         out = self.fc(out)
         return out
 
