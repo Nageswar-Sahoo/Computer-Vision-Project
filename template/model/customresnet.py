@@ -21,8 +21,8 @@ class ResidualBlock(nn.Module):
         out = self.conv2(out)
         out = self.bn2(out)
         out = self.relu(out)
-        out = residual.clone() + out.clone()
-        #out = self.relu(out)
+        out = residual + out
+        out = self.relu(out)
         return out
 
 
@@ -66,7 +66,6 @@ class ResNet(nn.Module):
         out = self.conv_X2(out)
         out = self.layer3(out)
         out = self.avg_pool(out)
-        print(out.size(0))
         out = out.view(64, -1)
         out = self.fc(out)
         return out
