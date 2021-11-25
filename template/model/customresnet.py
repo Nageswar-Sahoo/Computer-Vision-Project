@@ -36,14 +36,14 @@ class ResNet(nn.Module):
         self.preplayer = nn.Sequential(
             nn.Conv2d(in_channels=3, out_channels=64, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.BatchNorm2d(64),
-            nn.Dropout(0.20),
+            nn.Dropout(0.30),
             nn.ReLU()
         )
         self.conv_X1 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=128, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.MaxPool2d(2, 2),
             nn.BatchNorm2d(128),
-            nn.Dropout(0.20),
+            nn.Dropout(0.40),
             nn.ReLU()
         )
         self.layer1 = block(128, 128, 1)
@@ -51,14 +51,14 @@ class ResNet(nn.Module):
             nn.Conv2d(in_channels=128, out_channels=256, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.MaxPool2d(2, 2),
             nn.BatchNorm2d(256),
-            nn.Dropout(0.20),
+            nn.Dropout(0.40),
             nn.ReLU()
         )
         self.conv_X2 = nn.Sequential(
             nn.Conv2d(in_channels=256, out_channels=512, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.MaxPool2d(2, 2),
             nn.BatchNorm2d(512),
-            nn.Dropout(0.20),
+            nn.Dropout(0.40),
             nn.ReLU()
         )
         self.layer3 = block(512, 512, 1)
