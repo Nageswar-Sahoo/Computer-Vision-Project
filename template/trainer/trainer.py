@@ -67,8 +67,8 @@ class Trainer(BaseTrainer):
                 self.trainaccuracy.append(met(output, target))
 
             if batch_idx % self.log_step == 0:
-                self.logger.debug('Train Epoch: Lr_used {:.4f} {} {} Loss: {:.6f}'.format(
-                    self.get_lr(),
+                self.logger.debug('Train Epoch: last_lr_used {:.4f} {} {} Loss: {:.6f}'.format(
+                    self.lr_scheduler.get_last_lr(),
                     epoch,
                     self._progress(batch_idx),
                     loss.item()))
@@ -82,9 +82,7 @@ class Trainer(BaseTrainer):
             val_log = self._valid_epoch(epoch)
             log.update(**{'val_' + k: v for k, v in val_log.items()})
 
-        print("Hello Nagesh")
         if self.lr_scheduler is not None:
-            print(self.lr_scheduler.get_last_lr())
             self.lr_scheduler.step()
         return log
 
