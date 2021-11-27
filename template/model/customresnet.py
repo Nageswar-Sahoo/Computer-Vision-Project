@@ -43,20 +43,17 @@ class ResNet(nn.Module):
             nn.Conv2d(in_channels=128, out_channels=256, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.MaxPool2d(2, 2),
             nn.BatchNorm2d(256),
-            nn.Dropout(0.1),
             nn.ReLU()
         )
         self.conv_X2 = nn.Sequential(
             nn.Conv2d(in_channels=256, out_channels=512, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.MaxPool2d(2, 2),
             nn.BatchNorm2d(512),
-            nn.Dropout(0.2),
             nn.ReLU()
         )
         self.layer3 = residualblock(512, 512, 1)
         self.classifier = nn.Sequential(nn.MaxPool2d(4),
                                         nn.Flatten(),
-                                        nn.Dropout(0.2),
                                         nn.Linear(512, num_classes))
 
     def forward(self, x):
