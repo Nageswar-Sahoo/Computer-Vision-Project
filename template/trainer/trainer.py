@@ -67,7 +67,8 @@ class Trainer(BaseTrainer):
                 self.trainaccuracy.append(met(output, target))
 
             if batch_idx % self.log_step == 0:
-                self.logger.debug('Train Epoch: {} {} Loss: {:.6f}'.format(
+                self.logger.debug('Train Epoch: Lr_used {:.4f} {} {} Loss: {:.6f}'.format(
+                    self.get_lr(),
                     epoch,
                     self._progress(batch_idx),
                     loss.item()))
@@ -131,3 +132,7 @@ class Trainer(BaseTrainer):
             current = batch_idx
             total = self.len_epoch
         return base.format(current, total, 100.0 * current / total)
+
+    def get_lr(self):
+        for param_group in self.optimizer.param_groups:
+            return param_group['lr']
