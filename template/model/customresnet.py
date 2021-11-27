@@ -10,17 +10,14 @@ class ResidualBlock(nn.Module):
         self.conv2 = nn.Conv2d(in_channels, out_channels, kernel_size=3, stride=stride, padding=1, bias=False)
         self.bn2 = nn.BatchNorm2d(out_channels)
         self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(0.1)
 
     def forward(self, x):
         residual = x
         out = self.conv1(x.clone())
         out = self.bn1(out)
-        out = self.dropout(out)
         out = self.relu(out)
         out = self.conv2(out)
         out = self.bn2(out)
-        out = self.dropout(out)
         out = residual + out
         out = self.relu(out)
         return out
@@ -33,14 +30,12 @@ class ResNet(nn.Module):
         self.preplayer = nn.Sequential(
             nn.Conv2d(in_channels=3, out_channels=64, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.BatchNorm2d(64),
-            nn.Dropout(0.1),
             nn.ReLU()
         )
         self.conv_X1 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=128, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.MaxPool2d(2, 2),
             nn.BatchNorm2d(128),
-            nn.Dropout(0.1),
             nn.ReLU()
         )
         self.layer1 = residualblock(128, 128, 1)
@@ -48,7 +43,7 @@ class ResNet(nn.Module):
             nn.Conv2d(in_channels=128, out_channels=256, kernel_size=(3, 3), stride=1, padding=1, bias=False),
             nn.MaxPool2d(2, 2),
             nn.BatchNorm2d(256),
-            nn.Dropout(0.2),
+            nn.Dropout(0.1),
             nn.ReLU()
         )
         self.conv_X2 = nn.Sequential(
