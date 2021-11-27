@@ -30,12 +30,10 @@ class Trainer(BaseTrainer):
 
         self.train_metrics = MetricTracker('loss', *[m.__name__ for m in self.metric_ftns], writer=self.writer)
         self.valid_metrics = MetricTracker('loss', *[m.__name__ for m in self.metric_ftns], writer=self.writer)
-        self.trainloss=[]
-        self.testloss=[]
-        self.trainaccuracy=[]
-        self.testaccuracy=[]
-
-
+        self.trainloss = []
+        self.testloss = []
+        self.trainaccuracy = []
+        self.testaccuracy = []
 
     def _train_epoch(self, epoch):
         """
@@ -57,6 +55,9 @@ class Trainer(BaseTrainer):
 
             loss.backward()
             self.optimizer.step()
+            # Super convergence changes the learning rate
+            if self.lr_scheduler is not None:
+                self.lr_scheduler.step()
 
             self.writer.set_step((epoch - 1) * self.len_epoch + batch_idx)
             self.train_metrics.update('loss', loss.item())
@@ -82,8 +83,9 @@ class Trainer(BaseTrainer):
             val_log = self._valid_epoch(epoch)
             log.update(**{'val_' + k: v for k, v in val_log.items()})
 
-        if self.lr_scheduler is not None:
-            self.lr_scheduler.step()
+        # When No one cycle used
+        # if self.lr_scheduler is not None:
+        #     self.lr_scheduler.step()
         return log
 
     def _valid_epoch(self, epoch):
@@ -112,7 +114,6 @@ class Trainer(BaseTrainer):
 
                 self.writer.add_image('input', make_grid(data.cpu(), nrow=8, normalize=True))
                 pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
-
 
         # add histogram of model parameters to the tensorboard
         for name, p in self.model.named_parameters():
