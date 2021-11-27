@@ -82,7 +82,9 @@ class Trainer(BaseTrainer):
             val_log = self._valid_epoch(epoch)
             log.update(**{'val_' + k: v for k, v in val_log.items()})
 
+        print("Hello Nagesh")
         if self.lr_scheduler is not None:
+            print(self.lr_scheduler.get_last_lr())
             self.lr_scheduler.step()
         return log
 
