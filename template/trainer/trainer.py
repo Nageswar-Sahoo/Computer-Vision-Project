@@ -68,7 +68,7 @@ class Trainer(BaseTrainer):
                 self.trainaccuracy.append(met(output, target))
 
             if batch_idx % self.log_step == 0:
-                self.logger.debug('Train Epoch: last_lr_used {:.6f} {} {} Loss: {:.6f}'.format(
+                self.logger.debug('Train Epoch: last_lr_used_1  {:.6f} {} {} Loss: {:.6f}'.format(
                     self.lr_scheduler.get_last_lr()[-1],
                     epoch,
                     self._progress(batch_idx),
