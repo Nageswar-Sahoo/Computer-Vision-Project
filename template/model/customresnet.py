@@ -54,7 +54,7 @@ class ResNet(nn.Module):
         self.layer3 = residualblock(512, 512, 1)
         self.classifier = nn.Sequential(nn.MaxPool2d(4),
                                         nn.Flatten(),
-                                        nn.Dropout(0.2),
+                                        nn.Dropout(0.1),
                                         nn.Linear(512, num_classes))
         self.dropout = nn.Dropout(0.2)
 
@@ -63,9 +63,10 @@ class ResNet(nn.Module):
         out = self.conv_X1(out)
         out = self.layer1(out)
         out = self.layer2(out)
+        out = self.dropout(out)
         out = self.conv_X2(out)
+        out = self.dropout(out)
         out = self.layer3(out)
-        # out = self.dropout(out)
         out = self.classifier(out)
         return out
 
