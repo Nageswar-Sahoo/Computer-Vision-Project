@@ -54,7 +54,7 @@ class ResNet(nn.Module):
         self.layer3 = residualblock(512, 512, 1)
         self.classifier = nn.Sequential(nn.MaxPool2d(4),
                                         nn.Flatten(),
-                                        #nn.Dropout(0.2),
+                                        nn.Dropout(0.1),
                                         nn.Linear(512, num_classes))
 
     def forward(self, x):
