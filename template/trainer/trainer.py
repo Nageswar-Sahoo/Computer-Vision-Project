@@ -5,6 +5,7 @@ from base import BaseTrainer
 from utils import inf_loop, MetricTracker
 import torch.nn as nn
 
+
 class Trainer(BaseTrainer):
     """
     Trainer class
@@ -54,9 +55,6 @@ class Trainer(BaseTrainer):
             loss = self.criterion(output, target)
 
             loss.backward()
-
-            # Gradient clipping
-            nn.utils.clip_grad_value_(self.model.parameters(), 0.1)
 
             self.optimizer.step()
             # Super convergence changes the learning rate
