@@ -35,6 +35,7 @@ class Trainer(BaseTrainer):
         self.testloss = []
         self.trainaccuracy = []
         self.testaccuracy = []
+        self.lrused = []
 
     def _train_epoch(self, epoch):
         """
@@ -68,7 +69,7 @@ class Trainer(BaseTrainer):
             for met in self.metric_ftns:
                 self.train_metrics.update(met.__name__, met(output, target))
                 self.trainaccuracy.append(met(output, target))
-
+            self.lrused.append(self.lr_scheduler.get_last_lr()[-1])
             if batch_idx % self.log_step == 0:
                 self.logger.debug('Train Epoch: {} last_lr_used  {:.6f}  {} Loss: {:.6f}'.format(
                     self.lr_scheduler.get_last_lr()[-1],
