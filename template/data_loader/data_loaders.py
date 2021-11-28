@@ -1,15 +1,18 @@
-from torchvision import datasets, transforms
-from base import BaseDataLoader
-from transformation import trsfm
-import albumentations as A
-from albumentations.pytorch import ToTensorV2
 
+from transformation import trsfm
+
+import torch
 from transformation.Albumentations import Albumentations
 
 
-class CIFRDataLoader(BaseDataLoader):
-      def __init__(self, data_dir, batch_size, shuffle=True, validation_split=0.0, num_workers=1, training=True):
-        transformation = trsfm(training)
-        self.data_dir = data_dir
-        self.dataset = Albumentations(self.data_dir, train=training, download=True, transform=transformation)
-        super().__init__(self.dataset, batch_size, shuffle, validation_split, num_workers)
+def get_train_data_loader(batch_size=512):
+    trainset = Albumentations(root='./data', train=True, download=True, transform=trsfm(True))
+    return torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=2)
+
+
+def get_test_data_loader(batch_size=512):
+    testset = Albumentations(root='./data', train=False, download=True, transform=trsfm(False))
+    return torch.utils.data.DataLoader(testset, batch_size=512, shuffle=False, num_workers=2)
+
+
+
