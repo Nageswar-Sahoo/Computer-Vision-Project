@@ -72,8 +72,8 @@ class Trainer(BaseTrainer):
             self.lrused.append(self.lr_scheduler.get_last_lr()[-1])
             if batch_idx % self.log_step == 0:
                 self.logger.debug('Train Epoch: {} last_lr_used  {:.6f}  {} Loss: {:.6f}'.format(
-                    self.lr_scheduler.get_last_lr()[-1],
                     epoch,
+                    self.lr_scheduler.get_last_lr()[-1],
                     self._progress(batch_idx),
                     loss.item()))
                 self.writer.add_image('input', make_grid(data.cpu(), nrow=8, normalize=True))
