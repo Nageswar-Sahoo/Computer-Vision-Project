@@ -1,4 +1,3 @@
-import data_loader.data_loaders as module_data
 from parse_config import ConfigParser
 from trainer import Trainer
 from utils import prepare_device
@@ -9,15 +8,13 @@ import logging
 import numpy as np
 import torch
 import model.customresnet as module_resnet
-from transformation.Albumentations import Albumentations
-
+import utils
 SEED = 123
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 np.random.seed(SEED)
 import torch
-from transformation import trsfm
 import data_loader.data_loaders as data_loaders
 
 
@@ -51,11 +48,10 @@ def main():
     criterion = module_loss.crossentropyloss
     metrics = [module_metric.accuracy]
 
-    # optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
-    # lr_scheduler = StepLR(optimizer, step_size=20, gamma=0.1)
-    optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
-    # lr_scheduler = StepLR(optimizer, step_size=15, gamma=0.1)
-    scheduler = optim.lr_scheduler.OneCycleLR(optimizer, max_lr=0.2, epochs=24, steps_per_epoch=len(data_loader))
+    optimizer = optim.Adam(model.parameters(), lr=.01, weight_decay=1e-4)
+    #lr_scheduler = StepLR(optimizer, step_size=15, gamma=0.001)
+    #optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+    scheduler = optim.lr_scheduler.OneCycleLR(optimizer, cycle_momentum=True,anneal_strategy='linear', verbose=False, three_phase=True,  max_lr=.01, pct_start=5/24, epochs=24, steps_per_epoch=len(data_loader))
 
     trainer = Trainer(model, criterion, metrics, optimizer,
                       config=config,
@@ -65,12 +61,11 @@ def main():
                       lr_scheduler=scheduler)
 
     trainer.train()
-    # utils.showandcam_missclassifiedimage(trainer)
-    # utils.showaccuracy_and_loss_curve(trainer)
+    utils.showandcam_missclassifiedimage(trainer)
+    utils.showaccuracy_and_loss_curve(trainer)
 
     return trainer
 
 
 if __name__ == '__main__':
     trainer = main()
-    # utils.showandcam_missclassifiedimage(trainer)
