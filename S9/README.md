@@ -1,6 +1,8 @@
 Design Nenural newtwork architecture with following constarint :
 
-     We will be exploring the resnet architecture with GradCam .
+We will be exploring the custom resnet architecture .
+![customresnetdesign](https://user-images.githubusercontent.com/70502759/143819267-e474ae39-5dd5-418d-985b-1a5104ecbd49.PNG)
+
 
 Data Overview
 
