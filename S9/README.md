@@ -59,7 +59,14 @@ Resnet 18 Model Overview :
    Params size (MB): 25.07
    Estimated Total Size (MB): 32.15
 
-    
+Best LR Finder test for 24 Epoch : 
+
+![image](https://user-images.githubusercontent.com/70502759/143822511-8234a949-e27e-49f1-bbf9-140a7e13f161.png)
+LR suggestion: steepest gradient
+Suggested LR: 1.49E-03 (.00149)
+We have tried with this learning rate and accuracy is not good hence have tried different learning rate 0.01 and 0.001 which gave better result . 
+
+   
 Result
 The model was trained for 20 epochs -
 
