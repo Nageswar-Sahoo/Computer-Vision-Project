@@ -64,15 +64,16 @@ Best LR Finder test for 24 Epoch :
 ![LR_Test](https://user-images.githubusercontent.com/70502759/144747966-fc3416e1-31aa-4032-9755-4eee2864149f.PNG)
 
 We have used LR finder to find the max_lr and min_lr. As per the range test for 24 epochs  suggested max_lr=.74 and min_lr=.074 (1/10th of max_lr).
-While training with this max_lr with OneCycleLR , google colab is crashing and hence we have trained the model with a much lower learning rate .We are able to train the model with OneCycleLR  where  max_lr=.01.
+While training with this max_lr with OneCycleLR , google colab is crashing and hence we have trained the model with a much lower learning rate .We are able to train the model with OneCycleLR  where  max_lr=.03.
 
 
    
 Result
-The model was trained for 20 epochs -
-
+The model was trained for 24 epochs -
 Highest Training Accuracy achieved - 82.86%
 Highest Test Accuracy achieved - 80.63 
+
+
 
 ![image](https://user-images.githubusercontent.com/70502759/143260076-c895aafd-2e71-49df-a869-8b93358c9c60.png)
 
