@@ -1,6 +1,8 @@
 Design Nenural newtwork architecture with following constarint :
 
-     We will be exploring the resnet architecture with GradCam .
+We will be exploring the custom resnet architecture .
+![customresnetdesign](https://user-images.githubusercontent.com/70502759/143819267-e474ae39-5dd5-418d-985b-1a5104ecbd49.PNG)
+
 
 Data Overview
 
@@ -11,73 +13,70 @@ The dataset is divided into five training batches and one test batch, each with 
 Here are the classes in the dataset, as well as 10 random images from each:
 ![image](https://user-images.githubusercontent.com/70502759/141685528-79bce9e3-7de7-4613-8beb-b13d1e59d79d.png)
 
-Resnet 18 Model Overview : 
+Custom Resnet Model Overview : 
 
       
-        Layer (type)               Output Shape         Param #
+         Layer (type)               Output Shape         Param #
             Conv2d-1           [-1, 64, 32, 32]           1,728
        BatchNorm2d-2           [-1, 64, 32, 32]             128
-            Conv2d-3           [-1, 64, 32, 32]          36,864
-       BatchNorm2d-4           [-1, 64, 32, 32]             128
-            Conv2d-5           [-1, 64, 32, 32]          36,864
-       BatchNorm2d-6           [-1, 64, 32, 32]             128
-        BasicBlock-7           [-1, 64, 32, 32]               0
-            Conv2d-8           [-1, 64, 32, 32]          36,864
-       BatchNorm2d-9           [-1, 64, 32, 32]             128
-           Conv2d-10           [-1, 64, 32, 32]          36,864
-      BatchNorm2d-11           [-1, 64, 32, 32]             128
-       BasicBlock-12           [-1, 64, 32, 32]               0
-           Conv2d-13          [-1, 128, 16, 16]          73,728
-      BatchNorm2d-14          [-1, 128, 16, 16]             256
-           Conv2d-15          [-1, 128, 16, 16]         147,456
-      BatchNorm2d-16          [-1, 128, 16, 16]             256
-           Conv2d-17          [-1, 128, 16, 16]           8,192
-      BatchNorm2d-18          [-1, 128, 16, 16]             256
-       BasicBlock-19          [-1, 128, 16, 16]               0
-           Conv2d-20          [-1, 128, 16, 16]         147,456
-      BatchNorm2d-21          [-1, 128, 16, 16]             256
-           Conv2d-22          [-1, 128, 16, 16]         147,456
-      BatchNorm2d-23          [-1, 128, 16, 16]             256
-       BasicBlock-24          [-1, 128, 16, 16]               0
-           Conv2d-25            [-1, 256, 8, 8]         294,912
-      BatchNorm2d-26            [-1, 256, 8, 8]             512
-           Conv2d-27            [-1, 256, 8, 8]         589,824
-      BatchNorm2d-28            [-1, 256, 8, 8]             512
-           Conv2d-29            [-1, 256, 8, 8]          32,768
-      BatchNorm2d-30            [-1, 256, 8, 8]             512
-       BasicBlock-31            [-1, 256, 8, 8]               0
-           Conv2d-32            [-1, 256, 8, 8]         589,824
-      BatchNorm2d-33            [-1, 256, 8, 8]             512
-           Conv2d-34            [-1, 256, 8, 8]         589,824
-      BatchNorm2d-35            [-1, 256, 8, 8]             512
-       BasicBlock-36            [-1, 256, 8, 8]               0
-           Conv2d-37            [-1, 512, 4, 4]       1,179,648
-      BatchNorm2d-38            [-1, 512, 4, 4]           1,024
-           Conv2d-39            [-1, 512, 4, 4]       2,359,296
-      BatchNorm2d-40            [-1, 512, 4, 4]           1,024
-           Conv2d-41            [-1, 512, 4, 4]         131,072
-      BatchNorm2d-42            [-1, 512, 4, 4]           1,024
-       BasicBlock-43            [-1, 512, 4, 4]               0
-           Conv2d-44            [-1, 512, 4, 4]       2,359,296
-      BatchNorm2d-45            [-1, 512, 4, 4]           1,024
-           Conv2d-46            [-1, 512, 4, 4]       2,359,296
-      BatchNorm2d-47            [-1, 512, 4, 4]           1,024
-       BasicBlock-48            [-1, 512, 4, 4]               0
-           Linear-49                   [-1, 10]           5,130
-    Total params: 11,173,962  
-    Trainable params: 11,173,962
+              ReLU-3           [-1, 64, 32, 32]               0
+            Conv2d-4          [-1, 128, 32, 32]          73,728
+         MaxPool2d-5          [-1, 128, 16, 16]               0
+       BatchNorm2d-6          [-1, 128, 16, 16]             256
+              ReLU-7          [-1, 128, 16, 16]               0
+            Conv2d-8          [-1, 128, 16, 16]         147,456
+       BatchNorm2d-9          [-1, 128, 16, 16]             256
+             ReLU-10          [-1, 128, 16, 16]               0
+           Conv2d-11          [-1, 128, 16, 16]         147,456
+      BatchNorm2d-12          [-1, 128, 16, 16]             256
+             ReLU-13          [-1, 128, 16, 16]               0
+             ReLU-14          [-1, 128, 16, 16]               0
+    ResidualBlock-15          [-1, 128, 16, 16]               0
+           Conv2d-16          [-1, 256, 16, 16]         294,912
+        MaxPool2d-17            [-1, 256, 8, 8]               0
+      BatchNorm2d-18            [-1, 256, 8, 8]             512
+             ReLU-19            [-1, 256, 8, 8]               0
+           Conv2d-20            [-1, 512, 8, 8]       1,179,648
+        MaxPool2d-21            [-1, 512, 4, 4]               0
+      BatchNorm2d-22            [-1, 512, 4, 4]           1,024
+             ReLU-23            [-1, 512, 4, 4]               0
+           Conv2d-24            [-1, 512, 4, 4]       2,359,296
+      BatchNorm2d-25            [-1, 512, 4, 4]           1,024
+             ReLU-26            [-1, 512, 4, 4]               0
+           Conv2d-27            [-1, 512, 4, 4]       2,359,296
+      BatchNorm2d-28            [-1, 512, 4, 4]           1,024
+             ReLU-29            [-1, 512, 4, 4]               0
+             ReLU-30            [-1, 512, 4, 4]               0
+    ResidualBlock-31            [-1, 512, 4, 4]               0
+        AvgPool2d-32            [-1, 512, 1, 1]               0
+           Linear-33                   [-1, 10]           5,130
+    Total params: 6,573,130
+    Trainable params: 6,573,130
     Non-trainable params: 0
 
     Input size (MB): 0.01
-    Forward/backward pass size (MB): 11.25
-    Params size (MB): 42.63
-    Estimated Total Size (MB): 53.89
-    
+    Forward/backward pass size (MB): 7.07
+    Params size (MB): 25.07
+    Estimated Total Size (MB): 32.15
+
+Best LR Finder test for 24 Epoch : 
+
+![LR_Test](https://user-images.githubusercontent.com/70502759/144747966-fc3416e1-31aa-4032-9755-4eee2864149f.PNG)
+
+We have used LR finder to find the max_lr and min_lr. As per the range test for 24 epochs  suggested max_lr=.74 and min_lr=.074 (1/10th of max_lr).
+While training with this max_lr with OneCycleLR , google colab is crashing and hence we have trained the model with a much lower learning rate .We are able to train the model with OneCycleLR  where  max_lr=.03.
+
+
+   
 Result
-The model was trained for 20 epochs -
+
+The model was trained for 24 epochs -
 
 Highest Training Accuracy achieved - 82.86%
+
 Highest Test Accuracy achieved - 80.63 
+
+
 
 ![image](https://user-images.githubusercontent.com/70502759/143260076-c895aafd-2e71-49df-a869-8b93358c9c60.png)
 
@@ -133,6 +132,7 @@ Misclassified images were generated and for each misclassified image a gradcam i
 ![image](https://user-images.githubusercontent.com/70502759/143199589-9f7a5246-cb84-471d-8f8e-8cea1b8be563.png)
 
 
+ Training logs
 
 Project template repo link : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/template
 
