@@ -63,12 +63,6 @@ Best LR Finder test for 24 Epoch :
 
 ![LR_Test](https://user-images.githubusercontent.com/70502759/144747966-fc3416e1-31aa-4032-9755-4eee2864149f.PNG)
 
-
-LR suggestion: steepest gradient
-
-Suggested Max_lr: 0.74 (7.41E-01)
-          Min_lr:.0.074
-
 We have used LR finder to find the max_lr and min_lr. As per the range test for 24 epochs  suggested max_lr=.74 and min_lr=.074 (1/10th of max_lr).
 While training with this max_lr with OneCycleLR , google colab is crashing and hence we have trained the model with a much lower learning rate .We are able to train the model with OneCycleLR  where  max_lr=.01.
 
