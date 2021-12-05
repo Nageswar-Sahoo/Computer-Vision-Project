@@ -61,16 +61,8 @@ Custom Resnet Model Overview :
 
 Best LR Finder test for 24 Epoch : 
 
-      from torch_lr_finder import LRFinder
-      import torch.nn as nn
-      criterion = nn.CrossEntropyLoss()
-      optimizer = optim.Adam(model.parameters(), lr=.1, weight_decay=1e-2)
-      lr_finder = LRFinder(model, optimizer, criterion, device="cuda")
-      lr_finder.range_test(data_loader, val_loader=valid_data_loader, end_lr=10, num_iter=24, step_mode="exp")
-      lr_finder.plot(skip_end=0)
-      lr_finder.reset()
+![LR_Test](https://user-images.githubusercontent.com/70502759/144747966-fc3416e1-31aa-4032-9755-4eee2864149f.PNG)
 
-![image](https://user-images.githubusercontent.com/70502759/144747307-0c010306-d295-4f32-80db-972b0720817b.png)
 
 LR suggestion: steepest gradient
 
