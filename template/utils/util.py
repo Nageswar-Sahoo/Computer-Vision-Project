@@ -51,7 +51,7 @@ def showandcam_missclassifiedimage(trainer):
     missclassifiedimage_actual_label = []
     missclassifiedimage_predicted_label = []
     missclassifiedimage_cam = []
-    target_layers = [model.layer2[-1]]
+    target_layers = [model.conv_X2[-1]]
     target_category = None
     with torch.no_grad():
         for batch_idx, (data, target) in enumerate(trainer.valid_data_loader):
