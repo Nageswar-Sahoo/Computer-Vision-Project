@@ -83,50 +83,27 @@ Misclassified and GradCam Images Gallery
 Misclassified images were generated and for each misclassified image a gradcam image was generated for the misclassified class the model predicted.
 
 
+![image](https://user-images.githubusercontent.com/70502759/144750833-5887da41-3d00-4eaa-8d2f-3bac2d70ccb0.png)
+![image](https://user-images.githubusercontent.com/70502759/144750838-d795c34f-8590-4de3-9fba-ee4ed620d2e5.png)
+![image](https://user-images.githubusercontent.com/70502759/144750844-e68b89d1-9776-47a6-be81-9efa55111ca7.png)
+![image](https://user-images.githubusercontent.com/70502759/144750854-d32b9b2e-2369-4fce-9608-505738652bc5.png)
+![image](https://user-images.githubusercontent.com/70502759/144750856-ab330c0a-94f7-4efc-9bc1-dcd79ef1de47.png)
+![image](https://user-images.githubusercontent.com/70502759/144750861-4cda47d5-7829-436b-bee4-7d8a0f277627.png)
+![image](https://user-images.githubusercontent.com/70502759/144750868-bf58d25f-16b3-43af-ba3d-ef7e106efc1b.png)
+![image](https://user-images.githubusercontent.com/70502759/144750873-23fd16bd-9ae7-4737-8040-752754615c00.png)
+![image](https://user-images.githubusercontent.com/70502759/144750874-54e896fc-4195-4f37-8661-7b2b272c25d1.png)
+![image](https://user-images.githubusercontent.com/70502759/144750878-a904a374-4d38-43a6-8264-a9d6124316a7.png)
+![image](https://user-images.githubusercontent.com/70502759/144750884-1191ccd3-0d26-41dd-b922-8ddcd4931314.png)
+![image](https://user-images.githubusercontent.com/70502759/144750895-13b1c01d-a895-4fca-a15d-537f23c5cf28.png)
+![image](https://user-images.githubusercontent.com/70502759/144750899-e3026fb8-ccac-4dc5-968a-5aebaf000faf.png)
+![image](https://user-images.githubusercontent.com/70502759/144750908-3517ba1c-bbd4-4997-a0e7-0147616f8766.png)
+![image](https://user-images.githubusercontent.com/70502759/144750911-97347a52-7d53-46db-9abe-820c7a7aa576.png)
+![image](https://user-images.githubusercontent.com/70502759/144750927-d33bc7e4-c331-4d79-81d2-1ca0105e8a47.png)
+![image](https://user-images.githubusercontent.com/70502759/144750931-47408f19-c785-4d77-92ba-aa0228a97c59.png)
+![image](https://user-images.githubusercontent.com/70502759/144750939-8e0c9c8a-2918-406e-ae6c-dd80f689362b.png)
+![image](https://user-images.githubusercontent.com/70502759/144750944-f9994bd4-443f-4498-bcd8-f86b21a26be6.png)
+![image](https://user-images.githubusercontent.com/70502759/144750950-66065d8a-1962-45cf-a708-e814093eeab1.png)
 
-![image](https://user-images.githubusercontent.com/70502759/143198134-1f9588a6-16e8-4b2e-bed8-46f2a9d3116b.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143198221-60eb79c1-3734-4d5b-aca9-980714ab28fb.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143198248-e1f07ffd-7b9b-48da-8cff-597d939d0066.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143198348-173c20bd-de65-45ad-8260-ad287b71111d.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143198411-2f1ecfe7-901f-4bab-970a-f48ee369699a.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143198457-397b698f-e64d-45d1-b189-6fb4e866ddb2.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143198485-6152c2d4-49d4-472b-b385-210e34738281.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143198548-d069b37e-281e-47a6-9492-d9f0a5c74864.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143198650-83a7193c-453b-4ac6-baf8-f673027ee81d.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143198939-3ed132b0-0fd2-4ca0-a6db-df5768f6b217.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199037-5ca5055c-6398-42ac-a6a0-b45102e6785a.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199093-7b4e275c-97dd-4f3f-9476-5e8c7de8075d.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199133-bffd7b83-b886-4fc9-a86b-275fce750ebb.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199164-a8782f8e-0b09-4458-a97c-d014b44a0ecc.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199194-7491a2d4-9538-497f-910f-7a4c916b06ef.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199243-1745a5dc-00a3-47b0-b705-25f86d8b0664.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199314-085aeacb-c7ad-4af7-8719-4faa31f43c9b.png)
-  
-![image](https://user-images.githubusercontent.com/70502759/143199449-915f805e-53b9-4999-a29c-3a6a875d70c9.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199489-529b87c2-4768-4132-a408-3518fcacba21.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199542-9736a31f-9dc6-4ae3-9834-126bd99ed008.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199568-9588ac44-972a-4276-9cd6-02ee9cb6364b.png)
-
-![image](https://user-images.githubusercontent.com/70502759/143199589-9f7a5246-cb84-471d-8f8e-8cea1b8be563.png)
 
 
  Training logs
