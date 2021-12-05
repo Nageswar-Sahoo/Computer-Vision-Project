@@ -128,6 +128,7 @@ Misclassified images were generated and for each misclassified image a gradcam i
 ![image](https://user-images.githubusercontent.com/70502759/143199589-9f7a5246-cb84-471d-8f8e-8cea1b8be563.png)
 
 
+ Training logs
 
 Project template repo link : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/template
 
