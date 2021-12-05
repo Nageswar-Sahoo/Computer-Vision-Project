@@ -54,10 +54,10 @@ Custom Resnet Model Overview :
     Trainable params: 6,573,130
     Non-trainable params: 0
 
-   Input size (MB): 0.01
-   Forward/backward pass size (MB): 7.07
-   Params size (MB): 25.07
-   Estimated Total Size (MB): 32.15
+    Input size (MB): 0.01
+    Forward/backward pass size (MB): 7.07
+    Params size (MB): 25.07
+    Estimated Total Size (MB): 32.15
 
 Best LR Finder test for 24 Epoch : 
 
