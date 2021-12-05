@@ -69,8 +69,11 @@ While training with this max_lr with OneCycleLR , google colab is crashing and h
 
    
 Result
+
 The model was trained for 24 epochs -
+
 Highest Training Accuracy achieved - 82.86%
+
 Highest Test Accuracy achieved - 80.63 
 
 
