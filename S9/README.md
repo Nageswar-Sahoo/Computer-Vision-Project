@@ -71,6 +71,7 @@ Best LR Finder test for 24 Epoch :
       lr_finder.reset()
 
 ![image](https://user-images.githubusercontent.com/70502759/144747307-0c010306-d295-4f32-80db-972b0720817b.png)
+
 LR suggestion: steepest gradient
 Suggested LR: 0.74 (7.41E-01)
 
