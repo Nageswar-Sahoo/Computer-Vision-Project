@@ -1,12 +1,12 @@
 {
-    "name": "CIFR10",
+    "name": "TinyImageNet",
     "trainer": {
-        "epochs": 24,
+        "epochs": 50,
         "save_dir": "saved/",
         "save_period": 1,
         "verbosity": 2,
         "monitor": "min val_loss",
-        "early_stop": 40,
+        "early_stop": 50,
         "tensorboard": true
     }
 }

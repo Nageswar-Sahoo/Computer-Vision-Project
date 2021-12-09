@@ -56,8 +56,7 @@ def get_splited_data():
     test_data=np.concatenate((train_data_20 , test_data))
     test_labels=np.concatenate((train_labels_20 , test_labels))
 
-    print("train data shape: ", train_data.shape)
-    print("train label shape: ", train_labels.shape)
+
     print("test data shape: ", test_data.shape)
     print("test_labels.shape: ", test_labels.shape)
     print( "train data shape: ",  train_data_u.shape )

@@ -10,7 +10,6 @@ import numpy as np
 import torch
 import model.customresnet as module_resnet
 import utils
-
 SEED = 123
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
@@ -18,8 +17,7 @@ torch.backends.cudnn.benchmark = False
 np.random.seed(SEED)
 import torch
 import data_loader.data_loaders as data_loaders
-import torchvision.models as models
-import torch.nn as nn
+
 
 
 ##Reference Template used for the project : https://github.com/victoresque/pytorch-template
@@ -34,21 +32,11 @@ def main():
     train_data_u, train_labels_u, test_data, test_labels = get_splited_data()
     train_labels_u=train_labels_u.astype(float)
     test_labels=test_labels.astype(float)
-
-
-
-
     data_loader = data_loaders.get_train_data_loader(train_data_u, train_labels_u, 64)
-
     valid_data_loader = data_loaders.get_test_data_loader(test_data, test_labels, 64)
-
     # build model architecture, then print to console
     model = module_resnet.CustomResnet()
-
-
-
     logger.info(model)
-
     # prepare for (multi-device) GPU training
     n_gpu = 1
     device, device_ids = prepare_device(n_gpu)
