@@ -50,13 +50,11 @@ class Trainer(BaseTrainer):
         processed = 0
         for batch_idx, (data, target) in enumerate(self.data_loader):
             data, target = data.to(self.device), target.to(self.device)
-            print("Inside train")
-            print(data.shape)
-            print(target.shape)
 
             self.optimizer.zero_grad()
             output = self.model(data)
-            print(output.shape)
+            #output = output.argmax(dim=1, keepdim=True)
+            target = target.argmax(dim=1, keepdim=True).squeeze(1)
             loss = self.criterion(output, target)
 
             loss.backward()

@@ -25,7 +25,7 @@ class ResidualBlock(nn.Module):
 
 # ResNet
 class ResNet(nn.Module):
-    def __init__(self, residualblock, num_classes=10):
+    def __init__(self, residualblock, num_classes=200):
         super(ResNet, self).__init__()
         self.preplayer = nn.Sequential(
             nn.Conv2d(in_channels=3, out_channels=64, kernel_size=(3, 3), stride=1, padding=1, bias=False),
