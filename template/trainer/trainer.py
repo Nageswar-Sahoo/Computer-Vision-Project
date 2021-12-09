@@ -50,11 +50,15 @@ class Trainer(BaseTrainer):
         processed = 0
         for batch_idx, (data, target) in enumerate(self.data_loader):
             data, target = data.to(self.device), target.to(self.device)
-
+            print("Inside the train ")
+            print(data.shape)
+            print(target.shape)
             self.optimizer.zero_grad()
             output = self.model(data)
+            print(output.shape)
             #output = output.argmax(dim=1, keepdim=True)
             target = target.argmax(dim=1, keepdim=True).squeeze(1)
+            print(target.shape)
             loss = self.criterion(output, target)
 
             loss.backward()
@@ -110,6 +114,11 @@ class Trainer(BaseTrainer):
         with torch.no_grad():
             for batch_idx, (data, target) in enumerate(self.valid_data_loader):
                 data, target = data.to(self.device), target.to(self.device)
+
+                print("Inside the validation ")
+                print(data.shape)
+                print(target)
+                target = target.argmax(dim=1, keepdim=True).squeeze(1)
 
                 output = self.model(data)
                 loss = self.criterion(output, target)
