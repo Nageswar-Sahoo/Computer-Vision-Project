@@ -1,9 +1,5 @@
 import torch
 import torch.nn as nn
-
-
-import torch
-import torch.nn as nn
 import torch.nn.functional as F
 
 
@@ -67,7 +63,7 @@ class Bottleneck(nn.Module):
 
 
 class ResNet(nn.Module):
-    def __init__(self, block, num_blocks, num_classes=10):
+    def __init__(self, block, num_blocks, num_classes=200):
         super(ResNet, self).__init__()
         self.in_planes = 64
 
@@ -96,6 +92,8 @@ class ResNet(nn.Module):
         out = self.layer4(out)
         out = F.avg_pool2d(out, 4)
         out = out.view(out.size(0), -1)
+        print("Inside forward")
+        print(out.shape)
         out = self.linear(out)
         return out
 

@@ -17,6 +17,8 @@ torch.backends.cudnn.benchmark = False
 np.random.seed(SEED)
 import torch
 import data_loader.data_loaders as data_loaders
+import torchvision.models as models
+import torch.nn as nn
 
 
 
@@ -25,18 +27,32 @@ import data_loader.data_loaders as data_loaders
 # https://jovian.ai/aakashns/05b-cifar10-resnet
 
 def main():
-    # added logger to track change
     logger = logging.getLogger("trian")
     # Read the config.json
     config = ConfigParser.from_args()
     train_data_u, train_labels_u, test_data, test_labels = get_splited_data()
     train_labels_u=train_labels_u.astype(float)
     test_labels=test_labels.astype(float)
+
+
+
+
     data_loader = data_loaders.get_train_data_loader(train_data_u, train_labels_u, 64)
+
     valid_data_loader = data_loaders.get_test_data_loader(test_data, test_labels, 64)
+
     # build model architecture, then print to console
     model = module_resnet.CustomResnet()
+    #Load Resnet18
+    model = models.resnet18(True)
+    #Finetune Final few layers to adjust for tiny imagenet input
+    model.avgpool = nn.AdaptiveAvgPool2d(1)
+    model.fc.out_features = 200
+
+
+
     logger.info(model)
+
     # prepare for (multi-device) GPU training
     n_gpu = 1
     device, device_ids = prepare_device(n_gpu)
@@ -62,12 +78,9 @@ def main():
                       valid_data_loader=valid_data_loader,
                       lr_scheduler=scheduler)
 
-    trainer.train()
-    utils.showandcam_missclassifiedimage(trainer)
-    utils.showaccuracy_and_loss_curve(trainer)
-
     return trainer
 
 
 if __name__ == '__main__':
     trainer = main()
+    trainer.train()
