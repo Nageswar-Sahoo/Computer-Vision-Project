@@ -3202,7 +3202,6 @@
 ./data/customdata/images/1-best-hi-vis-hard-hat-lift-min.jpg
 ./data/customdata/images/1050418-1.jpg
 ./data/customdata/images/12_m_boots_520x650.jpg
-./data/customdata/images/1608721339_breathe-easy-karbon-face-mask-2.jpg
 ./data/customdata/images/2021-1104-mtnstalkerpro-feature-desktop.jpg
 ./data/customdata/images/214109901_g5.jpg
 ./data/customdata/images/3d03b888bca2460a278c7f895aa22bb5.jpg
