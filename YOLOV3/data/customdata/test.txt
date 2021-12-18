@@ -316,10 +316,3 @@
 ./data/customdata/images/SImage_71.jpg
 ./data/customdata/images/SImage_83.jpg
 ./data/customdata/images/SImage_95.jpg
-./data/customdata/images/48-73-2005_B_600px.jpg
-./data/customdata/images/asian-young-man-blue-t-shirt-top-medical-mask-to-protect-covid-isolated-white-background-concept-174214429.jpg
-./data/customdata/images/depositphotos_42438839-stock-photo-man-worker-in-safety-vest.jpg
-./data/customdata/images/gettyimages-175430912-612x612.jpg
-./data/customdata/images/india-circus-green-garbh-rashmi-cotton-mask-53121800sd00391-1.jpg
-./data/customdata/images/man-wearing-classic-male-boots-260nw-1213695847.jpg
-./data/customdata/images/poll2-1.jpg
