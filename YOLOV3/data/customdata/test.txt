@@ -323,5 +323,3 @@
 ./data/customdata/images/india-circus-green-garbh-rashmi-cotton-mask-53121800sd00391-1.jpg
 ./data/customdata/images/man-wearing-classic-male-boots-260nw-1213695847.jpg
 ./data/customdata/images/poll2-1.jpg
-./data/customdata/images/safety reflective vest.jpg
-
