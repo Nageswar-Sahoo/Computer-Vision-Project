@@ -3264,8 +3264,6 @@
 ./data/customdata/images/mens-boots-black-combat-shoes-260nw-1920418622.jpg
 ./data/customdata/images/net-safety-with-with-broad-visibiilty-stripes_1.jpg
 ./data/customdata/images/ODL902_LARGE.jpg
-./data/customdata/images/pexels-photo-1144834.jpg
-./data/customdata/images/pexels-photo-1485166.jpg
 ./data/customdata/images/portrait-beautiful-smiling-on-camera-260nw-1902078406.jpg
 ./data/customdata/images/portrait-smiling-worker-reflective-vest-260nw-192316871.jpg
 ./data/customdata/images/PPE-100_1.jpg
