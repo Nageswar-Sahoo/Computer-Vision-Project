@@ -2314,7 +2314,6 @@
 ./data/customdata/images/images9.jpg
 ./data/customdata/images/jennifer-lopez-white-sweatpants-boots-tank-2.jpg
 ./data/customdata/images/LKP13312028resized20cropped229.jpg
-./data/customdata/images/man-wearing-face-protection-mask-yellow-hardhat-and-orange-reflective-vest-lean-on-a-delivery-cart-and-showing-thumb-up-full-length-studio-shot-isol-2BEP9B1.jpg
 ./data/customdata/images/man-worker-wear-face-mask-safety-vest-yellow-helmet-preparing-product-input-box-shipment-warehouse-factory_34755-681.jpg
 ./data/customdata/images/optimized_large_thumb_39914.jpg
 ./data/customdata/images/sj_solar_panels_2016_doi_photo_th.jpg
