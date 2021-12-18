@@ -3216,7 +3216,6 @@
 ./data/customdata/images/800px_COLOURBOX2743508.jpg
 ./data/customdata/images/81pznG1AtrL._AC_UL1500_.jpg
 ./data/customdata/images/b23587f1e3b87e780205a8b94b9d30a19c.jpg
-./data/customdata/images/bates-tactical-sport-2-tall.jpg
 ./data/customdata/images/bearded-man-hardhat-goggles-asking-260nw-1921386734.jpg
 ./data/customdata/images/beautiful-construction-worker-girl-buttoning-her-protection-vest-before-M53KGD.jpg
 ./data/customdata/images/bg3_2x (1).jpg
