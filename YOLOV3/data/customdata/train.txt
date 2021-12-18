@@ -2260,7 +2260,6 @@
 ./data/customdata/images/9f7bb8e09e73b22d87b8b1a33782af69 - Copy.jpg
 ./data/customdata/images/a-worker-wears-a-safety-helmet-on-a-construction-site-in-bangalore-B8AJ7W.jpg
 ./data/customdata/images/a-worker-wears-a-safety-helmet-on-a-construction-site-in-bangalore-B8AJD3.jpg
-./data/customdata/images/african-black-warehouse-worker-with-face-mask-checking-goods-use-digital-tablet-barcode-scanner-she-wear-face-mask-prevent-from-covid-19-after-factory-reopen_63253-8364.jpg
 ./data/customdata/images/african-businesspeople-wearing-hard-hats-AMRFYN.jpg
 ./data/customdata/images/architects-wearing-hardhats-gesturing-thumbsup-portrait-multiethnic-against-white-background-53148193.jpg
 ./data/customdata/images/asian-architect-stock-picture-3143023.jpg
