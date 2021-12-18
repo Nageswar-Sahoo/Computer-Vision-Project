@@ -3277,7 +3277,6 @@
 ./data/customdata/images/smartvestsha.jpg
 ./data/customdata/images/surgical_mask_still_life-1296x728-header2.jpg
 ./data/customdata/images/survey-says-90-indians-aware-but-only-44-wearing-a-mask-discomfort-key-reason-for-non-compliance.jpg
-./data/customdata/images/tmp.jpg
 ./data/customdata/images/VisualsStock_AK32687.jpg
 ./data/customdata/images/white-plastic-safety-helmet-isolated-260nw-1905566200.jpg
 ./data/customdata/images/winter-boots-3867776_960_720.jpg
