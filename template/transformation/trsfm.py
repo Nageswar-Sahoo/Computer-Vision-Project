@@ -7,10 +7,10 @@ def trsfm(training):
         return A.Compose(
             [
 
-                #A.Sequential([A.PadIfNeeded(40, 40, always_apply=True), A.RandomCrop(32, 32,always_apply=True)]),
-               # A.HorizontalFlip(),
-               # A.RandomRotate90(),
-               # A.Cutout(num_holes=8, max_h_size=8, max_w_size=8, fill_value=0, always_apply=False),
+                A.Sequential([A.PadIfNeeded(40, 40, always_apply=True), A.RandomCrop(32, 32,always_apply=True)]),
+                A.HorizontalFlip(),
+                A.RandomRotate90(),
+                A.Cutout(num_holes=8, max_h_size=8, max_w_size=8, fill_value=0, always_apply=False),
                 A.Normalize(mean=(0.4802, 0.4481, 0.3975), std=(0.2302, 0.2265, 0.2262)),
                 ToTensorV2(),
             ]
