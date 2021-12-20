@@ -61,10 +61,6 @@ class Trainer(BaseTrainer):
             nn.utils.clip_grad_value_(self.model.parameters(), .1)
 
             self.optimizer.step()
-            # Super convergence changes the learning rate
-            if self.lr_scheduler is not None:
-                self.lr_scheduler.step()
-
             self.writer.set_step((epoch - 1) * self.len_epoch + batch_idx)
             self.train_metrics.update('loss', loss.item())
             self.trainloss.append(loss.item())
@@ -74,9 +70,8 @@ class Trainer(BaseTrainer):
                 self.trainaccuracy.append(met(output, target))
             self.lrused.append(self.lr_scheduler.get_last_lr()[-1])
             if batch_idx % self.log_step == 0:
-                self.logger.debug('Train Epoch: {} last_lr_used  {:.6f}  {} Loss: {:.6f}'.format(
+                self.logger.debug('Train Epoch: {}  {} Loss: {:.6f}'.format(
                     epoch,
-                    self.lr_scheduler.get_last_lr()[-1],
                     self._progress(batch_idx),
                     loss.item()))
                 self.writer.add_image('input', make_grid(data.cpu(), nrow=8, normalize=True))
@@ -90,8 +85,8 @@ class Trainer(BaseTrainer):
             log.update(**{'val_' + k: v for k, v in val_log.items()})
 
         # When No one cycle used
-        # if self.lr_scheduler is not None:
-        #     self.lr_scheduler.step()
+        if self.lr_scheduler is not None:
+             self.lr_scheduler.step()
         return log
 
     def _valid_epoch(self, epoch):
