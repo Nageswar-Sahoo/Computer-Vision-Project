@@ -82,11 +82,11 @@ Mask
 
 
 ![41b6oNz1h6L](https://user-images.githubusercontent.com/70502759/146812374-9ca60578-6148-450a-b5ba-92f86d6faa05.jpg)
-![61FakD2Mg2L _SL1280_](https://user-images.githubusercontent.com/70502759/146812393-8488da15-0145-4004-9e94-b9b033d8e4fa.jpg)
-![1050418-1](https://user-images.githubusercontent.com/70502759/146812412-c52c1503-08a1-4093-bfa5-a026d033fd45.jpg)
 ![b23587f1e3b87e780205a8b94b9d30a19c](https://user-images.githubusercontent.com/70502759/146812443-0b92ca71-0f9f-43bd-ae0d-9714ce5b15ce.jpg)
 ![survey-says-90-indians-aware-but-only-44-wearing-a-mask-discomfort-key-reason-for-non-compliance](https://user-images.githubusercontent.com/70502759/146812506-26d7f2b2-84be-4f09-a547-fdd4e4c9ef02.jpg)
 ![xU94NDWTKt7HfSZHdeY3Rn-1200-80](https://user-images.githubusercontent.com/70502759/146812524-3265b186-7461-4bd8-bf17-ab5059a8b1d8.jpg)
+![s75-jir-0335-eye_1](https://user-images.githubusercontent.com/70502759/146814781-14e09e05-c0ad-41ef-ace3-bf6ba4c07f34.jpg)
+![PPE-100_1](https://user-images.githubusercontent.com/70502759/146814805-1f64c3e6-de97-4069-94c1-34effdde3c3f.jpg)
 
 
 
