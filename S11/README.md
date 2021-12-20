@@ -119,13 +119,16 @@ Boot
 ![mens-boots-black-combat-shoes-260nw-1920418622](https://user-images.githubusercontent.com/70502759/146812048-94b944f5-1c86-48af-9c8b-f05d2f564fd9.jpg)
 
 
+Annotated Video by YOLO
+
+https://youtu.be/V058NjF4usA
+
+https://youtu.be/A5RssWTyJn4
 
 
 OpenCV GitHub implementation : 
 
 https://pysource.com/2019/06/27/yolo-object-detection-using-opencv-with-python/
 
-Annotated image by YOLO
-Annotated Video by YOLO
 
 
