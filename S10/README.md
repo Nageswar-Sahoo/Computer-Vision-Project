@@ -17,6 +17,8 @@ Calculate the Anchor Boxes for k = 3, 4, 5, 6 and draw them.
 
 ## Analysis
 
+The anchor boxes or templates are computed using K-means clustering with intersection over union (IOU) as the distance measure. The anchors thus computed do not ignore smaller boxes, and ensure that the resulting anchors ensure high IOU between ground truth boxes.
+
 The coco data set has set of image information like image size (Height and Width), labels(Class - ID) and bonding box(Diagonal co-ordinates). 
 
 There are 79 classes . 
