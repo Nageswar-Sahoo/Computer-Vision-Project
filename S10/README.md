@@ -1,4 +1,44 @@
-# Session - 10 Assignment -B
+# Assignment - 10 
+
+Part 1
+
+Requirement
+Download this TINY IMAGENET dataset.
+
+Train ResNet18 on this dataset (70/30 split) for 50 Epochs. Target 50%+ Validation Accuracy.
+
+Approach
+There are 3 main parts to this exercise.
+
+Part -1 Preparing dataset with  70/30 split ratio
+
+Part -2 Updating Resnet18 model to fit the new dataset and 200 classes
+
+Data Overview
+
+![image](https://user-images.githubusercontent.com/70502759/146711043-e37e632f-8252-4666-a9e6-37ae8812d8f6.png)
+
+Result
+
+The model was trained for 24 epochs -
+
+Highest Training Accuracy achieved - 92.13%
+
+Highest Test Accuracy achieved - 92.01%
+
+![image](https://user-images.githubusercontent.com/70502759/144750462-70a63b99-6cb5-42b0-9f3b-852f2a923967.png)
+
+Misclassified and GradCam Images Gallery
+
+Misclassified images were generated and for each misclassified image a gradcam image was generated for the misclassified class the model predicted.
+
+
+![image](https://user-images.githubusercontent.com/70502759/144750833-5887da41-3d00-4eaa-8d2f-3bac2d70ccb0.png)
+
+Training logs
+
+Project template repo link : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/template
+
 
 
 
