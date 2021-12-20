@@ -19,7 +19,6 @@ Requirement : OpenCV Yolo
 ![image](https://user-images.githubusercontent.com/70502759/146763758-d7822744-81d3-49e6-8a36-f988522f559b.png)
 ![image](https://user-images.githubusercontent.com/70502759/146763799-b090a263-2c9d-4ddf-9480-b5e4bd509250.png)
 ![image](https://user-images.githubusercontent.com/70502759/146763844-cd398b2b-ba2a-4a29-a7a1-3355de260e0d.png)
-![image](https://user-images.githubusercontent.com/70502759/146763892-b6267b99-1844-4cae-bec7-f5fd78248e0d.png)
 
 
 OpenCV GitHub implementation : 
