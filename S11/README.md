@@ -60,7 +60,11 @@ Requirement : Training Custom Dataset on Colab for YoloV3
 
 Annotated image for custom image collected  :
 
+
+
 Vest
+
+
 
 ![beautiful-construction-worker-girl-buttoning-her-protection-vest-before-M53KGD](https://user-images.githubusercontent.com/70502759/146811155-dd45f831-a575-4ce0-92ec-f0d6b5c717a4.jpg)
 ![confident-construction-worker-white-helmet-yellow-safety-vest-standing-hands-crossed-over-blue-background-155708353](https://user-images.githubusercontent.com/70502759/146811179-5402cb25-160b-40bc-821c-738e3ec7d1bd.jpg)
@@ -71,18 +75,25 @@ Vest
 ![istockphoto-498553469-612x612](https://user-images.githubusercontent.com/70502759/146811357-6d05b940-157a-4c74-b893-1f70547bf0e4.jpg)
 ![H4bc752a5cd5c4c70845b47968e912b9fB](https://user-images.githubusercontent.com/70502759/146811319-7e31b5c8-4d30-42e9-8900-253e59b40635.jpg)
 
+
+
 Mask 
+
+
 
 ![41b6oNz1h6L](https://user-images.githubusercontent.com/70502759/146812374-9ca60578-6148-450a-b5ba-92f86d6faa05.jpg)
 ![61FakD2Mg2L _SL1280_](https://user-images.githubusercontent.com/70502759/146812393-8488da15-0145-4004-9e94-b9b033d8e4fa.jpg)
 ![1050418-1](https://user-images.githubusercontent.com/70502759/146812412-c52c1503-08a1-4093-bfa5-a026d033fd45.jpg)
 ![b23587f1e3b87e780205a8b94b9d30a19c](https://user-images.githubusercontent.com/70502759/146812443-0b92ca71-0f9f-43bd-ae0d-9714ce5b15ce.jpg)
-![d31778_01](https://user-images.githubusercontent.com/70502759/146812485-19962aa0-1ff4-4d3b-955d-d062b21be5d7.jpg)
 ![survey-says-90-indians-aware-but-only-44-wearing-a-mask-discomfort-key-reason-for-non-compliance](https://user-images.githubusercontent.com/70502759/146812506-26d7f2b2-84be-4f09-a547-fdd4e4c9ef02.jpg)
 ![xU94NDWTKt7HfSZHdeY3Rn-1200-80](https://user-images.githubusercontent.com/70502759/146812524-3265b186-7461-4bd8-bf17-ab5059a8b1d8.jpg)
 
 
+
+
 HardHat
+
+
 
 ![3d03b888bca2460a278c7f895aa22bb5](https://user-images.githubusercontent.com/70502759/146812111-555632d4-83d7-47e1-a705-eb1ad07ccf1c.jpg)
 ![60901_app2](https://user-images.githubusercontent.com/70502759/146812139-1560b7c9-4456-4c03-8ccb-3c3bc155c406.jpg)
@@ -92,7 +103,11 @@ HardHat
 ![white-plastic-safety-helmet-isolated-260nw-1905566200](https://user-images.githubusercontent.com/70502759/146812266-be9a239e-a46d-410b-bc0d-ff1e6750b9ea.jpg)
 
 
+
+
 Boot 
+
+
 
 ![12_m_boots_520x650](https://user-images.githubusercontent.com/70502759/146811864-ec511051-0a89-4144-84bf-050b18f04d7b.jpg)
 ![5400_12_0 20210906000243](https://user-images.githubusercontent.com/70502759/146811903-3eafabff-490d-4f94-a2e8-3a61f5cf8d14.jpg)
