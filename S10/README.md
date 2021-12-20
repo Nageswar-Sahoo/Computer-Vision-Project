@@ -18,9 +18,16 @@ Data Overview
 
 ![image](https://user-images.githubusercontent.com/70502759/146711043-e37e632f-8252-4666-a9e6-37ae8812d8f6.png)
 
+70/30 split ratio
+
+test data shape:  (30000, 64, 64, 3)
+test_labels.shape:  (30000, 200)
+train data shape:  (80000, 64, 64, 3)
+train label shape:  (80000, 200)
+
 Result
 
-The model was trained for 24 epochs -
+The model was trained for 50 epochs -
 
 Highest Training Accuracy achieved - 92.13%
 
