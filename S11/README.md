@@ -66,9 +66,6 @@ Vest
 ![factory-worker-wearing-uniform-hardhat-operating-industrial-machine-with-push-button-joystick-production-hall_342744-214](https://user-images.githubusercontent.com/70502759/146811273-89fef0ef-501e-456d-9b71-ed384463e034.jpg)
 ![focused_173619994-stock-photo-construction-worker-construction-site-wearing](https://user-images.githubusercontent.com/70502759/146811302-d325c15b-d5d6-4dc0-93dd-7ec8526b4350.jpg)
 ![istockphoto-498553469-612x612](https://user-images.githubusercontent.com/70502759/146811357-6d05b940-157a-4c74-b893-1f70547bf0e4.jpg)
-
-
-
 ![H4bc752a5cd5c4c70845b47968e912b9fB](https://user-images.githubusercontent.com/70502759/146811319-7e31b5c8-4d30-42e9-8900-253e59b40635.jpg)
 
 
