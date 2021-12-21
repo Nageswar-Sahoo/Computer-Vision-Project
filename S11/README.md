@@ -14,6 +14,9 @@ Requirement : OpenCV Yolo
 
 5 - Upload the annotated image by YOLO. 
 
+Annotated image by YOLO
+
+
 
 ![image](https://user-images.githubusercontent.com/70502759/146763671-73ca19e0-1627-4cea-8898-53c6c096e358.png)
 ![image](https://user-images.githubusercontent.com/70502759/146763758-d7822744-81d3-49e6-8a36-f988522f559b.png)
@@ -25,7 +28,6 @@ OpenCV GitHub implementation :
 
 https://pysource.com/2019/06/27/yolo-object-detection-using-opencv-with-python/
 
-Annotated image by YOLO
 
 
 Part 2 
