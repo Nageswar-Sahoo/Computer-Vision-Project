@@ -4,15 +4,15 @@ Part 1
 
 Requirement : OpenCV Yolo
 
-1 - Run OpenCV  above code on your laptop or Colab. 
+      1 - Run OpenCV  above code on your laptop or Colab. 
 
-2 - Take an image of yourself, holding another object which is there in COCO data set (search for COCO classes to learn). 
+      2 - Take an image of yourself, holding another object which is there in COCO data set (search for COCO classes to learn). 
 
-3 - Run this image through the code above. 
+      3 - Run this image through the code above. 
 
-4 - Upload the link to GitHub implementation of this
+      4 - Upload the link to GitHub implementation of this
 
-5 - Upload the annotated image by YOLO. 
+      5 - Upload the annotated image by YOLO. 
 
 Annotated image by YOLO
 
