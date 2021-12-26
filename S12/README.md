@@ -42,6 +42,7 @@ Three differentiable modules:
 ![image](https://user-images.githubusercontent.com/70502759/147410614-634698fc-6636-45ab-ba6b-cafed7d0212d.png)
 
 Localisation Net
+----------------
 
 The goal of the localisation network is to spit out the parameters θ of the transformation that’ll be applied to the input feature map. The localisation network can take any form, such as a fully-connected network or a convolutional network, but should include a final regression layer to produce the transformation parameters 𝜃:
 
@@ -53,6 +54,7 @@ The size of 𝜃 can vary depending on the transformation that is parameterized,
 Another way to look at it is that the localisation network learns to store the knowledge of how to transform each training sample in the weights of its layers.
 
 Parameterised Sampling Grid (Grid Generator).
+---------------------------------------------
 
 The grid generator’s job is to output a parametrised sampling grid, which is a set of points where the input map should be sampled to produce the desired transformed output.
 
@@ -60,6 +62,7 @@ The grid generator’s job is to output a parametrised sampling grid, which is a
 
 
 Differentiable Image Sampling (Sampler).
+----------------------------------------
 
 The sampler iterates over the entries of the sampling grid and extracts the corresponding pixel values from the input map using bilinear interpolation.
 
