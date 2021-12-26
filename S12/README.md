@@ -100,7 +100,13 @@ The following image shows the results after the 50 epoch.
 
 
 
-Google Colab file
+Google Colab file : 
+
+Spatial Transformer Network model has cropped and resized most of the images to the center.
+It has rotated many of the images to an orientation that it feels will be helpful. 
+Although some of the orientations are not centered. 
+We can see that after each epoch, the neural network is resizing, cropping, and centering the images a bit better.
+
 
 
 
