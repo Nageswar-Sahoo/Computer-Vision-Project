@@ -22,6 +22,17 @@ Spatial Transformer
 
 ![image](https://user-images.githubusercontent.com/70502759/147410552-1cea4f3e-070e-4904-a90f-e4f68418ef42.png)
 
+Spatial Transformer Architecture
+--------------------------------
+Three differentiable modules:
+ Localisation network.
+ Parameterised Sampling Grid (Grid Generator).
+ Differentiable Image Sampling (Sampler).
+
+![image](https://user-images.githubusercontent.com/70502759/147410614-634698fc-6636-45ab-ba6b-cafed7d0212d.png)
+
+
+
 
 
 
