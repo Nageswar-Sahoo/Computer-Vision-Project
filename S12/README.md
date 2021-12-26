@@ -23,7 +23,7 @@ The Spatial Transformer mechanism addresses the issues above by providing Convol
 
  3 - Allows for end to end trainable models using standard back-propagation.
  
- 4 - Here is the result of using a spatial transformer as the first layer of a fully-connected network trained for distorted MNIST digit classification.
+Here is the result of using a spatial transformer as the first layer of a fully-connected network trained for distorted MNIST digit classification.
 
 ![image](https://user-images.githubusercontent.com/70502759/147410552-1cea4f3e-070e-4904-a90f-e4f68418ef42.png)
 
