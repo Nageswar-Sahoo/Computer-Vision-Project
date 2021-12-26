@@ -21,8 +21,12 @@ The Spatial Transformer mechanism addresses the issues above by providing Convol
  Transformation matrix is capable of including translation, rotation, scaling, cropping and non-rigid deformations.
 
  Allows for end to end trainable models using standard back-propagation.
+ 
+ Here is the result of using a spatial transformer as the first layer of a fully-connected network trained for distorted MNIST digit classification.
 
 ![image](https://user-images.githubusercontent.com/70502759/147410552-1cea4f3e-070e-4904-a90f-e4f68418ef42.png)
+
+Notice how it has learned to do exactly what we wanted our theoretical “robust” image classification model to do: by zooming in and eliminating background clutter, it has “standardized” the input to facilitate classification. If you want to view a live animation of the transformer in action
 
 Spatial Transformer Architecture
 --------------------------------
