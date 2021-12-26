@@ -13,9 +13,12 @@ SPATIAL TRANSFORMER NETWORKS
 ----------------------------
 
 Spatial Transformer
-● A dynamic mechanism that actively spatially transforms an image or feature map by learning appropriate transformation matrix.
-● Transformation matrix is capable of including translation, rotation, scaling, cropping and non-rigid deformations.
-● Allows for end to end trainable models using standard back-propagation.
+
+ A dynamic mechanism that actively spatially transforms an image or feature map by learning appropriate transformation matrix.
+
+ Transformation matrix is capable of including translation, rotation, scaling, cropping and non-rigid deformations.
+
+ Allows for end to end trainable models using standard back-propagation.
 
 ![image](https://user-images.githubusercontent.com/70502759/147410552-1cea4f3e-070e-4904-a90f-e4f68418ef42.png)
 
