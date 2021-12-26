@@ -66,6 +66,17 @@ The sampler iterates over the entries of the sampling grid and extracts the corr
 
 Both the grid generator and the sampler are parameter less operations, i.e. they don’t have any trainable parameters. In this regard they are comparable to a max-pooling layer. The brainpower of a spatial transformer module hence comes from the localisation net, which must learn to detect the pose of the input feature map (such as its orientation, scale etc.) in order to produce an appropriate transformation.
 
+Visualizing the Spatial Transformations Done by the STN Model
+
+The following image shows the results after the 5 epoch.
+
+The following image shows the results after the 10 epoch.
+
+The following image shows the results after the 20 epoch.
+
+The following image shows the results after the 40 epoch.
+
+The following image shows the results after the 50 epoch.
 
 Google Colab file
 
