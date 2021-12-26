@@ -70,6 +70,9 @@ Visualizing the Spatial Transformations Done by the STN Model
 
 The following image shows the results after the 5 epoch.
 
+![image](https://user-images.githubusercontent.com/70502759/147414125-1dcab0cd-5b5c-4f1a-a6e1-1bd02d8181f8.png)
+
+
 The following image shows the results after the 10 epoch.
 
 The following image shows the results after the 20 epoch.
@@ -77,6 +80,8 @@ The following image shows the results after the 20 epoch.
 The following image shows the results after the 40 epoch.
 
 The following image shows the results after the 50 epoch.
+
+
 
 Google Colab file
 
