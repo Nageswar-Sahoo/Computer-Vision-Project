@@ -15,13 +15,13 @@ def trsfm(training):
                 A.RandomCrop(height=128, width=128),
                 A.RGBShift(r_shift_limit=15, g_shift_limit=15, b_shift_limit=15, p=0.5),
                 A.RandomBrightnessContrast(p=0.5),
-                A.Normalize(mean=(0.4802, 0.4481, 0.3975), std=(0.2302, 0.2265, 0.2262)),
+                A.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.2010)),
                 ToTensorV2(),
             ]
         )
     else:
         return A.Compose(
-            [A.Normalize(mean=(0.4802, 0.4481, 0.3975), std=(0.2302, 0.2265, 0.2262)),
+            [A.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.2010)),
              ToTensorV2(),
              ]
         )

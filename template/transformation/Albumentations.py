@@ -1,17 +1,12 @@
 from typing import Tuple, Any
-from torch.utils.data import Dataset
+
 import numpy as np
+
 
 from torchvision.datasets import CIFAR10
 
-
-class Albumentations(Dataset):
+class Albumentations(CIFAR10):
     """__init__ and __len__ functions are the same as in TorchvisionDataset"""
-
-    def __init__(self, data, targets, transform):
-        self.data = data
-        self.targets = targets
-        self.transform = transform
 
     def __getitem__(self, index: int) -> Tuple[Any, Any]:
         img, target = self.data[index], self.targets[index]
@@ -20,7 +15,10 @@ class Albumentations(Dataset):
         img = np.array(img)
         if self.transform is not None:
             augmented = self.transform(image=img)
-            img = augmented['image']
+            img=augmented['image']
+
+        if self.target_transform is not None:
+            target = self.target_transform(target)
 
         return img, target
 
