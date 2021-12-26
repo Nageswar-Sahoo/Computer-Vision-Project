@@ -97,6 +97,7 @@ The following image shows the results after the 40 epoch.
 
 The following image shows the results after the 50 epoch.
 --------------------------------------------------------
+![image](https://user-images.githubusercontent.com/70502759/147415073-6803b9cb-b2f9-4dc2-bae4-6e937670ae76.png)
 
 
 
