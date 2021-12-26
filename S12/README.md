@@ -26,13 +26,14 @@ The Spatial Transformer mechanism addresses the issues above by providing Convol
 
 ![image](https://user-images.githubusercontent.com/70502759/147410552-1cea4f3e-070e-4904-a90f-e4f68418ef42.png)
 
-Notice how it has learned to do exactly what we wanted our theoretical “robust” image classification model to do: by zooming in and eliminating background clutter, it has “standardized” the input to facilitate classification. If you want to view a live animation of the transformer in action
-
+Notice how it has learned to do exactly what we wanted our theoretical “robust” image classification model to do: by zooming in and eliminating background clutter, it has “standardized” the input to facilitate classification.
 Spatial Transformer Architecture
 --------------------------------
 Three differentiable modules:
  Localisation network.
+ 
  Parameterised Sampling Grid (Grid Generator).
+ 
  Differentiable Image Sampling (Sampler).
 
 ![image](https://user-images.githubusercontent.com/70502759/147410614-634698fc-6636-45ab-ba6b-cafed7d0212d.png)
