@@ -32,6 +32,7 @@ Notice how it has learned to do exactly what we wanted our theoretical “robust
 Spatial Transformer Architecture
 --------------------------------
 Three differentiable modules:
+
  1 - Localisation network.
  
  2 - Parameterised Sampling Grid (Grid Generator).
@@ -42,15 +43,17 @@ Three differentiable modules:
 
 Localisation Net
 
-The goal of the localisation network is to spit out the parameters θ of the affine transformation that’ll be applied to the input feature map. The localisation network can take any form, such as a fully-connected network or a convolutional network, but should include a final regression layer to produce the transformation parameters 𝜃:
+The goal of the localisation network is to spit out the parameters θ of the transformation that’ll be applied to the input feature map. The localisation network can take any form, such as a fully-connected network or a convolutional network, but should include a final regression layer to produce the transformation parameters 𝜃:
 
 ![image](https://user-images.githubusercontent.com/70502759/147410971-d3777dda-2a47-4d18-901d-95301bffe27e.png)
+
 The size of 𝜃 can vary depending on the transformation that is parameterized, e.g. for an affine transformation 𝜃 is 6-dimensional:
 
 
 Another way to look at it is that the localisation network learns to store the knowledge of how to transform each training sample in the weights of its layers.
 
 Parameterised Sampling Grid (Grid Generator).
+
 The grid generator’s job is to output a parametrised sampling grid, which is a set of points where the input map should be sampled to produce the desired transformed output.
 
 ![Affine](https://user-images.githubusercontent.com/70502759/147411246-a9e3d95e-3b07-4324-ac58-168b8fec61b3.PNG)
