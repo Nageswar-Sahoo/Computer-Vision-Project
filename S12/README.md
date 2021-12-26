@@ -14,6 +14,8 @@ SPATIAL TRANSFORMER NETWORKS
 
 Spatial Transformer
 
+The Spatial Transformer mechanism addresses the issues above by providing Convolutional Neural Networks with explicit spatial transformation capabilities.
+
  A dynamic mechanism that actively spatially transforms an image or feature map by learning appropriate transformation matrix.
 
  Transformation matrix is capable of including translation, rotation, scaling, cropping and non-rigid deformations.
