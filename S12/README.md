@@ -1,67 +1,78 @@
-Assignment 11
+Assignment 12
 
-Part 1 
+Limitations CNN :
+----------------
+When working on a classification task, it is usually desirable that our system be robust to input variations. By this, we mean to say that should an input undergo a certain “transformation” so to speak, our classification model should in theory spit out the same class label as before that transformation.We have following limitation on CNN
 
-Requirement : OpenCV Yolo
+ 1 - Limited spatial invariance.
+ 
+ 2 - Max pooling has small spatial support.
+ 
+ 3 - Only deep layers (towards output) achieve invariance.
+ 
+ 4 - No rotation and scaling invariance.
 
-1 - Run OpenCV  above code on your laptop or Colab. 
+SPATIAL TRANSFORMER NETWORKS 
+----------------------------
 
-2 - Take an image of yourself, holding another object which is there in COCO data set (search for COCO classes to learn). 
+The Spatial Transformer mechanism addresses the issues above by providing Convolutional Neural Networks with explicit spatial transformation capabilities.
 
-3 - Run this image through the code above. 
+ 1 - A dynamic mechanism that actively spatially transforms an image or feature map by learning appropriate transformation matrix.
 
-4 - Upload the link to GitHub implementation of this
+ 2 - Transformation matrix is capable of including translation, rotation, scaling, cropping and non-rigid deformations.
 
-5 - Upload the annotated image by YOLO. 
+ 3 - Allows for end to end trainable models using standard back-propagation.
+ 
+Here is the result of using a spatial transformer as the first layer of a fully-connected network trained for distorted MNIST digit classification.
+
+![image](https://user-images.githubusercontent.com/70502759/147410552-1cea4f3e-070e-4904-a90f-e4f68418ef42.png)
+
+Notice how it has learned to do exactly what we wanted our theoretical “robust” image classification model to do: by zooming in and eliminating background clutter, it has “standardized” the input to facilitate classification.
+
+Spatial Transformer Architecture
+--------------------------------
+Three differentiable modules:
+
+ 1 - Localisation network.
+ 
+ 2 - Parameterised Sampling Grid (Grid Generator).
+ 
+ 3 - Differentiable Image Sampling (Sampler).
+
+![image](https://user-images.githubusercontent.com/70502759/147410614-634698fc-6636-45ab-ba6b-cafed7d0212d.png)
+
+Localisation Net
+
+The goal of the localisation network is to spit out the parameters θ of the transformation that’ll be applied to the input feature map. The localisation network can take any form, such as a fully-connected network or a convolutional network, but should include a final regression layer to produce the transformation parameters 𝜃:
+
+![image](https://user-images.githubusercontent.com/70502759/147410971-d3777dda-2a47-4d18-901d-95301bffe27e.png)
+
+The size of 𝜃 can vary depending on the transformation that is parameterized, e.g. for an affine transformation 𝜃 is 6-dimensional:
 
 
-![image](https://user-images.githubusercontent.com/70502759/146763671-73ca19e0-1627-4cea-8898-53c6c096e358.png)
-![image](https://user-images.githubusercontent.com/70502759/146763758-d7822744-81d3-49e6-8a36-f988522f559b.png)
-![image](https://user-images.githubusercontent.com/70502759/146763799-b090a263-2c9d-4ddf-9480-b5e4bd509250.png)
-![image](https://user-images.githubusercontent.com/70502759/146763844-cd398b2b-ba2a-4a29-a7a1-3355de260e0d.png)
+Another way to look at it is that the localisation network learns to store the knowledge of how to transform each training sample in the weights of its layers.
+
+Parameterised Sampling Grid (Grid Generator).
+
+The grid generator’s job is to output a parametrised sampling grid, which is a set of points where the input map should be sampled to produce the desired transformed output.
+
+![Affine](https://user-images.githubusercontent.com/70502759/147411246-a9e3d95e-3b07-4324-ac58-168b8fec61b3.PNG)
 
 
-OpenCV GitHub implementation : 
+Differentiable Image Sampling (Sampler).
 
-https://pysource.com/2019/06/27/yolo-object-detection-using-opencv-with-python/
-
-Annotated image by YOLO
+The sampler iterates over the entries of the sampling grid and extracts the corresponding pixel values from the input map using bilinear interpolation.
 
 
-Part 2 
+Both the grid generator and the sampler are parameter less operations, i.e. they don’t have any trainable parameters. In this regard they are comparable to a max-pooling layer. The brainpower of a spatial transformer module hence comes from the localisation net, which must learn to detect the pose of the input feature map (such as its orientation, scale etc.) in order to produce an appropriate transformation.
 
-Requirement : Training Custom Dataset on Colab for YoloV3
 
-1 - Refer to this Colab File:  https://colab.research.google.com/drive/1LbKkQf4hbIuiUHunLlvY-cc0d_sNcAgS#scrollTo=ElYu4RG01NVw
+Google Colab file
 
-2 - Refer to this GitHub  https://github.com/theschoolofai/YoloV3
 
-3 - Download dataset from web having class -  hardhat vest mask boots
 
-4 - you must follow exact rules to make sure that you can train the model. Steps are explained in the README.md file on github repo link above.
 
-5 - Once you add your additional 100 images, train the model
 
-6 - Download a very small (~10-30sec) video from youtube which shows your classes. 
 
-7 - Use ffmpeg to extract frames from the video. 
-
-8 - Upload on your drive (alternatively you could be doing all of this on your drive to save upload time)
-
-9 -  Infer on these images using detect.py file. **Modify** detect.py file if your file names do not match the ones mentioned on GitHub. 
-     python detect.py --conf-three 0.3 --output output_folder_name
-     
-10 - Use  ffmpeg  to convert the files in your output folder to video
-
-11 - Upload the video to YouTube. 
-
-12 - Also run the model on 16 images that you have collected (4 for each class)
-
-OpenCV GitHub implementation : 
-
-https://pysource.com/2019/06/27/yolo-object-detection-using-opencv-with-python/
-
-Annotated image by YOLO
-Annotated Video by YOLO
 
 
