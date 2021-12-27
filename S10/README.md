@@ -39,6 +39,38 @@ Highest Test Accuracy achieved - 49
 
 ![image](https://user-images.githubusercontent.com/70502759/147474410-9f3da5b8-9265-450b-9fb4-34f798b5a368.png)
 
+Few Last Training logs 
+----------------------
+
+<utils.util.MetricTracker object at 0x7f212618bd90>
+    epoch          : 47
+    loss           : 0.8187679586172104
+    accuracy       : 77.33625
+    val_loss       : 2.7356374886498522
+    val_accuracy   : 47.70455756929638
+
+<utils.util.MetricTracker object at 0x7f212618bd90>
+    epoch          : 48
+    loss           : 0.7877105013370513
+    accuracy       : 78.11375
+    val_loss       : 2.720578250600331
+    val_accuracy   : 48.51301528073916
+Saving checkpoint: saved/models/TinyImageNet/1227_101435/checkpoint-epoch48.pth ...
+
+<utils.util.MetricTracker object at 0x7f212618bd90>
+    epoch          : 49
+    loss           : 0.7713985350131989
+    accuracy       : 78.49875
+    val_loss       : 2.751128341343357
+    val_accuracy   : 48.165422885572134
+
+<utils.util.MetricTracker object at 0x7f212618bd90>
+    epoch          : 50
+    loss           : 0.758125228881836
+    accuracy       : 78.85
+    val_loss       : 2.8003420392587497
+    val_accuracy   : 47.90000888415068
+Saving checkpoint: saved/models/TinyImageNet/1227_101435/checkpoint-epoch50.pth ...
 
 Project template repo link : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/template
 
@@ -47,6 +79,7 @@ Project template repo link : https://github.com/Nageswar-Sahoo/Computer-Vision-P
 
 
 Part 2
+------
 ## Requirement
 
 Download  COCO object detection dataset's schema text file.
@@ -75,6 +108,7 @@ The data set was loaded as a dataframe in a notebook and the bonding box size (H
 KMeans clustering algorithm was run on X,Y coordinates to find the optimum number of clusters
 
 ![image](https://user-images.githubusercontent.com/70502759/146710015-91a82be8-ab04-4c16-abb8-38408a90b586.png)
+
 
 Then, for cluster values = 3,4,5,6 the centroids were calculated and anchor boxes were generated.
 ### For K=3
