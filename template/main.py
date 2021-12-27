@@ -70,7 +70,7 @@ def main():
                       lr_scheduler=lr_scheduler)
 
     trainer.train()
-    # utils.showandcam_missclassifiedimage(trainer)
+     utils.showandcam_missclassifiedimage(trainer)
     # utils.showaccuracy_and_loss_curve(trainer)
    # utils.showandcam_missclassifiedimage(trainer)
    # utils.showaccuracy_and_loss_curve(trainer)
