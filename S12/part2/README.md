@@ -2,7 +2,7 @@ Assignment 12
 
 VIT Architecture 
 
-![image](https://user-images.githubusercontent.com/70502759/147460284-3d61c101-59ec-491f-90ee-6bf93a1c9b72.png)
+![image](https://user-images.githubusercontent.com/70502759/147465620-b23a7883-5c01-4dfe-80e0-4104d5898a73.png)
 
 
 Block
