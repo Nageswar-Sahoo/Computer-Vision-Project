@@ -42,6 +42,7 @@ Three differentiable modules:
 ![image](https://user-images.githubusercontent.com/70502759/147410614-634698fc-6636-45ab-ba6b-cafed7d0212d.png)
 
 Localisation Net
+----------------
 
 The goal of the localisation network is to spit out the parameters θ of the transformation that’ll be applied to the input feature map. The localisation network can take any form, such as a fully-connected network or a convolutional network, but should include a final regression layer to produce the transformation parameters 𝜃:
 
@@ -53,6 +54,7 @@ The size of 𝜃 can vary depending on the transformation that is parameterized,
 Another way to look at it is that the localisation network learns to store the knowledge of how to transform each training sample in the weights of its layers.
 
 Parameterised Sampling Grid (Grid Generator).
+---------------------------------------------
 
 The grid generator’s job is to output a parametrised sampling grid, which is a set of points where the input map should be sampled to produce the desired transformed output.
 
@@ -60,14 +62,54 @@ The grid generator’s job is to output a parametrised sampling grid, which is a
 
 
 Differentiable Image Sampling (Sampler).
+----------------------------------------
 
 The sampler iterates over the entries of the sampling grid and extracts the corresponding pixel values from the input map using bilinear interpolation.
 
 
 Both the grid generator and the sampler are parameter less operations, i.e. they don’t have any trainable parameters. In this regard they are comparable to a max-pooling layer. The brainpower of a spatial transformer module hence comes from the localisation net, which must learn to detect the pose of the input feature map (such as its orientation, scale etc.) in order to produce an appropriate transformation.
 
+Visualizing the Spatial Transformations Done by the STN Model
+-------------------------------------------------------------
 
-Google Colab file
+The following image shows the results after the 5 epoch.
+--------------------------------------------------------
+
+![image](https://user-images.githubusercontent.com/70502759/147414125-1dcab0cd-5b5c-4f1a-a6e1-1bd02d8181f8.png)
+
+
+The following image shows the results after the 10 epoch.
+---------------------------------------------------------
+
+![image](https://user-images.githubusercontent.com/70502759/147414269-c7e459f3-e0d6-49bd-a56b-0c12ac8a54e2.png)
+
+
+The following image shows the results after the 20 epoch.
+---------------------------------------------------------
+
+![image](https://user-images.githubusercontent.com/70502759/147414441-a36cff58-3174-4e21-a449-c1c0191d407c.png)
+
+
+The following image shows the results after the 40 epoch.
+---------------------------------------------------------
+![image](https://user-images.githubusercontent.com/70502759/147414804-54c5d502-a483-4d23-9bc3-d6ef268e6734.png)
+
+
+The following image shows the results after the 50 epoch.
+--------------------------------------------------------
+![image](https://user-images.githubusercontent.com/70502759/147415073-6803b9cb-b2f9-4dc2-bae4-6e937670ae76.png)
+
+
+Spatial Transformer Network model has cropped and resized most of the images to the center.
+It has rotated many of the images to an orientation that it feels will be helpful. 
+Although some of the orientations are not centered. 
+We can see that after each epoch, the neural network is resizing, cropping, and centering the images a bit better.
+
+Google Colab file : 
+-------------------
+
+https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/S12/Assignment8.ipynb
+
 
 
 
