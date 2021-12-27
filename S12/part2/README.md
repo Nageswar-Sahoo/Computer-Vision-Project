@@ -5,8 +5,6 @@ VIT Architecture
 ![image](https://user-images.githubusercontent.com/70502759/147465620-b23a7883-5c01-4dfe-80e0-4104d5898a73.png)
 
 
-Block
-------
 
 Embeddings
 ----------
@@ -73,6 +71,12 @@ MLP
 ----
 
 Output from the encoder is passed directly into a Feed Forward Neural Network to obtain the classification output.
+
+
+Block
+------
+
+Inside the block layer we are performing task such as Attention , LayerNorm for normalization and classification with MLP layer 
 
 
 
