@@ -24,8 +24,7 @@ Below are the task performed in Embeddings layer .
 5 - Add the cls token which can be used for classification task 
 
 
-MLP
-----
+
 
 Attention
 ---------
@@ -68,6 +67,11 @@ Below are the task performed in Encoder layer .
 2 - Then the resultant respresentation is passed into a LayerNorm for normalization. 
 
 3 - Further, the output is passed into a point-wise feed forward network to obtain an even richer representation.
+
+MLP
+----
+
+Output from the encoder is passed directly into a Feed Forward Neural Network to obtain the classification output.
 
 
 
