@@ -25,14 +25,18 @@ import torch.nn as nn
 
 
 def main():
+
     # added logger to track change
     logger = logging.getLogger("trian")
     # Read the config.json
     config = ConfigParser.from_args()
+    train_data_u, train_labels_u, test_data, test_labels = get_splited_data()
+    train_labels_u = train_labels_u.astype(float)
+    test_labels = test_labels.astype(float)
 
-    data_loader = data_loaders.get_train_data_loader(512)
+    data_loader = data_loaders.get_train_data_loader(train_data_u, train_labels_u, 64)
 
-    valid_data_loader = data_loaders.get_test_data_loader(512)
+    valid_data_loader = data_loaders.get_test_data_loader(test_data, test_labels, 64)
 
     # build model architecture, then print to console
     model = module_stn.STNModel()
@@ -73,5 +77,6 @@ def main():
 
 if __name__ == '__main__':
     trainer = main()
+    trainer.model
     # utils.showandcam_missclassifiedimage(trainer)
 
