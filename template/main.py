@@ -10,7 +10,7 @@ import torch.optim as optim
 import logging
 import numpy as np
 import torch
-import model.stn as module_stn
+import model.model as customresnet
 import utils
 SEED = 123
 torch.manual_seed(SEED)
@@ -19,8 +19,6 @@ torch.backends.cudnn.benchmark = False
 np.random.seed(SEED)
 import torch
 import data_loader.data_loaders as data_loaders
-import torchvision.models as models
-import torch.nn as nn
 
 
 
@@ -39,7 +37,7 @@ def main():
     valid_data_loader = data_loaders.get_test_data_loader(test_data, test_labels, 64)
 
     # build model architecture, then print to console
-    model = module_stn.STNModel()
+    model = customresnet.ResNet18()
 
     logger.info(model)
 

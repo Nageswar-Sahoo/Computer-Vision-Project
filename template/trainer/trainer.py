@@ -53,6 +53,8 @@ class Trainer(BaseTrainer):
 
             self.optimizer.zero_grad()
             output = self.model(data)
+            #output = output.argmax(dim=1, keepdim=True)
+            target = target.argmax(dim=1, keepdim=True).squeeze(1)
             loss = self.criterion(output, target)
 
             loss.backward()
@@ -100,6 +102,8 @@ class Trainer(BaseTrainer):
         with torch.no_grad():
             for batch_idx, (data, target) in enumerate(self.valid_data_loader):
                 data, target = data.to(self.device), target.to(self.device)
+
+                target = target.argmax(dim=1, keepdim=True).squeeze(1)
 
                 output = self.model(data)
                 loss = self.criterion(output, target)
