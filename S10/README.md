@@ -43,38 +43,33 @@ Few Last Training logs
 ----------------------
 
 <utils.util.MetricTracker object at 0x7f212618bd90>
+
     epoch          : 47
     loss           : 0.8187679586172104
     accuracy       : 77.33625
     val_loss       : 2.7356374886498522
     val_accuracy   : 47.70455756929638
 
-<utils.util.MetricTracker object at 0x7f212618bd90>
+
     epoch          : 48
     loss           : 0.7877105013370513
     accuracy       : 78.11375
     val_loss       : 2.720578250600331
     val_accuracy   : 48.51301528073916
-Saving checkpoint: saved/models/TinyImageNet/1227_101435/checkpoint-epoch48.pth ...
 
-<utils.util.MetricTracker object at 0x7f212618bd90>
+
     epoch          : 49
     loss           : 0.7713985350131989
     accuracy       : 78.49875
     val_loss       : 2.751128341343357
     val_accuracy   : 48.165422885572134
 
-<utils.util.MetricTracker object at 0x7f212618bd90>
+
     epoch          : 50
     loss           : 0.758125228881836
     accuracy       : 78.85
     val_loss       : 2.8003420392587497
     val_accuracy   : 47.90000888415068
-Saving checkpoint: saved/models/TinyImageNet/1227_101435/checkpoint-epoch50.pth ...
-
-Project template repo link : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/template
-
-
 
 
 
@@ -158,3 +153,4 @@ Then, for cluster values = 3,4,5,6 the centroids were calculated and anchor boxe
 [ 19, 131]
 ![image](https://user-images.githubusercontent.com/70502759/146710330-5e6adf81-20c3-45ba-afd1-9a1479cb3ce9.png)
 
+Project template repo link : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/template
