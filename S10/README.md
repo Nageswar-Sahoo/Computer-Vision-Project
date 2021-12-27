@@ -30,6 +30,7 @@ train data shape:  (80000, 64, 64, 3)
 train label shape:  (80000, 200)
 
 Result
+------
 
 The model was trained for 50 epochs -
 
@@ -42,34 +43,62 @@ Highest Test Accuracy achieved - 49
 Few Last Training logs 
 ----------------------
 
-<utils.util.MetricTracker object at 0x7f212618bd90>
+    epoch          : 43
+    loss           : 1.1153605556964874
+    accuracy       : 70.62625
+    val_loss       : 2.397838760794861
+    val_accuracy   : 49.702380952380956
+
+
+    epoch          : 44
+    loss           : 1.104582673740387
+    accuracy       : 70.6675
+    val_loss       : 2.4913750063381723
+    val_accuracy   : 49.29815209665956
+
+
+    epoch          : 45
+    loss           : 1.0976585308551787
+    accuracy       : 70.97375
+    val_loss       : 2.4062800552290895
+    val_accuracy   : 49.594660625444206
+
+
+
+
+    epoch          : 46
+    loss           : 1.094077666759491
+    accuracy       : 71.13625
+    val_loss       : 2.4480305488175675
+    val_accuracy   : 49.542466240227434
+
 
     epoch          : 47
-    loss           : 0.8187679586172104
-    accuracy       : 77.33625
-    val_loss       : 2.7356374886498522
-    val_accuracy   : 47.70455756929638
+    loss           : 1.0911674251556396
+    accuracy       : 71.07
+    val_loss       : 2.489283079277478
+    val_accuracy   : 49.51914534470505
+
 
 
     epoch          : 48
-    loss           : 0.7877105013370513
-    accuracy       : 78.11375
-    val_loss       : 2.720578250600331
-    val_accuracy   : 48.51301528073916
+    loss           : 1.0941763689517976
+    accuracy       : 71.10125
+    val_loss       : 2.425588367590264
+    val_accuracy   : 49.52136638237384
 
+    
+	
+	epoch          : 49
+    loss           : 1.0872478447437286
+    accuracy       : 71.17625
+    val_loss       : 2.506463077530932
+    val_accuracy   : 49.321472992181945
 
-    epoch          : 49
-    loss           : 0.7713985350131989
-    accuracy       : 78.49875
-    val_loss       : 2.751128341343357
-    val_accuracy   : 48.165422885572134
-
-
-    epoch          : 50
-    loss           : 0.758125228881836
-    accuracy       : 78.85
-    val_loss       : 2.8003420392587497
-    val_accuracy   : 47.90000888415068
+    loss           : 1.0987044699192048
+    accuracy       : 70.91375
+    val_loss       : 2.431215469516925
+    val_accuracy   : 49.65129708599858
 
 
 
