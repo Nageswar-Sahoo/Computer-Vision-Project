@@ -53,7 +53,7 @@ class Trainer(BaseTrainer):
 
             self.optimizer.zero_grad()
             output = self.model(data)
-            #output = output.argmax(dim=1, keepdim=True)
+            output = output.argmax(dim=1, keepdim=True).squeeze(1)
             target = target.argmax(dim=1, keepdim=True).squeeze(1)
             loss = self.criterion(output, target)
 
@@ -105,7 +105,9 @@ class Trainer(BaseTrainer):
 
                 target = target.argmax(dim=1, keepdim=True).squeeze(1)
 
-                output = self.model(data)
+                output = self.model(data).squeeze(1)
+                output = output.argmax(dim=1, keepdim=True)
+
                 loss = self.criterion(output, target)
                 self.writer.set_step((epoch - 1) * len(self.valid_data_loader) + batch_idx, 'valid')
                 self.valid_metrics.update('loss', loss.item())
