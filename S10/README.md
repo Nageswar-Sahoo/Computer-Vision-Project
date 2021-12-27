@@ -1,6 +1,7 @@
 # Assignment - 10 
 
 Part 1
+-------
 
 Requirement
 Download this TINY IMAGENET dataset.
@@ -29,20 +30,12 @@ Result
 
 The model was trained for 50 epochs -
 
-Highest Training Accuracy achieved - 92.13%
+Highest Training Accuracy achieved - 71
 
-Highest Test Accuracy achieved - 92.01%
+Highest Test Accuracy achieved - 49
 
-![image](https://user-images.githubusercontent.com/70502759/144750462-70a63b99-6cb5-42b0-9f3b-852f2a923967.png)
+![image](https://user-images.githubusercontent.com/70502759/147474410-9f3da5b8-9265-450b-9fb4-34f798b5a368.png)
 
-Misclassified and GradCam Images Gallery
-
-Misclassified images were generated and for each misclassified image a gradcam image was generated for the misclassified class the model predicted.
-
-
-![image](https://user-images.githubusercontent.com/70502759/144750833-5887da41-3d00-4eaa-8d2f-3bac2d70ccb0.png)
-
-Training logs
 
 Project template repo link : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/template
 
