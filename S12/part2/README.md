@@ -53,6 +53,10 @@ Below are the task performed in Attention layer .
 
 6 - Then, the concatenated output of QK and V vectors are fed into the Linear layer to process further.
 
+
+![AttentionProcess](https://user-images.githubusercontent.com/70502759/147462295-541e6fc2-fc4a-48c4-b769-580d5924eb95.PNG)
+
+
 Encoder
 -------
 
