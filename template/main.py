@@ -19,6 +19,8 @@ torch.backends.cudnn.benchmark = False
 np.random.seed(SEED)
 import torch
 import data_loader.data_loaders as data_loaders
+import torch.nn as nn
+import torchvision.models as models
 
 
 
@@ -37,7 +39,10 @@ def main():
     valid_data_loader = data_loaders.get_test_data_loader(test_data, test_labels, 64)
 
     # build model architecture, then print to console
-    model = customresnet.ResNet18()
+    model = models.resnet18(True)
+    #Finetune Final few layers to adjust for tiny imagenet input
+    model.avgpool = nn.AdaptiveAvgPool2d(1)
+    model.fc.out_features = 200
 
     logger.info(model)
 
