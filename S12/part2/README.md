@@ -29,6 +29,29 @@ MLP
 
 Attention
 ---------
+Below are the task performed in Attention layer .
+
+1 - Attention consists of three learnable vectors. Query, Key and Value vectors. 
+    The motivation of this reportedly comes from information retrival 
+	where you search (query) and the search engine compares your query with a key and responds with a value.
+
+2 - The Q and K representations undergo a dot product matrix multiplication 
+    to produce a score matrix which represents how much a patch image has to attend to every other patch image.
+	Higher score means more attention and vice-versa.
+
+3 - Then the Score matrix is scaled down according to the dimensions of the Q and K vectors. 
+    This is to ensure more stable gradients as multiplication can have exploding effects.
+
+
+4 - Next the Score matrix is softmaxed to turn attention scores into probabilities. 
+    Obviously higher scores are heightened and lower scores are depressed. 
+	This ensures the model to be confident on which patch image to attend to.
+
+5 - Then the resultant matrix with probabilites is multiplied with the value vector.
+    This will make the higher probaility scores the model has learned to be more important.
+	The low scoring patch image will effectively drown out to become irrelevant.
+
+6 - Then, the concatenated output of QK and V vectors are fed into the Linear layer to process further.
 
 Encoder
 -------
