@@ -30,12 +30,10 @@ class Trainer(BaseTrainer):
 
         self.train_metrics = MetricTracker('loss', *[m.__name__ for m in self.metric_ftns], writer=self.writer)
         self.valid_metrics = MetricTracker('loss', *[m.__name__ for m in self.metric_ftns], writer=self.writer)
-        self.trainloss=[]
-        self.testloss=[]
-        self.trainaccuracy=[]
-        self.testaccuracy=[]
-
-
+        self.trainloss = []
+        self.testloss = []
+        self.trainaccuracy = []
+        self.testaccuracy = []
 
     def _train_epoch(self, epoch):
         """
@@ -53,7 +51,7 @@ class Trainer(BaseTrainer):
 
             self.optimizer.zero_grad()
             output = self.model(data)
-            output = output.argmax(dim=1, keepdim=True).squeeze(1)
+            # output = output.argmax(dim=1, keepdim=True).squeeze(1)
             target = target.argmax(dim=1, keepdim=True).squeeze(1)
             loss = self.criterion(output, target)
 
@@ -106,7 +104,7 @@ class Trainer(BaseTrainer):
                 target = target.argmax(dim=1, keepdim=True).squeeze(1)
 
                 output = self.model(data).squeeze(1)
-                output = output.argmax(dim=1, keepdim=True)
+                # output = output.argmax(dim=1, keepdim=True)
 
                 loss = self.criterion(output, target)
                 self.writer.set_step((epoch - 1) * len(self.valid_data_loader) + batch_idx, 'valid')
@@ -117,7 +115,6 @@ class Trainer(BaseTrainer):
 
                 self.writer.add_image('input', make_grid(data.cpu(), nrow=8, normalize=True))
                 pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
-
 
         # add histogram of model parameters to the tensorboard
         for name, p in self.model.named_parameters():
@@ -137,4 +134,3 @@ class Trainer(BaseTrainer):
             current = batch_idx
             total = self.len_epoch
         return base.format(current, total, 100.0 * current / total)
-
