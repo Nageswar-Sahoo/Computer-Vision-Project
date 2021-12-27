@@ -6,7 +6,7 @@ VIT Architecture
 
 
 
-Embeddings
+Embeddings layer performed step 1, 2 3, 4 ,5 of the above architecture image 
 ----------
 
 Below are the task performed in Embeddings layer .
@@ -15,7 +15,7 @@ Below are the task performed in Embeddings layer .
 
 2 - Flatten the patches
 
-3 - Produce lower-dimensional linear embeddings from the flattened patches
+3 - The patches are then unrolled (flattened) and sent for further processing into the network
 
 4 - Add positional embeddings
 
@@ -24,7 +24,8 @@ Below are the task performed in Embeddings layer .
 
 
 
-Attention
+
+Attention layer performed step 6 of the above architecture image  
 ---------
 Below are the task performed in Attention layer .
 
@@ -54,7 +55,7 @@ Below are the task performed in Attention layer .
 ![AttentionProcess](https://user-images.githubusercontent.com/70502759/147462295-541e6fc2-fc4a-48c4-b769-580d5924eb95.PNG)
 
 
-Encoder
+Encoder layer performed step 6 of the above architecture image
 -------
 Encoder layer consist of stack of Attention , Feed Forward  and Normalizaion layer .  
 
@@ -67,7 +68,7 @@ Below are the task performed in Encoder layer .
 
 3 - Further, the output is passed into a point-wise feed forward network to obtain an even richer representation.
 
-MLP
+MLP layer performed step 7 of the above architecture image
 ----
 
 Output from the encoder is passed directly into a Feed Forward Neural Network to obtain the classification output.
