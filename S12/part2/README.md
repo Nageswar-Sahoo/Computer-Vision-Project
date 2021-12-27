@@ -59,6 +59,16 @@ Below are the task performed in Attention layer .
 
 Encoder
 -------
+Encoder layer consist of stack of Attention , Feed Forward  and Normalizaion layer .  
+
+Below are the task performed in Encoder layer .
+
+1 - Attention layer output value vectors are concatenated and added to the 
+    residual connection coming from the input layer  
+2 - Then the resultant respresentation is passed into a LayerNorm for normalization. 
+
+3 - Further, the output is passed into a point-wise feed forward network to obtain an even richer representation.
+
 
 
 
