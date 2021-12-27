@@ -22,8 +22,11 @@ Data Overview
 70/30 split ratio
 
 test data shape:  (30000, 64, 64, 3)
+
 test_labels.shape:  (30000, 200)
+
 train data shape:  (80000, 64, 64, 3)
+
 train label shape:  (80000, 200)
 
 Result
