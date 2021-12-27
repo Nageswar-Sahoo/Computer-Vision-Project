@@ -108,7 +108,7 @@ We can see that after each epoch, the neural network is resizing, cropping, and 
 Google Colab file : 
 -------------------
 
-https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/S12/Assignment8.ipynb
+https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/S12/part1/Assignment.ipynb
 
 
 
