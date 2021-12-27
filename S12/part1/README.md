@@ -1,7 +1,7 @@
 Assignment 12
 
-Limitations CNN :
-----------------
+Limitations OF CNN :
+-------------------
 When working on a classification task, it is usually desirable that our system be robust to input variations. By this, we mean to say that should an input undergo a certain “transformation” so to speak, our classification model should in theory spit out the same class label as before that transformation.We have following limitation on CNN
 
  1 - Limited spatial invariance.
