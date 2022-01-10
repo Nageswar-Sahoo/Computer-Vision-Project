@@ -98,6 +98,7 @@ Part 2
 ------
 
 PatchEmbeddings
+----------------
 
 1 - Split an image into patches 
 
@@ -106,6 +107,7 @@ PatchEmbeddings
 3 - The patches are then unrolled (flattened) and sent for further processing into the network
 
 ViTEmbeddings
+-------------
 
 1 - Add positional embeddings
 
@@ -117,8 +119,7 @@ Full configuration file configure here .
 
 ViTSelfAttention
 ----------------
-Attention layer performed step 6 of the above architecture image  
----------
+
 Below are the task performed in Attention layer .
 
 1 - Attention consists of three learnable vectors. Query, Key and Value vectors. 
