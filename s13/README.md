@@ -97,10 +97,7 @@ Epoch : 20 - loss : 0.5821 - acc: 0.6876 - val_loss : 0.5919 - val_acc: 0.6695
 Part 2 
 ------
 
-Embeddings layer performed step 1, 2 3, 4 ,5 of the above architecture image 
-----------
-
-Below are the task performed in Embeddings layer .
+PatchEmbeddings
 
 1 - Split an image into patches 
 
@@ -108,14 +105,18 @@ Below are the task performed in Embeddings layer .
 
 3 - The patches are then unrolled (flattened) and sent for further processing into the network
 
-4 - Add positional embeddings
+ViTEmbeddings
 
-5 - Add the cls token which can be used for classification task 
+1 - Add positional embeddings
 
+2 - Add the cls token which can be used for classification task 
 
+ViTConfig
+---------
+Full configuration file configure here . 
 
-
-
+ViTSelfAttention
+----------------
 Attention layer performed step 6 of the above architecture image  
 ---------
 Below are the task performed in Attention layer .
