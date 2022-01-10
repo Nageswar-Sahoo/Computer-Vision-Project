@@ -1,8 +1,35 @@
-Assignment 12
+Assignment 13 : Part 1 
+-----------------------
+
+In this project, we are exploring transformer algorithm, a deep learning model to classify whether images contain either a dog or a cat.
+
+Cat-Dog-Classifier
+------------------
+
+This is a common computer vision project to classifier images whether it is cat or dog. While the output is the accuracy, the main objective of this assignments  is not to get a high accuracy but rather to learn how to use vit transformer 
+
+Total Dataset : 37500 images
+
+Training dataset : 20000 images of cats and  dogs
+
+Validation dataset : 5000 images of cats and  dogs
+
+test dataset : 12500 images of cats and  dogs
+
+Data
+----
+The dataset is available at Kaggle and we have downloaded for training . 
+
+![catanddog](https://user-images.githubusercontent.com/70502759/148720469-d7a58257-7b55-4623-9755-9d6ad9cf7c7a.PNG)
+
 
 VIT Architecture 
+-----------------
 
 ![image](https://user-images.githubusercontent.com/70502759/147465620-b23a7883-5c01-4dfe-80e0-4104d5898a73.png)
+
+Training Logs 
+-------------
 
 
 
