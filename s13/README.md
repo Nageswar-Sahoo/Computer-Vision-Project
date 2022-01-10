@@ -106,6 +106,9 @@ PatchEmbeddings
 
 3 - The patches are then unrolled (flattened) and sent for further processing into the network
 
+Convolution layer does both spliting of images and flattened the patches for further processing into the network
+ 
+
 ViTEmbeddings
 -------------
 
