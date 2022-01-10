@@ -1,5 +1,8 @@
-Assignment 13 : Part 1 
------------------------
+Assignment 13  
+-------------
+
+Part 1 
+------
 
 In this project, we are exploring transformer algorithm, a deep learning model to classify whether images contain either a dog or a cat.
 
@@ -91,7 +94,8 @@ Epoch : 19 - loss : 0.5901 - acc: 0.6793 - val_loss : 0.5921 - val_acc: 0.6774
   0%|          | 0/313 [00:00<?, ?it/s]
 Epoch : 20 - loss : 0.5821 - acc: 0.6876 - val_loss : 0.5919 - val_acc: 0.6695
 
-
+Part 2 
+------
 
 Embeddings layer performed step 1, 2 3, 4 ,5 of the above architecture image 
 ----------
