@@ -151,33 +151,3 @@ Below are the task performed in Attention layer .
 ![AttentionProcess](https://user-images.githubusercontent.com/70502759/147462295-541e6fc2-fc4a-48c4-b769-580d5924eb95.PNG)
 
 
-Encoder layer performed step 6 of the above architecture image
--------
-Encoder layer consist of stack of Attention , Feed Forward  and Normalizaion layer .  
-
-Below are the task performed in Encoder layer .
-
-1 - Attention layer output value vectors are concatenated and added to the 
-    residual connection coming from the input layer  
-    
-2 - Then the resultant respresentation is passed into a LayerNorm for normalization. 
-
-3 - Further, the output is passed into a point-wise feed forward network to obtain an even richer representation.
-
-MLP layer performed step 7 of the above architecture image
-----
-
-Output from the encoder is passed directly into a Feed Forward Neural Network to obtain the classification output.
-
-
-Block
-------
-
-Inside the block layer we are performing task such as Attention , LayerNorm for normalization and classification with MLP layer 
-
-
-
-
-
-
-
