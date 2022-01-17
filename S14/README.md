@@ -14,6 +14,15 @@ The architecture of DETR has three main components, which are a CNN backbone to 
 Encoder-Decoder Architecture
 -----------------------------
 
+![image](https://user-images.githubusercontent.com/70502759/149765937-816520b5-91df-4f7c-9705-325b39776a6b.png)
+
+
+Here, the CNN backbone generates a feature map from the input image. Then the output of the CNN backbone is converted into a one-dimensional feature map that is passed to the Transformer encoder as input. The output of this encoder are N number of fixed length embeddings (vectors), where N is the number of objects in the image assumed by the model.
+
+The Transformer Decoder – takes in Object queries and  decodes these embeddings into bounding box coordinates with the help of self and encoder-decoder attention mechanism.
+
+Finally, the feed-forward neural networks predict the normalized center coordinates, height, and width of the bounding boxes and the linear layer predicts the class label using a softmax function or a no object class.
+
 Bipartite loss, and why we need it
 ------------------------------------
 
@@ -27,6 +36,8 @@ We are using NMS for above task and this will increase overlapping bounding boxe
 
 Oobject queries
 ---------------
+
+
 
 Results
 -----------
