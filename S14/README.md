@@ -14,7 +14,7 @@ The architecture of DETR has three main components, which are a CNN backbone to 
 Encoder-Decoder Architecture
 -----------------------------
 
-![image](https://user-images.githubusercontent.com/70502759/149765937-816520b5-91df-4f7c-9705-325b39776a6b.png)
+![image](https://user-images.githubusercontent.com/70502759/149766446-cf294fbe-c1d1-4491-9315-7b09edf6b160.png)
 
 
 Here, the CNN backbone generates a feature map from the input image. Then the output of the CNN backbone is converted into a one-dimensional feature map that is passed to the Transformer encoder as input. The output of this encoder are N number of fixed length embeddings (vectors), where N is the number of objects in the image assumed by the model.
@@ -37,10 +37,16 @@ We are using NMS for above task and this will increase overlapping bounding boxe
 Oobject queries
 ---------------
 
+![image](https://user-images.githubusercontent.com/70502759/149766548-c9a26fda-5622-4031-8d15-51a6ee4cb5c3.png)
+
+The figure below depicts how N=20 learned object queries  focus on different areas of an image.
+An intuitive way of understanding the object queries is by imagining that each object query is a person. And each person can ask the, via attention, about a certain region of the image. So one object query will always ask about what is in the center of an image, and another will always ask about what is on the bottom left, and so on.
 
 
 Results
 -----------
 
+DETR training logs : 
+--------------------
 
 
