@@ -3,7 +3,7 @@ Assignment 14
 
 DETR
 -----
-DETR is short for DEtection TRansformer, and consists of a convolutional backbone  followed by an encoder-decoder Transformer. It can be trained end-to-end to perform object detection .The main contribution of DETR is its simplicity: compared to other models like Faster R-CNN and Mask R-CNN, which rely on several highly engineered things like region proposals, non-maximum suppression procedure and anchor generation, DETR is a model that can simply be trained end-to-end, and fine-tuned just like you would fine-tune BERT. This is possible due to the use of a clever loss function, the so-called bipartite matching loss
+DETR is short for DEtection TRansformer, and consists of a convolutional backbone  followed by an encoder-decoder Transformer. It can be trained end-to-end to perform object detection .The main contribution of DETR is its simplicity: compared to other models like Faster R-CNN and Mask R-CNN, which rely on several highly engineered things like region proposals, non-maximum suppression procedure and anchor generation. This is possible due to the use of a clever loss function, the so-called bipartite matching loss
 
 ![image](https://user-images.githubusercontent.com/70502759/149753302-5591d27d-ba80-437b-9ec2-bb4a73de835f.png)
 ![image](https://user-images.githubusercontent.com/70502759/149759863-3bc41c8a-1b90-4d66-8d3a-0b70269db818.png)
@@ -26,7 +26,6 @@ Finally, the feed-forward neural networks predict the normalized center coordina
 Bipartite loss, and why we need it
 ------------------------------------
 
-Issue with Existing Loss function in Object Detection :
 
 Existing object detection models label bounding boxes by matching multiple bounding boxes to one ground truth box with considering the ordering  . 
 We are using NMS for above task and this will increase overlapping bounding boxes in image .The predicted results are a set of N predictions. Comparing this N predictions to the ground truth set is non trivial. To assess the loss an optimal Bipartite matching is created between predicted labels and ground truth. This is done by minimizing matching loss between a tuple’s elements by picking one element from predicted labels and another element from ground truth.Once we have this bipartite mapping we can calculate a loss called Hungarian Loss. Bipartite matching loss is designed based on Hungarian algorithm
@@ -36,11 +35,14 @@ We are using NMS for above task and this will increase overlapping bounding boxe
 
 Oobject queries
 ---------------
+An intuitive way of understanding the object queries is by imagining that each object query is a person. And each person can ask the, via attention, about a certain region of the image. So one object query will always ask about what is in the center of an image, and another will always ask about what is on the bottom left, and so on.
+
+Decoder transforms N object queries at d dimension into N output embedding at d dimension.object queries are learned from during training steps and 
+apply encoder-decoder ove these embeddings enables reasoning about all objects all together using pair-wise relationships
 
 ![image](https://user-images.githubusercontent.com/70502759/149766548-c9a26fda-5622-4031-8d15-51a6ee4cb5c3.png)
 
 The figure below depicts how N=20 learned object queries  focus on different areas of an image.
-An intuitive way of understanding the object queries is by imagining that each object query is a person. And each person can ask the, via attention, about a certain region of the image. So one object query will always ask about what is in the center of an image, and another will always ask about what is on the bottom left, and so on.
 
 
 Results on Balloon Dataset :
