@@ -43,8 +43,21 @@ The figure below depicts how N=20 learned object queries  focus on different are
 An intuitive way of understanding the object queries is by imagining that each object query is a person. And each person can ask the, via attention, about a certain region of the image. So one object query will always ask about what is in the center of an image, and another will always ask about what is on the bottom left, and so on.
 
 
-Results
------------
+Results on Balloon Dataset :
+----------------------------
+Threshold 0.9
+
+![image](https://user-images.githubusercontent.com/70502759/149768045-52657799-393f-421d-9e7c-1b098b5d0a5e.png)
+![image](https://user-images.githubusercontent.com/70502759/149768174-df228e27-0b41-4ab2-b3cc-25f97b046cb9.png)
+
+
+Threshold 0.7
+
+![image](https://user-images.githubusercontent.com/70502759/149768150-18268caa-f158-4857-9f4c-405bd7e0cad4.png)
+![image](https://user-images.githubusercontent.com/70502759/149768197-17ff6c77-e630-4af0-aa28-99e091709384.png)
+
+
+
 
 DETR training logs : 
 --------------------
