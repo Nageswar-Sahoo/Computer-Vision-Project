@@ -44,6 +44,9 @@ apply encoder-decoder ove these embeddings enables reasoning about all objects a
 
 The figure below depicts how N=20 learned object queries  focus on different areas of an image.
 
+![DETR](https://user-images.githubusercontent.com/70502759/150676218-c6fc1aa0-c521-4289-acdb-8f386c03d4b1.PNG)
+
+
 
 Results on Balloon Dataset :
 ----------------------------
