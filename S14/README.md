@@ -31,6 +31,8 @@ Existing object detection models label bounding boxes by matching multiple bound
 We are using NMS for above task and this will increase overlapping bounding boxes in image .The predicted results are a set of N predictions. Comparing this N predictions to the ground truth set is non trivial. To assess the loss an optimal Bipartite matching is created between predicted labels and ground truth. This is done by minimizing matching loss between a tuple’s elements by picking one element from predicted labels and another element from ground truth.Once we have this bipartite mapping we can calculate a loss called Hungarian Loss. Bipartite matching loss is designed based on Hungarian algorithm
 
 ![image](https://user-images.githubusercontent.com/70502759/149750992-58d412a5-ca14-4389-a7c4-00be64a0fea5.png)
+![DETR_BI](https://user-images.githubusercontent.com/70502759/150676360-9aa6c9c4-67c4-439c-b32c-4fab68a37f3f.PNG)
+
 
 
 Oobject queries
