@@ -12,7 +12,7 @@
  
  Assuming we have sample image of batch 2 with shape : [batch = 2 , channel = 3 , hight = 768 , width = 1023 ]
  
- step 1  :  BackBone in DETR architecture  
+ Step 1  :  BackBone in DETR architecture  
  
           we know that the backbone upon accepting an input of above shape  returns out and pos, 
 	    where output has intermediate layer  tensors  and positional encoding of following shape 
