@@ -51,7 +51,7 @@
 	  and N object queries are transformed into an output embedding by the decoder . 
 	  
 	  Hence encoded image is the output of transformer encoder of following shape and   is passed to Multi-Head Attention 
-	      tensors shape : [batch = 2, channel = 256, hight = 28, width = 34]
+	      tensors shape : [batch = 2, embeding vector(d) :256, hight(H) = 28, width(N) = 34]
 	        
 
 
@@ -61,7 +61,7 @@
  Step  : We also send dxN Box embeddings to the Multi-Head Attention
  
        N object queries are transformed into an output embedding by the decoder of shape and is passed to Multi-Head Attention
-         tensors shape : [number of intermediate layer  = 6, batch = 2, object queries zize = 100, embeding vector : 256]
+         tensors shape : [number of intermediate layer  = 6, batch = 2, object queries zize(N) = 100, embeding vector(d) : 256]
 
  Step  : We do something here to generate NxMxH/32xW/32 maps
  
