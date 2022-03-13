@@ -159,7 +159,7 @@
         x = F.relu(x)
 
         x = self.out_lay(x)  # output x [ 200 1 219 265 ]
-        return x  # output x [ 200 1 192 256 ]  -> this will be reshaped into [batch 2 No of object query detection = 100 Hight(H/4) 192 Width(W/4) = 256]
+        return x  # output x [ 200 1 192 265 ]  -> this will be reshaped into [batch 2 No of object query detection = 100 Hight(H/4) 192 Width(W/4) = 265]
 	
 	 
 ![Capture_1](https://user-images.githubusercontent.com/70502759/158050613-14e2af1e-822f-45e5-a1ce-38e4b8210b2c.PNG)
@@ -169,8 +169,17 @@
  
  Step  : Then we perform the below steps
  
+          Detr will give below output after performing all above steps : 
+	  
+          pred_boxes [2, 100, 4] -> This can detect 100 object bouding box coordinate details 
+	  
+          pred_logits [2, 100, 251] -> This can detect max 100 object in the image
+	  
+          pred_masks  [2, 100, 192, 265] -> This will hold 100 predicted object pixel wise segmented details 
+	  
          We filter the predictions for which the confidence is less then certain threshold .
-         Finally, the remaining masks are merged together using a pixel-wise argmax . 
+	 
+	 
 	 
 
 	 
@@ -180,6 +189,9 @@
 
  
  Step  : Finally left with the panoptic segmentation
+ 
+        Finally, the remaining masks are merged together using a pixel-wise argmax . 
+
 
 
 
