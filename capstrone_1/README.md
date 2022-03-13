@@ -117,6 +117,57 @@
          We filter the predictions for which the confidence is less then certain threshold .
          Finally, the remaining masks are merged together using a pixel-wise argmax . 
 	 
+	     # x = [2 256 24 32] bbox_mask = [2 100 8 24 32 ]
+    # fpns # 0 > 2 1024 48 64 # 1 > 2 512 96 128 # 2 > 2 256 192 256
+    def forward(self, x: Tensor, bbox_mask: Tensor, fpns: List[Tensor]):
+
+        x = torch.cat([_expand(x, bbox_mask.shape[1]), bbox_mask.flatten(0, 1)],
+                      1)  # after expanded x [ 200 256 24 32 ],  bbox_mask [ 200 8 24 32 ]
+        # output x [  200 264 24 32 ]
+        x = self.lay1(x)
+        x = self.gn1(x)
+        x = F.relu(x)
+        # output x [  200 128 24 32 ]
+        x = self.lay2(x)
+        x = self.gn2(x)
+        x = F.relu(x)
+
+        cur_fpn = self.adapter1(fpns[0])
+        # op cur_fpn [ 2 128 48 64 ]
+        if cur_fpn.size(0) != x.size(0):
+            cur_fpn = _expand(cur_fpn, x.size(0) // cur_fpn.size(0))  # expanded cur_fpn 200 128 48 64
+        x = cur_fpn + F.interpolate(x, size=cur_fpn.shape[-2:], mode="nearest")
+        # cur_fpn 200 128 48 64   +  output x [  200 128 48 64 ]
+        # output x [  200 128 48 64 ]
+        x = self.lay3(x)
+        # output x [  200 64 48 64 ]
+        x = self.gn3(x)
+
+        x = F.relu(x)
+
+        cur_fpn = self.adapter2(fpns[1])  # output cur_fpn [ 2 64 96 128 ]
+        if cur_fpn.size(0) != x.size(0):
+            cur_fpn = _expand(cur_fpn, x.size(0) // cur_fpn.size(0))  # expanded cur_fpn  [ 200 64 96 128 ]
+        x = cur_fpn + F.interpolate(x, size=cur_fpn.shape[-2:], mode="nearest")
+        # output cur_fpn [  200 64 96 128] + x [ 200 64 96 128 ]
+        x = self.lay4(x)
+        # output x [  200 32 96 128 ]
+        x = self.gn4(x)
+        x = F.relu(x)
+
+        cur_fpn = self.adapter3(fpns[2])  # output x [ 2 32 192 256 ]
+        if cur_fpn.size(0) != x.size(0):
+            cur_fpn = _expand(cur_fpn, x.size(0) // cur_fpn.size(0))  # output cur_fpn [ 200 32 96 128 ]
+        x = cur_fpn + F.interpolate(x, size=cur_fpn.shape[-2:], mode="nearest")
+        # output cur_fpn [  200 32 96 128] + x [ 200 32 96 128 ]
+        x = self.lay5(x)  # output x [ 200 16 192 256 ]
+        x = self.gn5(x)
+        x = F.relu(x)
+
+        x = self.out_lay(x)  # output x [ 200 1 192 256 ]
+        return x  # output x [ 200 1 192 256 ]  -> this will be reshaped into [2 100 192 256] i.e 100 object query predection
+	
+	 
 
 	 
 ![Capture_3](https://user-images.githubusercontent.com/70502759/158048064-107b938c-a5bd-46c9-b326-dcedcb0e3e86.PNG)
