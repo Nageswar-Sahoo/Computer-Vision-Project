@@ -112,7 +112,8 @@
  -------------------------------------------------------
          
 	 
-  Attention map from step 4 and resnet BackBone block from step 1 will concatenate and will do upsampling  using a below FPN approach . 
+    Attention map from step 4 and resnet BackBone block from step 1 
+    will concatenate and will do upsampling  using a below FPN approach . 
 	 
     # x = [2 256 28 34] bbox_mask = [2 100 8 28 34 ]
     # fpns # 0 > 2 1024 48 64 # 1 > 2 512 96 128 # 2 > 2 256 192 256
@@ -167,7 +168,7 @@
         x = self.out_lay(x)  # output x [ 200 1 219 265 ]
         return x  
 	# output x [ 200 1 192 265 ]  
-	# this will be reshaped into [batch 2 No of object query detection = 100 Hight(H/4) 192 Width(W/4) = 265]
+	# this will be reshaped latter into [batch 2 No of object query detection = 100 Hight(H/4) 192 Width(W/4) = 265]
 	
 	 
 ![Capture_1](https://user-images.githubusercontent.com/70502759/158050613-14e2af1e-822f-45e5-a1ce-38e4b8210b2c.PNG)
