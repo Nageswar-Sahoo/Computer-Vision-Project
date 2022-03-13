@@ -76,7 +76,6 @@
 	  
 	  
 	def forward(self, q, k, mask: Optional[Tensor] = None):
-           
 	   q = self.q_linear(q)
 	   
            k = F.conv2d(k, self.k_linear.weight.unsqueeze(-1).unsqueeze(-1), self.k_linear.bias)
