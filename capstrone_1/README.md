@@ -14,8 +14,8 @@
  
  Step 1  :  BackBone in DETR architecture  
  
-          we know that the backbone upon accepting an input of above shape  returns out and pos, 
-	    where output has intermediate layer  tensors  and positional encoding of following shape 
+          we know that the backbone upon accepting an input of above shape  returns output and encoding, 
+	  where output has intermediate layer  tensors  and positional encoding of following shape 
 
          layer 0 :  tensors shape : [batch = 2, channel = 256, hight = 219, width = 265] 
                     mask shape    : [batch = 2,  hight = 219, width = 265 ]
@@ -50,8 +50,8 @@
 	  Transformer will return output from encoder as encoded image (called as memory ) 
 	  and N object queries are transformed into an output embedding by the decoder . 
 	  
-	  Hence encoded image is the output of transformer encoder of following shape and   is passed to Multi-Head Attention 
-	      tensors shape : [batch = 2, embeding vector(d) :256, hight(H/32) = 28, width(N/32) = 34]
+	  Hence encoded image is the output of transformer encoder which is of following shape and   is passed to Multi-Head Attention 
+	  tensors shape : [batch = 2, embeding vector(d) :256, hight(H/32) = 28, width(N/32) = 34]
 	        
 
 
@@ -60,8 +60,9 @@
 
  Step 3 : We also send dxN Box embeddings to the Multi-Head Attention
  
-       N object queries are transformed into an output embedding by the decoder of shape and is passed to Multi-Head Attention
-         tensors shape : [number of intermediate layer  = 6, batch = 2, object queries zize(N) = 100, embeding vector(d) : 256]
+         N object queries are transformed into an output embedding by the decoder  and 
+	 last decoder layer output is passed to Multi-Head Attention along with output of step 2 i.e encoded image.
+         tensors shape : [batch = 2, object queries zize(N) = 100, embeding vector(d) : 256]
 
  Step 4 : We do something here to generate NxMxH/32xW/32 maps
  
