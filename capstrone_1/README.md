@@ -13,6 +13,7 @@
  Assuming we have sample image of batch 2 with shape : [batch = 2 , channel (C) = 3 , hight (H) = 873 , width (W) = 1060 ]
  
  Step 1  :  BackBone in DETR architecture  
+ ----------------------------------------
  
           we know that the backbone upon accepting an input of above shape  returns output and encoding, 
 	  where output has intermediate layer  tensors  and positional encoding of following shape 
@@ -39,6 +40,7 @@
                     
  
  Step 2 : We take the encoded image (dxH/32xW/32) and send it to Multi-Head Attention
+ ------------------------------------------------------------------------------------
        
          Backbone last layer o/p again pass throw convolution network and 
          project back in to  Size of the embeddings (dimension as required by the transformer)
@@ -59,14 +61,17 @@
         
 
  Step 3 : We also send dxN Box embeddings to the Multi-Head Attention
+ --------------------------------------------------------------------
  
          N object queries are transformed into an output embedding by the decoder  and 
 	 last decoder layer output is passed to Multi-Head Attention along with output of step 2 i.e encoded image.
          tensors shape : [batch = 2, object queries zize(N) = 100, embeding vector(d) : 256]
 
  Step 4 : We do something here to generate NxMxH/32xW/32 maps
+ ------------------------------------------------------------
  
-        Multi Head Attention Map will take input of transformer decoder last layer (from step 3) output and encoder encoded image output (from step 2) .
+        Multi Head Attention Map will take input of transformer decoder last layer (from step 3) output and 
+	encoder encoded image output (from step 2) .
 	Transformer decoder last layer output behaves as query and encoder output behaves as key . 
 	Then we calculate a self-attention score. The score is calculated by taking the dot 
 	product of the query vector with the key vector. 
@@ -104,6 +109,7 @@
 
  
  Step 5 : Then we concatenate these maps with Res5 Block
+ -------------------------------------------------------
          
 	 
 	 Attention map from step 4 and resnet BackBone block from step 1 will concatenate and will do upsampling  using a below FPN approach . 
@@ -159,7 +165,8 @@
         x = F.relu(x)
 
         x = self.out_lay(x)  # output x [ 200 1 219 265 ]
-        return x  # output x [ 200 1 192 265 ]  -> this will be reshaped into [batch 2 No of object query detection = 100 Hight(H/4) 192 Width(W/4) = 265]
+        return x  
+	# output x [ 200 1 192 265 ]  -> this will be reshaped into [batch 2 No of object query detection = 100 Hight(H/4) 192 Width(W/4) = 265]
 	
 	 
 ![Capture_1](https://user-images.githubusercontent.com/70502759/158050613-14e2af1e-822f-45e5-a1ce-38e4b8210b2c.PNG)
@@ -168,6 +175,7 @@
 	 
  
  Step  : Then we perform the below steps
+ ---------------------------------------
  
           Detr will give below output after performing all above steps : 
 	  
@@ -189,8 +197,9 @@
 
  
  Step  : Finally left with the panoptic segmentation
+ ----------------------------------------------------
  
-        Finally, the remaining masks are merged together using a pixel-wise argmax . 
+          Finally, the remaining masks are merged together using a pixel-wise argmax . 
 
 
 
