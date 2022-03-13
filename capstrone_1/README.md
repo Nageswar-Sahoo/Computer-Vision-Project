@@ -107,7 +107,7 @@
 	 
 	 Attention map from step 4 and resnet BackBone block from step 1 will concatenate and will do upsampling  using a FPN approach . 
 	 
-![Capture_1](https://user-images.githubusercontent.com/70502759/158048086-61efa3ba-525f-4f70-80f5-c7848a3ccf70.PNG)
+![Capture_1](https://user-images.githubusercontent.com/70502759/158050613-14e2af1e-822f-45e5-a1ce-38e4b8210b2c.PNG)
 
 	 
 	 
