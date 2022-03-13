@@ -10,7 +10,7 @@
  
  
  
- Assuming we have sample image of batch 2 with shape : [batch = 2 , channel = 3 , hight = 768 , width = 1023 ]
+ Assuming we have sample image of batch 2 with shape : [batch = 2 , channel (C) = 3 , hight (H) = 873 , width (W) = 1060 ]
  
  Step 1  :  BackBone in DETR architecture  
  
@@ -51,7 +51,7 @@
 	  and N object queries are transformed into an output embedding by the decoder . 
 	  
 	  Hence encoded image is the output of transformer encoder of following shape and   is passed to Multi-Head Attention 
-	      tensors shape : [batch = 2, embeding vector(d) :256, hight(H) = 28, width(N) = 34]
+	      tensors shape : [batch = 2, embeding vector(d) :256, hight(H/32) = 28, width(N/32) = 34]
 	        
 
 
@@ -75,7 +75,7 @@
 	  Details coding done in Multi Head Attention Map : 
 	  
 	  
-	 def forward(self, q, k, mask: Optional[Tensor] = None):  # q = [2 100 256 ] k = [2 256 24 32]  mask = [2 24 32]
+	 def forward(self, q, k, mask: Optional[Tensor] = None):  # q = [2 100 256 ] k = [2 256 28 34]  mask = [2 28 34]
 	 
            q = self.q_linear(q)  # q will be projected
 	   
@@ -87,7 +87,7 @@
            kh = k.view(k.shape[0], self.num_heads, self.hidden_dim // self.num_heads, k.shape[-2], k.shape[-1])
            # kh rehsape based on number of heads to optimize the matrix multiplication  kh [2 8 32 24 32]
 
-           weights = torch.einsum("bqnc,bnchw->bqnhw", qh * self.normalize_fact, kh)  # self attention weight = [2 100 8 24 32 ]
+           weights = torch.einsum("bqnc,bnchw->bqnhw", qh * self.normalize_fact, kh)  # self attention weight = [2 100 8 28 34 ]
 
            if mask is not None:
               weights.masked_fill_(mask.unsqueeze(1).unsqueeze(1), float("-inf"))
@@ -96,7 +96,7 @@
 
            weights = self.dropout(weights)  # dropout
 
-           return weights  # Batch N = 2 Object Query M = 100 No of Head= 8 Hight = 24 width = 32
+           return weights  # Batch N = 2 Object Query M = 100 No of Head= 8 Hight = 28 width = 34
 	   
 
 ![Capture_4](https://user-images.githubusercontent.com/70502759/158050222-87865ae1-a803-4364-9115-c25a4753deba.PNG)
@@ -106,6 +106,60 @@
          
 	 
 	 Attention map from step 4 and resnet BackBone block from step 1 will concatenate and will do upsampling  using a FPN approach . 
+	 
+	 	     # x = [2 256 28 34] bbox_mask = [2 100 8 28 34 ]
+    # fpns # 0 > 2 1024 48 64 # 1 > 2 512 96 128 # 2 > 2 256 192 256
+    def forward(self, x: Tensor, bbox_mask: Tensor, fpns: List[Tensor]):
+
+        x = torch.cat([_expand(x, bbox_mask.shape[1]), bbox_mask.flatten(0, 1)],
+                      1)  # after expanded x [ 200 256 28 34 ],  bbox_mask [ 200 8 28 34 ]
+        # output x [  200 264 28 34 ]
+        x = self.lay1(x)
+	# output x [  200 264 28 34 ]
+        x = self.gn1(x)
+        x = F.relu(x)
+	
+        x = self.lay2(x)
+	# output x [  200 128 28 34 ]
+
+        x = self.gn2(x)
+        x = F.relu(x)
+
+        cur_fpn = self.adapter1(fpns[0])
+        # op cur_fpn [ 2 128 55 67 ]
+        if cur_fpn.size(0) != x.size(0):
+            cur_fpn = _expand(cur_fpn, x.size(0) // cur_fpn.size(0))  # expanded cur_fpn 200 128 55 67
+        x = cur_fpn + F.interpolate(x, size=cur_fpn.shape[-2:], mode="nearest")
+        # cur_fpn 200 128 55 67   +  output x [  200 128 55 67 ]
+        # output x [  200 128 55 67 ]
+        x = self.lay3(x)
+        # output x [  200 64 55 67 ]
+        x = self.gn3(x)
+
+        x = F.relu(x)
+
+        cur_fpn = self.adapter2(fpns[1])  # output cur_fpn [ 2 64 110 133 ]
+        if cur_fpn.size(0) != x.size(0):
+            cur_fpn = _expand(cur_fpn, x.size(0) // cur_fpn.size(0))  # expanded cur_fpn  [ 200 64 110 133 ]
+        x = cur_fpn + F.interpolate(x, size=cur_fpn.shape[-2:], mode="nearest")
+        # output cur_fpn [  200 64 110 133] + x [ 200 64 110 133 ]
+        x = self.lay4(x)
+        # output x [  200 32 110 133 ]
+        x = self.gn4(x)
+        x = F.relu(x)
+
+        cur_fpn = self.adapter3(fpns[2])  # output x [ 2 32 219 265 ]
+        if cur_fpn.size(0) != x.size(0):
+            cur_fpn = _expand(cur_fpn, x.size(0) // cur_fpn.size(0))  # output cur_fpn [ 200 32 219 265 ]
+        x = cur_fpn + F.interpolate(x, size=cur_fpn.shape[-2:], mode="nearest")
+        # output cur_fpn [  200 32 219 265] + x [ 200 32 219 265 ]
+        x = self.lay5(x)  # output x [ 200 16 219 265 ]
+        x = self.gn5(x)
+        x = F.relu(x)
+
+        x = self.out_lay(x)  # output x [ 200 1 219 265 ]
+        return x  # output x [ 200 1 192 256 ]  -> this will be reshaped into [batch 2 No of object query detection = 100 Hight(H/4) 192 Width(W/4) = 256]
+	
 	 
 ![Capture_1](https://user-images.githubusercontent.com/70502759/158050613-14e2af1e-822f-45e5-a1ce-38e4b8210b2c.PNG)
 
@@ -117,56 +171,7 @@
          We filter the predictions for which the confidence is less then certain threshold .
          Finally, the remaining masks are merged together using a pixel-wise argmax . 
 	 
-	     # x = [2 256 24 32] bbox_mask = [2 100 8 24 32 ]
-    # fpns # 0 > 2 1024 48 64 # 1 > 2 512 96 128 # 2 > 2 256 192 256
-    def forward(self, x: Tensor, bbox_mask: Tensor, fpns: List[Tensor]):
 
-        x = torch.cat([_expand(x, bbox_mask.shape[1]), bbox_mask.flatten(0, 1)],
-                      1)  # after expanded x [ 200 256 24 32 ],  bbox_mask [ 200 8 24 32 ]
-        # output x [  200 264 24 32 ]
-        x = self.lay1(x)
-        x = self.gn1(x)
-        x = F.relu(x)
-        # output x [  200 128 24 32 ]
-        x = self.lay2(x)
-        x = self.gn2(x)
-        x = F.relu(x)
-
-        cur_fpn = self.adapter1(fpns[0])
-        # op cur_fpn [ 2 128 48 64 ]
-        if cur_fpn.size(0) != x.size(0):
-            cur_fpn = _expand(cur_fpn, x.size(0) // cur_fpn.size(0))  # expanded cur_fpn 200 128 48 64
-        x = cur_fpn + F.interpolate(x, size=cur_fpn.shape[-2:], mode="nearest")
-        # cur_fpn 200 128 48 64   +  output x [  200 128 48 64 ]
-        # output x [  200 128 48 64 ]
-        x = self.lay3(x)
-        # output x [  200 64 48 64 ]
-        x = self.gn3(x)
-
-        x = F.relu(x)
-
-        cur_fpn = self.adapter2(fpns[1])  # output cur_fpn [ 2 64 96 128 ]
-        if cur_fpn.size(0) != x.size(0):
-            cur_fpn = _expand(cur_fpn, x.size(0) // cur_fpn.size(0))  # expanded cur_fpn  [ 200 64 96 128 ]
-        x = cur_fpn + F.interpolate(x, size=cur_fpn.shape[-2:], mode="nearest")
-        # output cur_fpn [  200 64 96 128] + x [ 200 64 96 128 ]
-        x = self.lay4(x)
-        # output x [  200 32 96 128 ]
-        x = self.gn4(x)
-        x = F.relu(x)
-
-        cur_fpn = self.adapter3(fpns[2])  # output x [ 2 32 192 256 ]
-        if cur_fpn.size(0) != x.size(0):
-            cur_fpn = _expand(cur_fpn, x.size(0) // cur_fpn.size(0))  # output cur_fpn [ 200 32 96 128 ]
-        x = cur_fpn + F.interpolate(x, size=cur_fpn.shape[-2:], mode="nearest")
-        # output cur_fpn [  200 32 96 128] + x [ 200 32 96 128 ]
-        x = self.lay5(x)  # output x [ 200 16 192 256 ]
-        x = self.gn5(x)
-        x = F.relu(x)
-
-        x = self.out_lay(x)  # output x [ 200 1 192 256 ]
-        return x  # output x [ 200 1 192 256 ]  -> this will be reshaped into [2 100 192 256] i.e 100 object query predection
-	
 	 
 
 	 
