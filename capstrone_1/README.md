@@ -15,7 +15,7 @@
  Step 1  :  BackBone in DETR architecture  
  ----------------------------------------
  
-          we know that the backbone upon accepting an input of above shape  returns output and encoding, 
+      we know that the backbone upon accepting an input of above shape  returns output and encoding, 
 	  where output has intermediate layer  tensors  and positional encoding of following shape 
 
          layer 0 :  tensors shape : [batch = 2, channel = 256, hight = 219, width = 265] 
@@ -42,11 +42,11 @@
  Step 2 : We take the encoded image (dxH/32xW/32) and send it to Multi-Head Attention
  ------------------------------------------------------------------------------------
        
-         Backbone last layer o/p again pass throw convolution network and 
-         project back in to  Size of the embeddings (dimension as required by the transformer)
+      Backbone last layer o/p again pass throw convolution network and 
+      project back in to  Size of the embeddings (dimension as required by the transformer)
 
-          i/p  shape      : tensors shape : [batch = 2, channel = 2048, hight = 28, width = 34] 
-          projected shape : tensors shape : [batch = 2, channel = 256, hight = 28, width = 34] 
+      i/p  shape      : tensors shape : [batch = 2, channel = 2048, hight = 28, width = 34] 
+      projected shape : tensors shape : [batch = 2, channel = 256, hight = 28, width = 34] 
 	  
 	  These project back embeddings along with positional embedding passed to transformer architecture .
 	  Transformer will return output from encoder as encoded image (called as memory ) 
@@ -64,13 +64,13 @@
  --------------------------------------------------------------------
  
          N object queries are transformed into an output embedding by the decoder  and 
-	 last decoder layer output is passed to Multi-Head Attention along with output of step 2 i.e encoded image.
+	     last decoder layer output is passed to Multi-Head Attention along with output of step 2 i.e encoded image.
          tensors shape : [batch = 2, object queries zize(N) = 100, embeding vector(d) : 256]
 
  Step 4 : We do something here to generate NxMxH/32xW/32 maps
  ------------------------------------------------------------
  
-        Multi Head Attention Map will take input of transformer decoder last layer (from step 3) output and 
+    Multi Head Attention Map will take input of transformer decoder last layer (from step 3) output and 
 	encoder encoded image output (from step 2) .
 	Transformer decoder last layer output behaves as query and encoder output behaves as key . 
 	Then we calculate a self-attention score. The score is calculated by taking the dot 
