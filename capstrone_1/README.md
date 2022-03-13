@@ -112,7 +112,7 @@
 	 
 	 
  
- Step  : Then we perform the above steps
+ Step  : Then we perform the below steps
  
          We filter the predictions for which the confidence is less then certain threshold .
          Finally, the remaining masks are merged together using a pixel-wise argmax . 
