@@ -65,6 +65,40 @@
 
  Step  : We do something here to generate NxMxH/32xW/32 maps
  
+        Multi Head Attention Map will take input of transformer decoder last layer output and encoder encoded image output .
+	Transformer decoder last layer output behaves as query and encoder output behaves as key . 
+	Then we calculate a self-attention score. The score is calculated by taking the dot product of the query vector with the key vector.           
+	The score determines how much focus to place on other parts of the input image at a certain position 
+	and Multi Head Attention Map module only returns the attention softmax
+	
+	  Details coding done in Multi Head Attention Map : 
+	  
+	  
+	def forward(self, q, k, mask: Optional[Tensor] = None):
+           
+	   q = self.q_linear(q)
+	   
+           k = F.conv2d(k, self.k_linear.weight.unsqueeze(-1).unsqueeze(-1), self.k_linear.bias)
+	   
+           #qh 2 100 8 32
+           #kh 2 8 32 24 32
+           qh = q.view(q.shape[0], q.shape[1], self.num_heads, self.hidden_dim // self.num_heads)
+	   
+           kh = k.view(k.shape[0], self.num_heads, self.hidden_dim // self.num_heads, k.shape[-2], k.shape[-1])
+	   
+           #weight 2 100 8 24 32
+           weights = torch.einsum("bqnc,bnchw->bqnhw", qh * self.normalize_fact, kh)
+
+           if mask is not None:
+              weights.masked_fill_(mask.unsqueeze(1).unsqueeze(1), float("-inf"))
+	      
+           weights = F.softmax(weights.flatten(2), dim=-1).view(weights.size())
+	   
+           weights = self.dropout(weights)
+	   
+           #2 100 8 24 32
+           return weights
+ 
  Step  : Then we concatenate these maps with Res5 Block
  
  Step  : Then we perform the above steps
