@@ -176,7 +176,7 @@
 	 
 	 
  
- Step  : Then we perform the below steps
+ Step 6 : Then we perform the below steps
  ---------------------------------------
  
           Detr will give below output after performing all above steps : 
@@ -198,7 +198,7 @@
 ![Capture_3](https://user-images.githubusercontent.com/70502759/158048064-107b938c-a5bd-46c9-b326-dcedcb0e3e86.PNG)
 
  
- Step  : Finally left with the panoptic segmentation
+ Step 7 : Finally left with the panoptic segmentation
  ----------------------------------------------------
  
           Finally, the remaining masks are merged together using a pixel-wise argmax . 
