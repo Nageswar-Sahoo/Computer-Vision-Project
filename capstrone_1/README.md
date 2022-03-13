@@ -67,7 +67,8 @@
  
         Multi Head Attention Map will take input of transformer decoder last layer output and encoder encoded image output .
 	Transformer decoder last layer output behaves as query and encoder output behaves as key . 
-	Then we calculate a self-attention score. The score is calculated by taking the dot product of the query vector with the key vector.           
+	Then we calculate a self-attention score. The score is calculated by taking the dot 
+	product of the query vector with the key vector. 
 	The score determines how much focus to place on other parts of the input image at a certain position 
 	and Multi Head Attention Map module only returns the attention softmax
 	
