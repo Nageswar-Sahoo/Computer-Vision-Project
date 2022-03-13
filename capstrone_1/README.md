@@ -28,14 +28,14 @@
 		   
          layer 2 :  tensors shape : [batch = 2, channel = 1024, hight = 55, width = 67] 
                     mask shape    : [batch = 2,  hight = 55, width = 67 ]
-		        pos encoding  : [batch = 2, channel = 256, hight = 55, width = 67] 
+     pos encoding  : [batch = 2, channel = 256, hight = 55, width = 67] 
 
 
 
          layer 3 :  tensors shape : [batch = 2, channel = 2048, hight = 28, width = 34] 
                     mask shape    : [batch = 2,  hight = 28, width = 34 ]
 		        pos encoding  : [batch = 2, channel = 256, hight = 28, width = 34] 
-			
+
                     
  
  Step 2 : We take the encoded image (dxH/32xW/32) and send it to Multi-Head Attention
@@ -97,16 +97,30 @@
            weights = self.dropout(weights)  # dropout
 
            return weights  # Batch N = 2 Object Query M = 100 No of Head= 8 Hight = 24 width = 32
+	   
+![Capture_2](https://user-images.githubusercontent.com/70502759/158048279-34f521e9-afc0-48c7-a932-84dd98516811.PNG)
+
 
  
  Step 5 : Then we concatenate these maps with Res5 Block
          
-	 Attention map from step 4 and resnet BackBone block from step 1 will concatenate and will do upsampling  using a FPN approach .   
+	 
+	 Attention map from step 4 and resnet BackBone block from step 1 will concatenate and will do upsampling  using a FPN approach . 
+	 
+![Capture_1](https://user-images.githubusercontent.com/70502759/158048086-61efa3ba-525f-4f70-80f5-c7848a3ccf70.PNG)
+
+	 
+	 
  
  Step  : Then we perform the above steps
  
          We filter the predictions for which the confidence is less then certain threshold .
          Finally, the remaining masks are merged together using a pixel-wise argmax . 
+	 
+
+	 
+![Capture_3](https://user-images.githubusercontent.com/70502759/158048064-107b938c-a5bd-46c9-b326-dcedcb0e3e86.PNG)
+
  
  Step  : Finally left with the panoptic segmentation
 
