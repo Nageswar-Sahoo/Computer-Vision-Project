@@ -66,14 +66,14 @@
 
  Step 4 : We do something here to generate NxMxH/32xW/32 maps
  
-        Multi Head Attention Map will take input of transformer decoder last layer output and encoder encoded image output .
+        Multi Head Attention Map will take input of transformer decoder last layer (from step 3) output and encoder encoded image output (from step 2) .
 	Transformer decoder last layer output behaves as query and encoder output behaves as key . 
 	Then we calculate a self-attention score. The score is calculated by taking the dot 
 	product of the query vector with the key vector. 
 	The score determines how much focus to place on other parts of the input image at a certain position 
 	and Multi Head Attention Map module only returns the attention softmax
 	
-	  Details coding done in Multi Head Attention Map : 
+	  Details coding steps in Multi Head Attention Map : 
 	  
 	  
 	 def forward(self, q, k, mask: Optional[Tensor] = None):  # q = [2 100 256 ] k = [2 256 28 34]  mask = [2 28 34]
@@ -106,9 +106,9 @@
  Step 5 : Then we concatenate these maps with Res5 Block
          
 	 
-	 Attention map from step 4 and resnet BackBone block from step 1 will concatenate and will do upsampling  using a FPN approach . 
+	 Attention map from step 4 and resnet BackBone block from step 1 will concatenate and will do upsampling  using a below FPN approach . 
 	 
-	 	     # x = [2 256 28 34] bbox_mask = [2 100 8 28 34 ]
+    # x = [2 256 28 34] bbox_mask = [2 100 8 28 34 ]
     # fpns # 0 > 2 1024 48 64 # 1 > 2 512 96 128 # 2 > 2 256 192 256
     def forward(self, x: Tensor, bbox_mask: Tensor, fpns: List[Tensor]):
 
