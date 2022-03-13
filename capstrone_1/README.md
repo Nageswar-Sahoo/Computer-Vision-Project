@@ -6,7 +6,7 @@
                                                              
  ![image](https://user-images.githubusercontent.com/70502759/158041859-474702f1-b5e0-4498-abe7-34685cdd8183.png)
  
- Below are the steps perfoqrmed in DETR for Panoptic segmentation : 
+ Below are the steps performed  in DETR for Panoptic segmentation : 
  
  
  
@@ -53,7 +53,7 @@
 	  and N object queries are transformed into an output embedding by the decoder . 
 	  
 	  Hence encoded image is the output of transformer encoder which is of following shape and   is passed to Multi-Head Attention 
-	  tensors shape : [batch = 2, embeding vector(d) :256, hight(H/32) = 28, width(N/32) = 34]
+	  tensors shape : [batch = 2, embedding  vector(d) :256, hight(H/32) = 28, width(N/32) = 34]
 	        
 
 
@@ -65,7 +65,7 @@
  
          N object queries are transformed into an output embedding by the decoder  and 
 	     last decoder layer output is passed to Multi-Head Attention along with output of step 2 i.e encoded image.
-         tensors shape : [batch = 2, object queries zize(N) = 100, embeding vector(d) : 256]
+         tensors shape : [batch = 2, object queries size(N) = 100, embedding  vector(d) : 256]
 
  Step 4 : We do something here to generate NxMxH/32xW/32 maps
  ------------------------------------------------------------
@@ -88,10 +88,10 @@
            k = F.conv2d(k, self.k_linear.weight.unsqueeze(-1).unsqueeze(-1), self.k_linear.bias)  # k will be projected
 	    
            qh = q.view(q.shape[0], q.shape[1], self.num_heads, self.hidden_dim // self.num_heads)	   
-           # qq rehsape based on number of heads to optimize the matrix multiplication qh = [2 100 8 32]
+           # qq reshape  based on number of heads to optimize the matrix multiplication qh = [2 100 8 32]
 	  
            kh = k.view(k.shape[0], self.num_heads, self.hidden_dim // self.num_heads, k.shape[-2], k.shape[-1])
-           # kh rehsape based on number of heads to optimize the matrix multiplication  kh [2 8 32 24 32]
+           # kh reshape  based on number of heads to optimize the matrix multiplication  kh [2 8 32 24 32]
 
            weights = torch.einsum("bqnc,bnchw->bqnhw", qh * self.normalize_fact, kh)  # self attention weight = [2 100 8 28 34 ]
 
