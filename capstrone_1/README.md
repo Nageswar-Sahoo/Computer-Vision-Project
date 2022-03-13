@@ -28,7 +28,7 @@
 		   
          layer 2 :  tensors shape : [batch = 2, channel = 1024, hight = 55, width = 67] 
                     mask shape    : [batch = 2,  hight = 55, width = 67 ]
-     pos encoding  : [batch = 2, channel = 256, hight = 55, width = 67] 
+                        pos encoding  : [batch = 2, channel = 256, hight = 55, width = 67] 
 
 
 
@@ -98,8 +98,8 @@
 
            return weights  # Batch N = 2 Object Query M = 100 No of Head= 8 Hight = 24 width = 32
 	   
-![Capture_2](https://user-images.githubusercontent.com/70502759/158048279-34f521e9-afc0-48c7-a932-84dd98516811.PNG)
 
+![Capture_4](https://user-images.githubusercontent.com/70502759/158050222-87865ae1-a803-4364-9115-c25a4753deba.PNG)
 
  
  Step 5 : Then we concatenate these maps with Res5 Block
