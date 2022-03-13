@@ -12,7 +12,7 @@
  
  Assuming we have sample image of batch 2 with shape : [batch = 2 , channel = 3 , hight = 768 , width = 1023 ]
  
- step  :  Detr architecture  
+ step 1  :  BackBone in DETR architecture  
  
           we know that the backbone upon accepting an input of above shape  returns out and pos, 
 	    where output has intermediate layer  tensors  and positional encoding of following shape 
@@ -38,7 +38,7 @@
 			
                     
  
- Step  : We take the encoded image (dxH/32xW/32) and send it to Multi-Head Attention
+ Step 2 : We take the encoded image (dxH/32xW/32) and send it to Multi-Head Attention
        
          Backbone last layer o/p again pass throw convolution network and 
          project back in to  Size of the embeddings (dimension as required by the transformer)
@@ -58,12 +58,12 @@
         
         
 
- Step  : We also send dxN Box embeddings to the Multi-Head Attention
+ Step 3 : We also send dxN Box embeddings to the Multi-Head Attention
  
        N object queries are transformed into an output embedding by the decoder of shape and is passed to Multi-Head Attention
          tensors shape : [number of intermediate layer  = 6, batch = 2, object queries zize(N) = 100, embeding vector(d) : 256]
 
- Step  : We do something here to generate NxMxH/32xW/32 maps
+ Step 4 : We do something here to generate NxMxH/32xW/32 maps
  
         Multi Head Attention Map will take input of transformer decoder last layer output and encoder encoded image output .
 	Transformer decoder last layer output behaves as query and encoder output behaves as key . 
@@ -96,12 +96,17 @@
 
            weights = self.dropout(weights)  # dropout
 
-           return weights  # 2 100 8 24 32
+           return weights  # Batch N = 2 Object Query M = 100 No of Head= 8 Hight = 24 width = 32
 
  
- Step  : Then we concatenate these maps with Res5 Block
+ Step 5 : Then we concatenate these maps with Res5 Block
+         
+	 Attention map from step 4 and resnet BackBone block from step 1 will concatenate and will do upsampling  using a FPN approach .   
  
  Step  : Then we perform the above steps
+ 
+         We filter the predictions for which the confidence is less then certain threshold .
+         Finally, the remaining masks are merged together using a pixel-wise argmax . 
  
  Step  : Finally left with the panoptic segmentation
 
