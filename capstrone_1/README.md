@@ -75,29 +75,29 @@
 	  Details coding done in Multi Head Attention Map : 
 	  
 	  
-	def forward(self, q, k, mask: Optional[Tensor] = None):
-	   q = self.q_linear(q)
+	 def forward(self, q, k, mask: Optional[Tensor] = None):  # q = [2 100 256 ] k = [2 256 24 32]  mask = [2 24 32]
+	 
+           q = self.q_linear(q)  # q will be projected
 	   
-           k = F.conv2d(k, self.k_linear.weight.unsqueeze(-1).unsqueeze(-1), self.k_linear.bias)
-	   
-           #qh 2 100 8 32
-           #kh 2 8 32 24 32
-           qh = q.view(q.shape[0], q.shape[1], self.num_heads, self.hidden_dim // self.num_heads)
-	   
+           k = F.conv2d(k, self.k_linear.weight.unsqueeze(-1).unsqueeze(-1), self.k_linear.bias)  # k will be projected
+	    
+           qh = q.view(q.shape[0], q.shape[1], self.num_heads, self.hidden_dim // self.num_heads)	   
+           # qq rehsape based on number of heads to optimize the matrix multiplication qh = [2 100 8 32]
+	  
            kh = k.view(k.shape[0], self.num_heads, self.hidden_dim // self.num_heads, k.shape[-2], k.shape[-1])
-	   
-           #weight 2 100 8 24 32
-           weights = torch.einsum("bqnc,bnchw->bqnhw", qh * self.normalize_fact, kh)
+           # kh rehsape based on number of heads to optimize the matrix multiplication  kh [2 8 32 24 32]
+
+           weights = torch.einsum("bqnc,bnchw->bqnhw", qh * self.normalize_fact, kh)  # self attention weight = [2 100 8 24 32 ]
 
            if mask is not None:
               weights.masked_fill_(mask.unsqueeze(1).unsqueeze(1), float("-inf"))
-	      
-           weights = F.softmax(weights.flatten(2), dim=-1).view(weights.size())
-	   
-           weights = self.dropout(weights)
-	   
-           #2 100 8 24 32
-           return weights
+
+           weights = F.softmax(weights.flatten(2), dim=-1).view(weights.size())  # attention softmax 
+
+           weights = self.dropout(weights)  # dropout
+
+           return weights  # 2 100 8 24 32
+
  
  Step  : Then we concatenate these maps with Res5 Block
  
