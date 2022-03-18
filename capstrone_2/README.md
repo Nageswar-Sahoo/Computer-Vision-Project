@@ -102,7 +102,9 @@ Loss function used
 Now we make use of the unique loss that the model uses and for that we need to define the matcher. DETR calcuates three individual losses :
 
 Classification Loss for labels(its weight can be set by loss_ce)
+
 Bbox Loss (its weight can be set by loss_bbox, loss_giou)
+
 Loss for Background class
 
 loss
@@ -114,8 +116,6 @@ class_error
 
 Results
 -------
-
-	
 
 Metrics Visualization
 -----------------------
