@@ -33,6 +33,8 @@ As given dataset doest not have annotated data from mask image we have genrate t
 We have used skimage module label, regionprops, find_contours to get the required bounding box and 
 with the help of custom code we have converted the concret dataset into COCO dataset format which can be directly trained in detr . 
 
+Details code use to generate COCO dataset format  can be found here : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_2/MaskToBoundingBox.py 
+
 
 
 
