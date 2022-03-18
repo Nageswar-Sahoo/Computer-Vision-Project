@@ -116,11 +116,12 @@ Results
 -------
 
 	
-COCO Evaluation Metrics on Validation Dataset (After 15 epochs of training)
------------------------------------------------------------------------------
 
 Metrics Visualization
 -----------------------
+
+Last Training Logs 
+--------------
 Augmentation methods
 --------------------
 
