@@ -27,8 +27,16 @@ Object and Bounding Box Detection. Data set has total 1443 number of image . Als
 
 
 
-Step 2 : Collecting Dataset for Concrete defect 
------------------------------------------------
+Step 2 : Converting dataset into COCO dataset format 
+-----------------------------------------------------
+As given dataset doest not have annotated data from mask image we have genrate the bounding coordinate .
+We have used skimage module label, regionprops, find_contours to get the required bounding box and 
+with the help of custom code we have converted the concret dataset into COCO dataset format which can be directly trained in detr . 
+
+
+
+
+
 
 
 
