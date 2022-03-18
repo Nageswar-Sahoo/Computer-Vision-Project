@@ -37,13 +37,14 @@ Details code use to generate COCO dataset format  can be found here : https://gi
 
 COCO dataset format After conversion 
 
-path/to/coco/
-  annotations/  # annotation json files
-      -instances_train2017.json
-      -instances_val2017.json
-      -instances_test2017.json      
-  train2017/    # train images
-  val2017/      # val images
+           path/to/coco/
+               annotations/  # annotation json files
+                   -instances_train2017.json
+                   -instances_val2017.json
+                   -instances_test2017.json      
+              train2017/    # train images
+              val2017/      # val images
+	      test2017/     # test images
   
   Sample Annotated Data : 
   
@@ -81,7 +82,7 @@ path/to/coco/
 
 Step 3 : BackBone in DETR 
 -------------------------
-   We have used resnet-50 model as backbone network for DETR.
+        We have used resnet-50 model as backbone network for DETR.
    
 
 
