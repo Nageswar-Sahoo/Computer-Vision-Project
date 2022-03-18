@@ -83,6 +83,10 @@ COCO dataset format After conversion
 Step 3 : BackBone in DETR 
 -------------------------
         We have used resnet-50 model as backbone network for DETR.
+	
+Step 4 : Training Detr 
+-------------------------
+        We have used resnet-50 model as backbone network for DETR.	
    
 
 
