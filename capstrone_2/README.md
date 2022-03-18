@@ -35,6 +35,56 @@ with the help of custom code we have converted the concret dataset into COCO dat
 
 Details code use to generate COCO dataset format  can be found here : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_2/MaskToBoundingBox.py 
 
+COCO dataset format After conversion 
+
+path/to/coco/
+  annotations/  # annotation json files
+      -instances_train2017.json
+      -instances_val2017.json
+      -instances_test2017.json      
+  train2017/    # train images
+  val2017/      # val images
+  
+  Sample Annotated Data : 
+  
+  
+            {
+            
+        "images": [ 
+          {
+             "file_name": "0035002.jpg",
+             "height": 287,
+             "width": 416,
+             "id": 1
+          }
+	     ]
+	    "annotations": [
+         {
+            "area": 12628,
+            "iscrowd": 0,
+            "image_id": 1,
+            "bbox": [
+              142,
+              0,
+              44,
+              287
+           ],
+          "category_id": 1,
+          "id": 1,
+          "ignore": 0,
+          "segmentation": []
+	       }
+	     ] 
+     }	
+
+
+
+Step 3 : BackBone in DETR 
+-------------------------
+   We have used resnet-50 model as backbone network for DETR.
+   
+
+
 
 
 
