@@ -96,6 +96,16 @@ Step 3 : BackBone in DETR
 Step 4 : Training Detr 
 -------------------------
         We have used resnet-50 model as backbone network for DETR.
+	
+Loss function used 
+------------------
+
+loss
+map
+loss_ce
+loss_bbox
+loss_giou
+class_error
 
 Results
 -------
