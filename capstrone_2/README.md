@@ -133,7 +133,10 @@ Results
 -------
 
 Last Training Logs 
---------------
+------------------
+
+AWS Training Logs 
+------------------ 
 
 
 
