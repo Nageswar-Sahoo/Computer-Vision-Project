@@ -13,8 +13,8 @@ DETR is short for DEtection TRansformer, and consists of a convolutional backbon
 
 The architecture of DETR has three main components, which are a CNN backbone to extract a compact feture representation, encoder-decoder transformer, Feed-Forward Netoworks.
 
-Step 1 : Data Overview
------------------------------------------------
+Data Overview
+--------------
 A dataset with mask labeling of three major types of concrete surface defects: crack, spalling and exposed rebar, was prepared for training and testing of the DETR for
 Object and Bounding Box Detection. Data set has total 1443 number of image . Also we have equal number of mask image . Data set does not have all annotated data for bounding box so from mask image we have to generate the bounding box . 
 
@@ -32,12 +32,8 @@ Object and Bounding Box Detection. Data set has total 1443 number of image . Als
  </table>
 
 
-
-
-
-
-Step 2 : Converting dataset into COCO dataset format 
------------------------------------------------------
+Converting dataset into COCO dataset format 
+-------------------------------------------
 As given dataset doest not have annotated data from mask image we have genrate the bounding coordinate .
 We have used skimage module label, regionprops, find_contours to get the required bounding box and 
 with the help of custom code we have converted the concret dataset into COCO dataset format which can be directly trained in detr . 
@@ -88,13 +84,12 @@ COCO dataset format After conversion
      }	
 
 
-
-Step 3 : BackBone in DETR 
--------------------------
+ BackBone in DETR 
+------------------
         We have used resnet-50 model as backbone network for DETR.
 	
-Step 4 : Training Detr 
--------------------------
+Training Detr 
+--------------
         We have used resnet-50 model as backbone network for DETR.
 	
 Loss function used 
