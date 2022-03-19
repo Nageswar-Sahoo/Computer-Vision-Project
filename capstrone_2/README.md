@@ -104,7 +104,6 @@ Training Detr
 	  --batch_size 4 --epochs 350 --num_queries 20  -lr .00001 --lr_backbone .00001 --resume output_2/checkpoint.pth 
 	
 	
-Torch implementation: https://github.com/facebookresearch/detr
 	
 Loss function used 
 ------------------
