@@ -112,7 +112,10 @@ loss_ce
 loss_bbox
 loss_giou
 class_error
-
+Optimizer
+---------
+   We have used adam optimizer while training the detr . 
+   
 Results
 -------
 
