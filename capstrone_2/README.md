@@ -99,7 +99,8 @@ Training Detr
      We have also change number of      object query to 20 as the whole object does not contain more than 20 objects in a single image. 
      Below command used for trainig the detr - 
 	
-	!python -m torch.distributed.launch --nproc_per_node=1 --use_env main.py --coco_path coco --output_dir output_2  --batch_size 4 --epochs 350 --num_queries 20 -           -lr .00001 --lr_backbone .00001 --resume output_2/checkpoint.pth 
+	!python -m torch.distributed.launch --nproc_per_node=1 --use_env main.py --coco_path coco --output_dir output_2  
+	        --batch_size 4 --epochs 350 --num_queries 20  -lr .00001 --lr_backbone .00001 --resume output_2/checkpoint.pth 
 	
 	
 Torch implementation: https://github.com/facebookresearch/detr
