@@ -8,7 +8,7 @@ About Model  DETR
 -----------------
 DETR is short for DEtection TRansformer, and consists of a convolutional backbone  followed by an encoder-decoder Transformer. It can be trained end-to-end to perform object detection .The main contribution of DETR is its simplicity: compared to other models like Faster R-CNN and Mask R-CNN, which rely on several highly engineered things like region proposals, non-maximum suppression procedure and anchor generation. This is possible due to the use of a clever loss function, the so-called bipartite matching loss . 
 
-1443 image splitted into train and test split of 80% to 20% ratio . Hence the train set contain 1146 and 297 number of image . 
+1443 image splitted into train and test split of 80% to 20% ratio . Hence the train set contain 1146 and 297 number of image .
 
 
 ![image](https://user-images.githubusercontent.com/70502759/149753302-5591d27d-ba80-437b-9ec2-bb4a73de835f.png)
@@ -54,7 +54,8 @@ COCO dataset format After conversion
               train2017/    # train images
               val2017/      # val images
 	      test2017/     # test images
-  
+  Note : Both validation and Test contain same set of image .
+
   Sample Annotated Data : 
   
   
@@ -98,14 +99,14 @@ Training Detr
 	
 Loss function used 
 ------------------
-Now we make use of the unique loss that the model uses and for that we need to define the matcher. DETR calcuates three individual losses :
+Now we make use of the unique loss that the model uses and for that we need to define the matcher. 
 
 Classification Loss for labels(its weight can be set by loss_ce)
 
 Bbox Loss (its weight can be set by loss_bbox, loss_giou)
 
 Loss/Accuracy Score Metric Visualization: 
--------------
+----------------------------------------
     Classification loss: 
            loss_ce :  denotes the cross entropy loss . 
            class_error : denotes   error for predicting "object" and "no-object"          
@@ -120,10 +121,12 @@ Loss/Accuracy Score Metric Visualization:
 
      loss : overall all model loss   
 
-     cardinality_error : Compute the cardinality error, ie the absolute error in the number of predicted non-empty boxes. This is not really a loss, it is intended 
-                          for logging purposes only. It doesn't propagate gradients
+     cardinality_error : Compute the cardinality error, ie the absolute error in the number of predicted non-empty boxes. 
+                         This is not really a loss, it is intended for logging purposes only. It doesn't propagate gradients
 
      mAP error : mean the average of precisions score  , it is intended for accuracy score for object detection problem 
+     
+     
 
 Optimizer
 ---------
