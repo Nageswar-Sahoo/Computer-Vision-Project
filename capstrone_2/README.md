@@ -104,14 +104,27 @@ Classification Loss for labels(its weight can be set by loss_ce)
 
 Bbox Loss (its weight can be set by loss_bbox, loss_giou)
 
-Loss for Background class
+Loss/Accuracy Score Metric Visualization: 
+-------------
+    Classification loss: 
+           loss_ce :  denotes the cross entropy loss . 
+           class_error : denotes   error for predicting "object" and "no-object"          
 
-loss
-map
-loss_ce
-loss_bbox
-loss_giou
-class_error
+    Compute the losses related to the bounding boxes:
+        loss_bbox :  L1 regression loss
+        loss_giou  : GIoU loss 
+                  (   GIoU loss maximizes the overlap area of the ground truth 
+		 and predicted the bounding box. It increases the predicted box's 
+		 size to overlap with the target box by moving slowly 
+		 towards the target box for non-overlapping cases.)
+
+     loss : overall all model loss   
+
+     cardinality_error : Compute the cardinality error, ie the absolute error in the number of predicted non-empty boxes. This is not really a loss, it is intended 
+                          for logging purposes only. It doesn't propagate gradients
+
+     mAP error : mean the average of precisions score  , it is intended for accuracy score for object detection problem 
+
 Optimizer
 ---------
    We have used adam optimizer while training the detr . 
@@ -119,13 +132,10 @@ Optimizer
 Results
 -------
 
-Metrics Visualization
------------------------
-
 Last Training Logs 
 --------------
-Augmentation methods
---------------------
+
+
 
 
    
