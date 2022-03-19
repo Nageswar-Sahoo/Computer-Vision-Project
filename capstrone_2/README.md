@@ -15,8 +15,7 @@ The architecture of DETR has three main components, which are a CNN backbone to 
 
 Data Overview
 --------------
-A dataset with mask labeling of three major types of concrete surface defects: crack, spalling and exposed rebar, was prepared for training and testing of the DETR for
-Object and Bounding Box Detection. Data set has total 1443 number of image . Also we have equal number of mask image . Data set does not have all annotated data for bounding box so from mask image we have to generate the bounding box . 
+A dataset with mask labeling of three major types of concrete surface defects: crack, spalling and exposed rebar, was prepared for training and testing of the DETR for Object and Bounding Box Detection. Data set has a total 1443 number of images . Also we have an equal number of mask images . Data set does not have all annotated data for the bounding box so from mask image we have generated the bounding box .
 
 <table>
   <tr>
@@ -34,9 +33,11 @@ Object and Bounding Box Detection. Data set has total 1443 number of image . Als
 
 Converting dataset into COCO dataset format 
 -------------------------------------------
-As given dataset doest not have annotated data from mask image we have genrate the bounding coordinate .
-We have used skimage module label, regionprops, find_contours to get the required bounding box and 
-with the help of custom code we have converted the concret dataset into COCO dataset format which can be directly trained in detr . 
+As the given dataset does not have annotated data from the mask image we have generated the bounding coordinate .
+We have used skimage module label, regionprops, find_contours to get the required bounding box 
+and With the help of custom code we have converted the concret dataset into COCO dataset format which can be used for training the detr . 
+
+
 
 Details code use to generate COCO dataset format  can be found here : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_2/MaskToBoundingBox.py 
 
