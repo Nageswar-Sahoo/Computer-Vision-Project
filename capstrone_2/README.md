@@ -31,7 +31,7 @@ A dataset with mask labeling of three major types of concrete surface defects: c
  </table>
 
 
-Converting dataset into COCO dataset format 
+Converting concrete dataset into COCO dataset format 
 -------------------------------------------
 As the given dataset does not have annotated data from the mask image we have generated the bounding coordinate .
 We have used skimage module label, regionprops, find_contours to get the required bounding box 
