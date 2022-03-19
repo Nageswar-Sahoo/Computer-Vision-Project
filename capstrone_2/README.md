@@ -148,7 +148,8 @@ Last Training Logs
 AWS Training Logs 
 ------------------ 
 
-
+Augmentation methods
+----------------------
 Training Notebook Link : 
 ------------------------
 
