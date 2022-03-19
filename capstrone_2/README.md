@@ -139,9 +139,12 @@ Optimizer
 ---------
    We have used adam optimizer while training the detr . 
    
+   
 Inference
 -------
 
+Evaluation Metrics on Validation Dataset (After 400 epochs of training)
+-----------------------------------------------------------------------
 Last Training Logs 
 ------------------
 
