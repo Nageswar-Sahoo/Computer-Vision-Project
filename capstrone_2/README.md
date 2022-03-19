@@ -139,7 +139,7 @@ Optimizer
 ---------
    We have used adam optimizer while training the detr . 
    
-Results
+Inference
 -------
 
 Last Training Logs 
