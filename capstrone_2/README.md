@@ -153,6 +153,11 @@ Augmentation methods
 Training Notebook Link : 
 ------------------------
 
+# References 
+- Official DETR repository (https://github.com/facebookresearch/detr)
+- Fine-tunne DETR ( https://github.com/woctezuma/finetune-detr )
+- A Github issue regarding training detr on custom data (https://github.com/facebookresearch/detr/issues/9)
+
 
 
 
