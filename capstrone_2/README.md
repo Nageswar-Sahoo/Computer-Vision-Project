@@ -159,9 +159,6 @@ Inference
 ------------------------------------------------------------------------------------------------------------------------------------
 
 
-![85](https://user-images.githubusercontent.com/70502759/159162568-4b716dc7-7f74-46c8-98d3-688f147c1b1c.jpg)
-![84](https://user-images.githubusercontent.com/70502759/159162574-58ce8758-8617-4b23-b402-766c478e639d.jpg)
-![83](https://user-images.githubusercontent.com/70502759/159162576-9f753178-0999-42bb-99c4-1eb543e7a7ad.jpg)
 ![81](https://user-images.githubusercontent.com/70502759/159162578-a710a8fe-283d-4e07-afc1-a5a9843bf78f.jpg)
 ![75](https://user-images.githubusercontent.com/70502759/159162581-33d655af-c404-40cb-a383-2470b0a433bc.jpg)
 ![74](https://user-images.githubusercontent.com/70502759/159162583-c184c4fe-a38b-464e-8d16-33303c2e1bf4.jpg)
@@ -257,6 +254,9 @@ Inference
 ![96](https://user-images.githubusercontent.com/70502759/159165150-2cc49ee4-c5a8-4b63-a630-94201eab1836.jpg)
 ![97](https://user-images.githubusercontent.com/70502759/159165152-6c1ccfe0-70bb-4cde-8d54-1352d2b40c22.jpg)
 ![100](https://user-images.githubusercontent.com/70502759/159165155-a0bb90a2-bdc2-42fb-9bb5-c90f3fc925e7.jpg)
+![85](https://user-images.githubusercontent.com/70502759/159162568-4b716dc7-7f74-46c8-98d3-688f147c1b1c.jpg)
+![84](https://user-images.githubusercontent.com/70502759/159162574-58ce8758-8617-4b23-b402-766c478e639d.jpg)
+![83](https://user-images.githubusercontent.com/70502759/159162576-9f753178-0999-42bb-99c4-1eb543e7a7ad.jpg)
 
 
 
