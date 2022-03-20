@@ -112,11 +112,11 @@ Training Detr
 	
 Loss function used 
 ------------------
-Now we make use of the unique loss that the model uses and for that we need to define the matcher. 
+     Now we make use of the unique loss that the model uses and for that we need to define the matcher. 
 
-Classification Loss for labels(its weight can be set by loss_ce , class_error)
+     Classification Loss for labels(its weight can be set by loss_ce , class_error)
 
-Bbox Loss (its weight can be set by loss_bbox, loss_giou)
+     Bbox Loss (its weight can be set by loss_bbox, loss_giou)
 
 Loss/Accuracy Score Metric Visualization: 
 ----------------------------------------
