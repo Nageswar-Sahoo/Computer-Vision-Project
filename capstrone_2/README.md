@@ -133,6 +133,11 @@ Loss/Accuracy Score Metric Visualization:
                          This is not really a loss, it is intended for logging purposes only. It doesn't propagate gradients
 
      mAP error : mean the average of precisions score  , it is intended for accuracy score for object detection problem 
+
+![image](https://user-images.githubusercontent.com/70502759/159144791-493d61a5-2d0f-4685-85b4-f2bdfc718071.png)
+![image](https://user-images.githubusercontent.com/70502759/159144794-300fafe1-a799-401f-9e4b-8d31add2957f.png)
+![image](https://user-images.githubusercontent.com/70502759/159144800-59457351-c64d-4277-a1c9-d77270e55af6.png)
+
      
      
 
