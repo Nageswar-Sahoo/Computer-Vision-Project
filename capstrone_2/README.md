@@ -147,10 +147,20 @@ Inference
 Evaluation Metrics on Validation Dataset (After 400 epochs of training)
 -----------------------------------------------------------------------
 
-It took me 4:59:45 hours to finish 15 epochs with batch_size=16 using Tesla P100-PCIE. If you want better accuracy, you can train more epochs.
 
-IoU metric: bbox
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.393
+     IoU metric: bbox
+       Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.179
+       Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.320
+       Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.178
+       Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+       Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.036
+       Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.219
+       Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.230
+       Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.339
+       Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.355
+       Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.009
+       Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.081
+       Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.435
 
 Last Training Logs 
 ------------------
