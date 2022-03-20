@@ -151,8 +151,8 @@ Optimizer
    We have used adam optimizer while training the detr . 
    
    
-Inference
--------
+Inference (With Threshold kept as 0.5) 
+--------------------------------------
 
 
                Orignal Image                             Ground Truth                              Predicted Bounding Box
@@ -524,6 +524,9 @@ AWS Training Logs
 
 Training Notebook Link : 
 ------------------------
+
+https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_2/DETR_Training_From_Scratch.ipynb
+
 
 # References 
 - Official DETR repository (https://github.com/facebookresearch/detr)
