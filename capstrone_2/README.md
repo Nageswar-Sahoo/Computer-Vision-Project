@@ -150,7 +150,8 @@ Inference
 -------
 
 
-![13](https://user-images.githubusercontent.com/70502759/159162522-72fd42e3-3193-43e7-b252-8732dcd584ba.jpg)
+               Orignal Image                             Ground Truth                              Predicted Bounding Box
+------------------------------------------------------------------------------------------------------------------------------------
 ![85](https://user-images.githubusercontent.com/70502759/159162568-4b716dc7-7f74-46c8-98d3-688f147c1b1c.jpg)
 ![84](https://user-images.githubusercontent.com/70502759/159162574-58ce8758-8617-4b23-b402-766c478e639d.jpg)
 ![83](https://user-images.githubusercontent.com/70502759/159162576-9f753178-0999-42bb-99c4-1eb543e7a7ad.jpg)
