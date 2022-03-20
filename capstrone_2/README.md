@@ -1,6 +1,9 @@
 
 
 
+
+
+
                                                    DETR for Object and Bounding Box Detection
                                                    ------------------------------------------
                                                    
@@ -153,6 +156,67 @@ Inference
                Orignal Image                             Ground Truth                              Predicted Bounding Box
 ------------------------------------------------------------------------------------------------------------------------------------
 
+
+![85](https://user-images.githubusercontent.com/70502759/159162568-4b716dc7-7f74-46c8-98d3-688f147c1b1c.jpg)
+![84](https://user-images.githubusercontent.com/70502759/159162574-58ce8758-8617-4b23-b402-766c478e639d.jpg)
+![83](https://user-images.githubusercontent.com/70502759/159162576-9f753178-0999-42bb-99c4-1eb543e7a7ad.jpg)
+![81](https://user-images.githubusercontent.com/70502759/159162578-a710a8fe-283d-4e07-afc1-a5a9843bf78f.jpg)
+![75](https://user-images.githubusercontent.com/70502759/159162581-33d655af-c404-40cb-a383-2470b0a433bc.jpg)
+![74](https://user-images.githubusercontent.com/70502759/159162583-c184c4fe-a38b-464e-8d16-33303c2e1bf4.jpg)
+![72](https://user-images.githubusercontent.com/70502759/159162586-19e82611-3d9d-4fef-b667-9120566948f4.jpg)
+![71](https://user-images.githubusercontent.com/70502759/159162588-8fb140ec-b3cc-4fc3-a7ff-2aedcf987913.jpg)
+![70](https://user-images.githubusercontent.com/70502759/159162592-ac4be5ee-27e6-4841-a298-9f34fc6baf3b.jpg)
+![69](https://user-images.githubusercontent.com/70502759/159162596-19276597-54cb-482c-b59c-a569c97b8ed8.jpg)
+![68](https://user-images.githubusercontent.com/70502759/159162599-33c51856-ef57-438a-9ba6-a08dc57fe999.jpg)
+![66](https://user-images.githubusercontent.com/70502759/159162600-cc33dd40-ff35-4539-8fda-4d7a3df1cc0b.jpg)
+![65](https://user-images.githubusercontent.com/70502759/159162602-1b4c8d45-c8d6-4f15-ab88-23019b9a2aea.jpg)
+![64](https://user-images.githubusercontent.com/70502759/159162608-14d521ee-4891-49c7-8f9c-ab661311aed4.jpg)
+![63](https://user-images.githubusercontent.com/70502759/159162611-6bf9fccc-b6c3-49e4-aed1-7302d43f189d.jpg)
+![62](https://user-images.githubusercontent.com/70502759/159162615-bcda106b-e750-4aa1-9b2e-c9c1ae4b7e93.jpg)
+![59](https://user-images.githubusercontent.com/70502759/159162617-3fd13beb-edcc-44b0-bded-f20f06ccddd8.jpg)
+![56](https://user-images.githubusercontent.com/70502759/159162619-d3d42e6b-cd4f-4613-9eb9-371fef0d6db5.jpg)
+![55](https://user-images.githubusercontent.com/70502759/159162621-624efc3e-6bca-4bc0-b4a4-076e8ac1265d.jpg)
+![54](https://user-images.githubusercontent.com/70502759/159162622-d82b0902-d488-4d7e-a9ee-12ddc8356fe5.jpg)
+![53](https://user-images.githubusercontent.com/70502759/159162623-f19e6614-f042-49b8-9c37-8715ab2fff58.jpg)
+![51](https://user-images.githubusercontent.com/70502759/159162626-9574c8c4-3a1d-4f60-8c7b-33c33711cc13.jpg)
+![50](https://user-images.githubusercontent.com/70502759/159162628-12c5ccf6-2651-48d1-99b7-9cc2e6d54130.jpg)
+![48](https://user-images.githubusercontent.com/70502759/159162631-732b52cc-e7c1-4938-a41a-0eb021ae2d0d.jpg)
+![45](https://user-images.githubusercontent.com/70502759/159162632-fef40ea5-7bb3-42cc-b847-4618dab9d1bb.jpg)
+![44](https://user-images.githubusercontent.com/70502759/159162633-345d9a74-efc5-4ac9-8073-d8817d7ba4f6.jpg)
+![43](https://user-images.githubusercontent.com/70502759/159162636-181c44cc-0015-469c-8a17-377e6a2b01f2.jpg)
+![42](https://user-images.githubusercontent.com/70502759/159162638-8a7cf8cd-a4ad-4447-9cbd-dd924b324def.jpg)
+![38](https://user-images.githubusercontent.com/70502759/159162641-b01edb2d-7fa8-4a92-bcc4-cde231d91d21.jpg)
+![36](https://user-images.githubusercontent.com/70502759/159162642-a1a36493-63ac-4aac-95da-a37903be2b19.jpg)
+![35](https://user-images.githubusercontent.com/70502759/159162644-872fec0d-1213-4926-9edc-dc506d0fcab2.jpg)
+![34](https://user-images.githubusercontent.com/70502759/159162645-462310ac-67e0-4153-a0d2-a4150b672cbe.jpg)
+![33](https://user-images.githubusercontent.com/70502759/159162646-3d921e8a-46be-42f8-87c8-dfc9661d051d.jpg)
+![32](https://user-images.githubusercontent.com/70502759/159162647-972d1d91-baf0-4528-89cf-44b453aa1832.jpg)
+![31](https://user-images.githubusercontent.com/70502759/159162649-81224e42-f55a-4ec8-bdf8-f5a5df43a2cb.jpg)
+![30](https://user-images.githubusercontent.com/70502759/159162650-f0e1ad24-a7e9-41be-8e42-33fb17cded65.jpg)
+![29](https://user-images.githubusercontent.com/70502759/159162652-769cc2f2-59e7-4d0e-b253-d5dd9f9ca291.jpg)
+![28](https://user-images.githubusercontent.com/70502759/159162653-9d56e9aa-4d35-4b67-b86d-4a2e8e3617ca.jpg)
+![27](https://user-images.githubusercontent.com/70502759/159162656-1d210305-94c8-48f3-a724-925d47ee45a9.jpg)
+![25](https://user-images.githubusercontent.com/70502759/159162658-d12e5135-7941-4ac5-be3b-e866817c18c4.jpg)
+![24](https://user-images.githubusercontent.com/70502759/159162661-de5fbde8-4005-4a14-9969-696aaeb3f57d.jpg)
+![23](https://user-images.githubusercontent.com/70502759/159162663-d6b31e78-c363-46f8-b667-7876f878b340.jpg)
+![22](https://user-images.githubusercontent.com/70502759/159162664-0a04a907-70f8-4838-abe9-730dbb1f1cc2.jpg)
+![21](https://user-images.githubusercontent.com/70502759/159162666-ee7449ff-8869-4500-8342-c10e776a881d.jpg)
+![20](https://user-images.githubusercontent.com/70502759/159162667-eb66114a-c02d-49f3-8348-a5798d82240f.jpg)
+![18](https://user-images.githubusercontent.com/70502759/159162669-66b90389-480d-4f9d-b4fd-4575969d75b5.jpg)
+![17](https://user-images.githubusercontent.com/70502759/159162671-cb7b901b-a0c6-4d84-8377-ca505a71fe3e.jpg)
+![16](https://user-images.githubusercontent.com/70502759/159162672-18824810-18fd-43a0-acb4-52bf44cd998c.jpg)
+![15](https://user-images.githubusercontent.com/70502759/159162674-287285cd-8cc8-4578-985f-f3ca6c2839cd.jpg)
+![12](https://user-images.githubusercontent.com/70502759/159162525-d628a036-1f92-4d95-b173-6290d93da844.jpg)
+![11](https://user-images.githubusercontent.com/70502759/159162528-f133228e-deae-4219-bc91-0f9278db1011.jpg)
+![10](https://user-images.githubusercontent.com/70502759/159162530-574b8621-8b4f-4051-a580-f8f60222cfc7.jpg)
+![9](https://user-images.githubusercontent.com/70502759/159162533-5c6c0f31-47f1-40b5-b15a-72d748ae4de6.jpg)
+![86](https://user-images.githubusercontent.com/70502759/159162565-3be4f63d-0eef-448c-9155-e7c2e972e311.jpg)
+![8](https://user-images.githubusercontent.com/70502759/159162539-71a6e762-15cd-4ac3-ad42-2ac62907fb80.jpg)
+![7](https://user-images.githubusercontent.com/70502759/159162547-a05a7b00-2840-4f4f-993f-8b2e20ecc2d2.jpg)
+![4](https://user-images.githubusercontent.com/70502759/159162548-69bc2909-2bd4-4007-a3c6-9137b41280c3.jpg)
+![3](https://user-images.githubusercontent.com/70502759/159162551-00c7f6e1-04b5-49fb-8e4b-5faff96c1ed9.jpg)
+![2](https://user-images.githubusercontent.com/70502759/159162554-e0d5e2eb-9ddd-4889-bbf5-75d2f1956b48.jpg)
+![87](https://user-images.githubusercontent.com/70502759/159162559-20ddf09b-c6af-46e1-88eb-412fc482c05c.jpg)
 
 
 
@@ -401,6 +465,11 @@ Last Training Logs
            Test:  [10/75]  eta: 0:00:25  class_error: 20.00  loss: 17.5644 (22.1923)  loss_ce: 0.5551 (0.7288)  loss_bbox: 1.2989 (1.6134)  loss_giou: 1.1078 (1.2130)  loss_ce_0: 0.6541 (0.7861)  loss_bbox_0: 1.4128 (1.8654)  loss_giou_0: 1.2392 (1.2367)  loss_ce_1: 0.5206 (0.7195)  loss_bbox_1: 1.4392 (1.7884)  loss_giou_1: 1.2223 (1.2341)  loss_ce_2: 0.4889 (0.7185)  loss_bbox_2: 1.3475 (1.7089)  loss_giou_2: 1.2891 (1.2826)  loss_ce_3: 0.4903 (0.7154)  loss_bbox_3: 1.3522 (1.7012)  loss_giou_3: 1.2509 (1.2706)  loss_ce_4: 0.4979 (0.7113)  loss_bbox_4: 1.2790 (1.6503)  loss_giou_4: 1.2808 (1.2480)  loss_ce_unscaled: 0.5551 (0.7288)  class_error_unscaled: 25.0000 (31.1003)  loss_bbox_unscaled: 0.2598 (0.3227)  loss_giou_unscaled: 0.5539 (0.6065)  cardinality_error_unscaled: 4.2500 (4.4318)  loss_ce_0_unscaled: 0.6541 (0.7861)  loss_bbox_0_unscaled: 0.2826 (0.3731)  loss_giou_0_unscaled: 0.6196 (0.6183)  cardinality_error_0_unscaled: 6.7500 (6.7273)  loss_ce_1_unscaled: 0.5206 (0.7195)  loss_bbox_1_unscaled: 0.2878 (0.3577)  loss_giou_1_unscaled: 0.6111 (0.6171)  cardinality_error_1_unscaled: 4.2500 (5.4545)  loss_ce_2_unscaled: 0.4889 (0.7185)  loss_bbox_2_unscaled: 0.2695 (0.3418)  loss_giou_2_unscaled: 0.6445 (0.6413)  cardinality_error_2_unscaled: 3.7500 (4.5227)  loss_ce_3_unscaled: 0.4903 (0.7154)  loss_bbox_3_unscaled: 0.2704 (0.3402)  loss_giou_3_unscaled: 0.6254 (0.6353)  cardinality_error_3_unscaled: 4.7500 (4.7727)  loss_ce_4_unscaled: 0.4979 (0.7113)  loss_bbox_4_unscaled: 0.2558 (0.3301)  loss_giou_4_unscaled: 0.6404 (0.6240)  cardinality_error_4_unscaled: 4.0000 (4.2727)  time: 0.3879  data: 0.1000  max mem: 7375
            Test:  [20/75]  eta: 0:00:17  class_error: 20.00  loss: 18.1832 (22.5841)  loss_ce: 0.5420 (0.7568)  loss_bbox: 1.3511 (1.6011)  loss_giou: 1.1078 (1.2418)  loss_ce_0: 0.6581 (0.8178)  loss_bbox_0: 1.4128 (1.9190)  loss_giou_0: 1.1290 (1.2674)  loss_ce_1: 0.5206 (0.7659)  loss_bbox_1: 1.4392 (1.8117)  loss_giou_1: 1.2223 (1.2758)  loss_ce_2: 0.4889 (0.7652)  loss_bbox_2: 1.3475 (1.7013)  loss_giou_2: 1.1071 (1.3028)  loss_ce_3: 0.4903 (0.7645)  loss_bbox_3: 1.2909 (1.6750)  loss_giou_3: 1.1282 (1.2775)  loss_ce_4: 0.4979 (0.7515)  loss_bbox_4: 1.3473 (1.6302)  loss_giou_4: 1.1015 (1.2588)  loss_ce_unscaled: 0.5420 (0.7568)  class_error_unscaled: 20.0000 (30.0321)  loss_bbox_unscaled: 0.2702 (0.3202)  loss_giou_unscaled: 0.5539 (0.6209)  cardinality_error_unscaled: 3.2500 (4.1310)  loss_ce_0_unscaled: 0.6581 (0.8178)  loss_bbox_0_unscaled: 0.2826 (0.3838)  loss_giou_0_unscaled: 0.5645 (0.6337)  cardinality_error_0_unscaled: 6.2500 (6.7262)  loss_ce_1_unscaled: 0.5206 (0.7659)  loss_bbox_1_unscaled: 0.2878 (0.3623)  loss_giou_1_unscaled: 0.6111 (0.6379)  cardinality_error_1_unscaled: 4.2500 (5.0952)  loss_ce_2_unscaled: 0.4889 (0.7652)  loss_bbox_2_unscaled: 0.2695 (0.3403)  loss_giou_2_unscaled: 0.5536 (0.6514)  cardinality_error_2_unscaled: 3.7500 (4.4167)  loss_ce_3_unscaled: 0.4903 (0.7645)  loss_bbox_3_unscaled: 0.2582 (0.3350)  loss_giou_3_unscaled: 0.5641 (0.6387)  cardinality_error_3_unscaled: 3.7500 (4.4881)  loss_ce_4_unscaled: 0.4979 (0.7515)  loss_bbox_4_unscaled: 0.2695 (0.3260)  loss_giou_4_unscaled: 0.5508 (0.6294)  cardinality_error_4_unscaled: 3.0000 (4.0238)  time: 0.2777  data: 0.0175  max mem: 7375
            Test:  [30/75]  eta: 0:00:13  class_error: 75.00  loss: 22.7153 (25.2088)  loss_ce: 1.0646 (0.9579)  loss_bbox: 1.5445 (1.8220)  loss_giou: 1.3141 (1.2743)  loss_ce_0: 0.6886 (0.9281)  loss_bbox_0: 2.1778 (2.2134)  loss_giou_0: 1.3121 (1.3051)  loss_ce_1: 0.7059 (0.9181)  loss_bbox_1: 1.9017 (2.0733)  loss_giou_1: 1.3611 (1.3111)  loss_ce_2: 0.6180 (0.9126)  loss_bbox_2: 1.6899 (1.9531)  loss_giou_2: 1.3705 (1.3357)  loss_ce_3: 0.7576 (0.9216)  loss_bbox_3: 1.7072 (1.8977)  loss_giou_3: 1.3706 (1.3157)  loss_ce_4: 0.8551 (0.9248)  loss_bbox_4: 1.6365 (1.8497)  loss_giou_4: 1.3421 (1.2945)  loss_ce_unscaled: 1.0646 (0.9579)  class_error_unscaled: 33.3333 (35.7733)  loss_bbox_unscaled: 0.3089 (0.3644)  loss_giou_unscaled: 0.6570 (0.6371)  cardinality_error_unscaled: 2.2500 (3.6532)  loss_ce_0_unscaled: 0.6886 (0.9281)  loss_bbox_0_unscaled: 0.4356 (0.4427)  loss_giou_0_unscaled: 0.6560 (0.6526)  cardinality_error_0_unscaled: 4.7500 (6.4032)  loss_ce_1_unscaled: 0.7059 (0.9181)  loss_bbox_1_unscaled: 0.3803 (0.4147)  loss_giou_1_unscaled: 0.6805 (0.6556)  cardinality_error_1_unscaled: 3.5000 (4.7419)  loss_ce_2_unscaled: 0.6180 (0.9126)  loss_bbox_2_unscaled: 0.3380 (0.3906)  loss_giou_2_unscaled: 0.6853 (0.6679)  cardinality_error_2_unscaled: 3.0000 (3.9758)  loss_ce_3_unscaled: 0.7576 (0.9216)  loss_bbox_3_unscaled: 0.3414 (0.3795)  loss_giou_3_unscaled: 0.6853 (0.6578)  cardinality_error_3_unscaled: 3.0000 (4.0565)  loss_ce_4_unscaled: 0.8551 (0.9248)  loss_bbox_4_unscaled: 0.3273 (0.3699)  loss_giou_4_unscaled: 0.6711 (0.6473)  cardinality_error_4_unscaled: 2.5000 (3.5806)  time: 0.2468  data: 0.0174  max mem: 7375
+	   
+	   
+
+	   
+	   
            Test:  [40/75]  eta: 0:00:09  class_error: 23.08  loss: 20.8947 (23.1186)  loss_ce: 0.8397 (0.8642)  loss_bbox: 1.5445 (1.6226)  loss_giou: 1.0955 (1.2265)  loss_ce_0: 0.6617 (0.8479)  loss_bbox_0: 1.6861 (1.9575)  loss_giou_0: 1.3042 (1.2907)  loss_ce_1: 0.6877 (0.8396)  loss_bbox_1: 1.6946 (1.8321)  loss_giou_1: 1.2095 (1.2735)  loss_ce_2: 0.6180 (0.8215)  loss_bbox_2: 1.6522 (1.7437)  loss_giou_2: 1.2016 (1.2888)  loss_ce_3: 0.6766 (0.8275)  loss_bbox_3: 1.6294 (1.6914)  loss_giou_3: 1.0858 (1.2645)  loss_ce_4: 0.7091 (0.8271)  loss_bbox_4: 1.6361 (1.6515)  loss_giou_4: 1.0918 (1.2482)  loss_ce_unscaled: 0.8397 (0.8642)  class_error_unscaled: 33.3333 (33.4317)  loss_bbox_unscaled: 0.3089 (0.3245)  loss_giou_unscaled: 0.5477 (0.6132)  cardinality_error_unscaled: 2.2500 (3.5854)  loss_ce_0_unscaled: 0.6617 (0.8479)  loss_bbox_0_unscaled: 0.3372 (0.3915)  loss_giou_0_unscaled: 0.6521 (0.6453)  cardinality_error_0_unscaled: 5.2500 (6.0976)  loss_ce_1_unscaled: 0.6877 (0.8396)  loss_bbox_1_unscaled: 0.3389 (0.3664)  loss_giou_1_unscaled: 0.6048 (0.6367)  cardinality_error_1_unscaled: 3.5000 (4.5854)  loss_ce_2_unscaled: 0.6180 (0.8215)  loss_bbox_2_unscaled: 0.3304 (0.3487)  loss_giou_2_unscaled: 0.6008 (0.6444)  cardinality_error_2_unscaled: 2.7500 (3.8780)  loss_ce_3_unscaled: 0.6766 (0.8275)  loss_bbox_3_unscaled: 0.3259 (0.3383)  loss_giou_3_unscaled: 0.5429 (0.6322)  cardinality_error_3_unscaled: 2.5000 (3.9573)  loss_ce_4_unscaled: 0.7091 (0.8271)  loss_bbox_4_unscaled: 0.3272 (0.3303)  loss_giou_4_unscaled: 0.5459 (0.6241)  cardinality_error_4_unscaled: 2.2500 (3.5122)  time: 0.2453  data: 0.0186  max mem: 7375
            Test:  [50/75]  eta: 0:00:06  class_error: 40.00  loss: 20.8947 (23.1172)  loss_ce: 0.7503 (0.8667)  loss_bbox: 0.9415 (1.6213)  loss_giou: 1.0955 (1.2332)  loss_ce_0: 0.6271 (0.8390)  loss_bbox_0: 1.0583 (1.9654)  loss_giou_0: 1.2076 (1.2886)  loss_ce_1: 0.6408 (0.8143)  loss_bbox_1: 1.1776 (1.8397)  loss_giou_1: 1.1542 (1.2769)  loss_ce_2: 0.6707 (0.8183)  loss_bbox_2: 1.0719 (1.7446)  loss_giou_2: 1.2016 (1.2915)  loss_ce_3: 0.6766 (0.8179)  loss_bbox_3: 1.1796 (1.6940)  loss_giou_3: 1.0951 (1.2698)  loss_ce_4: 0.7091 (0.8366)  loss_bbox_4: 1.0166 (1.6460)  loss_giou_4: 1.0918 (1.2534)  loss_ce_unscaled: 0.7503 (0.8667)  class_error_unscaled: 25.0000 (34.6235)  loss_bbox_unscaled: 0.1883 (0.3243)  loss_giou_unscaled: 0.5477 (0.6166)  cardinality_error_unscaled: 3.2500 (3.7696)  loss_ce_0_unscaled: 0.6271 (0.8390)  loss_bbox_0_unscaled: 0.2117 (0.3931)  loss_giou_0_unscaled: 0.6038 (0.6443)  cardinality_error_0_unscaled: 5.5000 (6.3088)  loss_ce_1_unscaled: 0.6408 (0.8143)  loss_bbox_1_unscaled: 0.2355 (0.3679)  loss_giou_1_unscaled: 0.5771 (0.6384)  cardinality_error_1_unscaled: 3.7500 (4.6814)  loss_ce_2_unscaled: 0.6707 (0.8183)  loss_bbox_2_unscaled: 0.2144 (0.3489)  loss_giou_2_unscaled: 0.6008 (0.6457)  cardinality_error_2_unscaled: 3.2500 (4.0098)  loss_ce_3_unscaled: 0.6766 (0.8179)  loss_bbox_3_unscaled: 0.2359 (0.3388)  loss_giou_3_unscaled: 0.5475 (0.6349)  cardinality_error_3_unscaled: 2.7500 (4.0637)  loss_ce_4_unscaled: 0.7091 (0.8366)  loss_bbox_4_unscaled: 0.2033 (0.3292)  loss_giou_4_unscaled: 0.5459 (0.6267)  cardinality_error_4_unscaled: 3.0000 (3.6275)  time: 0.2365  data: 0.0183  max mem: 7375
            Test:  [60/75]  eta: 0:00:04  class_error: 50.00  loss: 21.1638 (22.3213)  loss_ce: 0.7808 (0.8438)  loss_bbox: 1.1190 (1.5364)  loss_giou: 1.1288 (1.2052)  loss_ce_0: 0.6670 (0.8205)  loss_bbox_0: 1.5034 (1.8816)  loss_giou_0: 1.1220 (1.2572)  loss_ce_1: 0.6789 (0.7985)  loss_bbox_1: 1.3061 (1.7499)  loss_giou_1: 1.1542 (1.2469)  loss_ce_2: 0.7501 (0.8086)  loss_bbox_2: 1.2216 (1.6583)  loss_giou_2: 1.2121 (1.2597)  loss_ce_3: 0.7244 (0.8090)  loss_bbox_3: 1.2201 (1.6063)  loss_giou_3: 1.2094 (1.2428)  loss_ce_4: 0.7379 (0.8206)  loss_bbox_4: 1.0786 (1.5550)  loss_giou_4: 1.2159 (1.2211)  loss_ce_unscaled: 0.7808 (0.8438)  class_error_unscaled: 42.8571 (35.3254)  loss_bbox_unscaled: 0.2238 (0.3073)  loss_giou_unscaled: 0.5644 (0.6026)  cardinality_error_unscaled: 3.0000 (3.7049)  loss_ce_0_unscaled: 0.6670 (0.8205)  loss_bbox_0_unscaled: 0.3007 (0.3763)  loss_giou_0_unscaled: 0.5610 (0.6286)  cardinality_error_0_unscaled: 6.0000 (6.2172)  loss_ce_1_unscaled: 0.6789 (0.7985)  loss_bbox_1_unscaled: 0.2612 (0.3500)  loss_giou_1_unscaled: 0.5771 (0.6235)  cardinality_error_1_unscaled: 3.5000 (4.6352)  loss_ce_2_unscaled: 0.7501 (0.8086)  loss_bbox_2_unscaled: 0.2443 (0.3317)  loss_giou_2_unscaled: 0.6061 (0.6299)  cardinality_error_2_unscaled: 3.2500 (3.9918)  loss_ce_3_unscaled: 0.7244 (0.8090)  loss_bbox_3_unscaled: 0.2440 (0.3213)  loss_giou_3_unscaled: 0.6047 (0.6214)  cardinality_error_3_unscaled: 3.0000 (4.0451)  loss_ce_4_unscaled: 0.7379 (0.8206)  loss_bbox_4_unscaled: 0.2157 (0.3110)  loss_giou_4_unscaled: 0.6079 (0.6105)  cardinality_error_4_unscaled: 3.0000 (3.6066)  time: 0.2387  data: 0.0168  max mem: 7375
