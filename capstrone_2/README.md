@@ -519,9 +519,7 @@ Last Training Logs
            Test: Total time: 0:00:19 (0.2646 s / it)
 
 
-
-AWS Training Logs 
------------------- 
+ 
 
 Training Notebook Link : 
 ------------------------
