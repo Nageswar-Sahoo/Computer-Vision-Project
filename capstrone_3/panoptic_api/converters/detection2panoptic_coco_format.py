@@ -131,7 +131,6 @@ def convert_detection_to_panoptic_coco_format(input_json_file,
 
     print(json_formatted_str)
 
-    json_fp = open('panoptic_coco_panoptic_format11.json', "w")
     json_str = json.dumps(json_object)
     json_fp.write(json_str)
     json_fp.close()
@@ -145,10 +144,10 @@ if __name__ == "__main__":
         description="This script converts detection COCO format to panoptic \
             COCO format. See this file's head for more information."
     )
-    parser.add_argument('--input_json_file', type=str, default='./../sample_data/instances_val20178.json',
+    parser.add_argument('--input_json_file', type=str, default='./../sample_data/instances_val2017.json',
                         help="JSON file with detection COCO format")
     parser.add_argument('--output_json_file', type=str,
-                        default='./../converted_data/panoptic_coco_panoptic_format11.json',
+                        default='panoptic_val2017.json',
                         help="JSON file with panoptic COCO format")
     parser.add_argument(
         '--segmentations_folder', type=str, default=None, help="Folder with \
