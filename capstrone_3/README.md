@@ -108,9 +108,9 @@ PNG file along with panoptic custom annotated json file . Details code use can b
   Sample Annotated Data : 
   
   
-   "annotations": [
-    {
-      "image_id": 1,
+     "annotations": [
+        {
+       "image_id": 1,
       "file_name": "001053.png",
       "segments_info": [
         {
@@ -138,26 +138,9 @@ PNG file along with panoptic custom annotated json file . Details code use can b
           "id": 2100087,
           "ignore": 0,
           "area": 760032
+          }
+         ]
         }
-      ]
-    },
-    {
-      "image_id": 2,
-      "file_name": "0734.png",
-      "segments_info": [
-        {
-          "iscrowd": 0,
-          "bbox": [
-            54,
-            0,
-            166,
-            241
-          ],
-          "category_id": 3,
-          "id": 9306112,
-          "ignore": 0,
-          "area": 26992
-        },
 	
 <table>
   <tr>
