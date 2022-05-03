@@ -6,8 +6,8 @@
 
 
 
-                                                   DETR for Object and Bounding Box Detection
-                                                   ------------------------------------------
+                                                   DETR for Panoptic segmentation
+                                                   ------------------------------
                                                    
 About Model  DETR
 -----------------
@@ -20,6 +20,9 @@ DETR is short for DEtection TRansformer, and consists of a convolutional backbon
 ![image](https://user-images.githubusercontent.com/70502759/149759863-3bc41c8a-1b90-4d66-8d3a-0b70269db818.png)
 
 The architecture of DETR has three main components, which are a CNN backbone to extract a compact feture representation, encoder-decoder transformer, Feed-Forward Netoworks.
+
+About Model  Panoptic segmentation
+----------------------------------
 
 Data Overview
 --------------
