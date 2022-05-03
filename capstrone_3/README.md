@@ -14,7 +14,10 @@ Panoptic segmentation
 
  In semantic segmentation, the goal is to classify each pixel into the given classes. In instance segmentation, we care about segmentation of the instances of objects separately. The panoptic segmentation combines semantic and instance segmentation such that all pixels are assigned a class label and all object instances are uniquely segmented.
  
- 
+Important terminologies:  
+Things – Any countable object is referred to as a thing in . To exemplify – person, cat, car, key, ball are called things.
+Stuff – Uncountable region of identical texture is known as stuff. For instance, road, water, sky etc.
+
  <table>
   <tr>
     <td><img src=https://user-images.githubusercontent.com/70502759/166416601-b126a9f7-5f44-401d-847c-c0d2cd34594a.png width=270 height=480></td>
@@ -24,11 +27,14 @@ Panoptic segmentation
  </table> 
  
                      Left: semantic segmentation, middle: instance segmentation, right: panoptic segmentation
+		     
+		     
 
                                                    
-About Model  DETR Panoptic segmentation
+About  DETR Panoptic segmentation
 ---------------------------------------
-DETR is short for DEtection TRansformer, and consists of a convolutional backbone  followed by an encoder-decoder Transformer. It can be trained end-to-end to perform object detection .The main contribution of DETR is its simplicity: compared to other models like Faster R-CNN and Mask R-CNN, which rely on several highly engineered things like region proposals, non-maximum suppression procedure and anchor generation. This is possible due to the use of a clever loss function, the so-called bipartite matching loss . 
+DETR is short for DEtection TRansformer, and consists of a convolutional backbone  followed by an encoder-decoder Transformer. It can be trained end-to-end to perform object detection .The main contribution of DETR is its simplicity: compared to other models like Faster R-CNN and Mask R-CNN, which rely on several highly engineered things like region proposals, non-maximum suppression procedure and anchor generation. This is possible due to the use of a clever loss function, the so-called bipartite matching loss . The model predicts a box and a binary mask for each object queries We filter the predictions for which the confidence is < threshold
+Finally, the remaining masks are merged together using a pixel-wise argmax to get the panoptic segmented image . 
 
 1443 image splitted into train and test split of 80% to 20% ratio . Hence the train set contain 1146 and 297 number of image .
 
