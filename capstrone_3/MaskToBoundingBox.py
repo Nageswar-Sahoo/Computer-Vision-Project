@@ -272,5 +272,5 @@ if __name__ == '__main__':
     print(train_data)
     print(test_data)
 
-    build_coc_json(train_data, "instances_train20178.json")
-    build_coc_json(test_data, "instances_val20178.json")
+    build_coc_json(train_data, "panoptic_train2017.json")
+    build_coc_json(test_data, "panoptic_val2017.json")
