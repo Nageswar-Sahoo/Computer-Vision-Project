@@ -274,8 +274,7 @@ Last Training Logs
 Training Notebook Link : 
 ------------------------
 
-https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_2/DETR_Training_From_Scratch.ipynb
-
+https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_3/DETR_Panoptic_Training_From_Scratch.ipynb
 
 # References 
 - Official DETR repository (https://github.com/facebookresearch/detr)
