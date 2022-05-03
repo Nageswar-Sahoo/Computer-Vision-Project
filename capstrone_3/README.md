@@ -8,6 +8,23 @@
 
                                                    DETR for Panoptic segmentation
                                                    ------------------------------
+
+Panoptic segmentation
+---------------------
+
+ In semantic segmentation, the goal is to classify each pixel into the given classes. In instance segmentation, we care about segmentation of the instances of objects separately. The panoptic segmentation combines semantic and instance segmentation such that all pixels are assigned a class label and all object instances are uniquely segmented.
+ 
+ 
+ <table>
+  <tr>
+    <td><img src=https://user-images.githubusercontent.com/70502759/166416601-b126a9f7-5f44-401d-847c-c0d2cd34594a.png width=270 height=480></td>
+    <td><img src=https://user-images.githubusercontent.com/70502759/166416632-349924e8-1e8a-4d45-9daa-112ed62a771f.png width=270 height=480></td>
+     <td><img src=https://user-images.githubusercontent.com/70502759/166416647-1f28aa14-a0f0-4489-ac06-ce91444b2a6b.png width=270 height=480></td>
+  </tr> 
+ </table> 
+ 
+                     Left: semantic segmentation, middle: instance segmentation, right: panoptic segmentation
+
                                                    
 About Model  DETR Panoptic segmentation
 ---------------------------------------
