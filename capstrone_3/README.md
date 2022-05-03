@@ -9,8 +9,8 @@
                                                    DETR for Panoptic segmentation
                                                    ------------------------------
                                                    
-About Model  DETR
------------------
+About Model  DETR Panoptic segmentation
+---------------------------------------
 DETR is short for DEtection TRansformer, and consists of a convolutional backbone  followed by an encoder-decoder Transformer. It can be trained end-to-end to perform object detection .The main contribution of DETR is its simplicity: compared to other models like Faster R-CNN and Mask R-CNN, which rely on several highly engineered things like region proposals, non-maximum suppression procedure and anchor generation. This is possible due to the use of a clever loss function, the so-called bipartite matching loss . 
 
 1443 image splitted into train and test split of 80% to 20% ratio . Hence the train set contain 1146 and 297 number of image .
@@ -22,8 +22,7 @@ DETR is short for DEtection TRansformer, and consists of a convolutional backbon
 
 The architecture of DETR has three main components, which are a CNN backbone to extract a compact feture representation, encoder-decoder transformer, Feed-Forward Netoworks.
 
-About Model  Panoptic segmentation
-----------------------------------
+
 
 Data Overview
 --------------
@@ -43,15 +42,17 @@ A dataset with mask labeling of three major types of concrete surface defects: c
  </table>
 
 
-Converting concrete dataset into COCO dataset format 
+Converting concrete dataset into COCO Panoptic dataset format 
 -------------------------------------------
-As the given dataset does not have annotated data from the mask image we have generated the bounding coordinate .
-We have used skimage module label, regionprops, find_contours to get the required bounding box 
+As the given dataset does not have annotated data from the mask image we have generated the bounding coordinate for thing/instance segment 
+and we have inverted the image and generated the bounding coordinate for stuff segment.
+We have used cv2 connectedComponents along with pycocotools mask API to get the required bounding box . 
+
 and With the help of custom code we have converted the concret dataset into COCO dataset format which can be used for training the detr . 
 
 
 
-Details code use to generate COCO dataset format from the given mask images can be found here : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_2/MaskToBoundingBox.py 
+Details code use to generate bounding box of COCO dataset format from the given mask images can be found here : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_2/MaskToBoundingBox.py 
 
 COCO dataset format After conversion 
 
