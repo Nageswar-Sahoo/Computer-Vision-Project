@@ -46,11 +46,7 @@ Converting concrete dataset into COCO Panoptic dataset format
 -------------------------------------------
 As the given dataset does not have annotated data from the mask image we have generated the bounding coordinate for thing/instance segment 
 and we have inverted the image and generated the bounding coordinate for stuff segment.
-We have used cv2 connectedComponents along with pycocotools mask API to get the required bounding box . 
-
-and With the help of custom code we have converted the concret dataset into COCO dataset format which can be used for training the detr . 
-
-
+We have used cv2 connectedComponents along with pycocotools mask API to get the required bounding box and With the help of custom code we have converted the concret dataset into COCO dataset format .
 
 Details code use to generate bounding box in COCO dataset format from the given mask images can be found here : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_3/MaskToBoundingBox.py. This will generate coco annotated json file instances_train2017 , instances_val2017 , instances_test2017
 
@@ -102,6 +98,10 @@ COCO dataset format After conversion
 	     ] 
      }	
 
+We have used panoptic API (https://github.com/cocodataset/panopticapi) to get custom annotated data for panoptic segmentation training . 
+We have passed above generated instances_train2017 , instances_val2017 , instances_test2017 json file as an input to panoptic API and its generated 
+PNG file along with panoptic custom annotated json file . 
+Details code use can be found here :   
 
  BackBone in DETR 
 ------------------
