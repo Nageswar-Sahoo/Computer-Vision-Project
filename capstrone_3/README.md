@@ -281,6 +281,7 @@ https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_2/
 - Official DETR repository (https://github.com/facebookresearch/detr)
 - Fine-tunne DETR ( https://github.com/woctezuma/finetune-detr )
 - A Github issue regarding training detr on custom data (https://github.com/facebookresearch/detr/issues/9)
+- Panoptic API (https://github.com/cocodataset/panopticapi)
 
 
 
