@@ -67,6 +67,8 @@ COCO dataset format After conversion
               val2017/      # val images
 	      test2017/     # test images
   Note : Both validation and Test contain same set of image .
+  
+  sample data : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/capstrone_3/coco_sample
 
   Sample Annotated Data : 
   
