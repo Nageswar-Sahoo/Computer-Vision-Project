@@ -101,7 +101,64 @@ COCO dataset format After conversion
 We have used panoptic API (https://github.com/cocodataset/panopticapi) to get custom annotated data for panoptic segmentation training . 
 We have passed above generated instances_train2017 , instances_val2017 , instances_test2017 json file as an input to panoptic API and its generated 
 PNG file along with panoptic custom annotated json file . 
-Details code use can be found here :   
+Details code use can be found here : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_3/panoptic_api/converters/detection2panoptic_coco_format.py
+
+
+ sample data : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/capstrone_3/coco_sample_panoptic
+
+  Sample Annotated Data : 
+  
+  
+   "annotations": [
+    {
+      "image_id": 1,
+      "file_name": "001053.png",
+      "segments_info": [
+        {
+          "iscrowd": 0,
+          "bbox": [
+            444,
+            150,
+            437,
+            453
+          ],
+          "category_id": 2,
+          "id": 925277,
+          "ignore": 0,
+          "area": 2121
+        },
+        {
+          "iscrowd": 0,
+          "bbox": [
+            0,
+            0,
+            1008,
+            754
+          ],
+          "category_id": 4,
+          "id": 2100087,
+          "ignore": 0,
+          "area": 760032
+        }
+      ]
+    },
+    {
+      "image_id": 2,
+      "file_name": "0734.png",
+      "segments_info": [
+        {
+          "iscrowd": 0,
+          "bbox": [
+            54,
+            0,
+            166,
+            241
+          ],
+          "category_id": 3,
+          "id": 9306112,
+          "ignore": 0,
+          "area": 26992
+        },
 
  BackBone in DETR 
 ------------------
