@@ -159,8 +159,8 @@ PNG file along with panoptic custom annotated json file . Details code use can b
 ------------------
         We have used pre-train resnet-50 model as backbone network for DETR.
 	
-Training Detr 
---------------
+Training Detr For Panoptic Task
+-------------------------------
      We have used the detr model provided by facebook research open source code .
      We have trained the model from scratch for 400 epochs .We have also change number of object query to 20 
      as the whole object does not contain more than 20 objects in a single image. 
