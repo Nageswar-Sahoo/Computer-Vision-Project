@@ -100,11 +100,10 @@ COCO dataset format After conversion
 
 We have used panoptic API (https://github.com/cocodataset/panopticapi) to get custom annotated data for panoptic segmentation training . 
 We have passed above generated instances_train2017 , instances_val2017 , instances_test2017 json file as an input to panoptic API and its generated 
-PNG file along with panoptic custom annotated json file . 
-Details code use can be found here : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_3/panoptic_api/converters/detection2panoptic_coco_format.py
+PNG file along with panoptic custom annotated json file . Details code use can be found here : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/blob/main/capstrone_3/panoptic_api/converters/detection2panoptic_coco_format.py
 
 
- sample data : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/capstrone_3/coco_sample_panoptic
+ sample data : https://github.com/Nageswar-Sahoo/Computer-Vision-Project/tree/main/capstrone_3/coco_panoptic_sample
 
   Sample Annotated Data : 
   
@@ -159,6 +158,19 @@ Details code use can be found here : https://github.com/Nageswar-Sahoo/Computer-
           "ignore": 0,
           "area": 26992
         },
+	
+<table>
+  <tr>
+    <td><img src=https://user-images.githubusercontent.com/70502759/159024634-e2c0204f-3815-4413-a238-94d4171d148a.jpg width=270 height=480></td>
+    <td><img src=https://user-images.githubusercontent.com/70502759/159024661-bdd03980-6360-426a-9e77-fc23c3a3fb30.jpg width=270 height=480></td>
+     <td><img src=https://user-images.githubusercontent.com/70502759/159024692-63623fb6-bd02-428b-a81e-a4c4ac1a827b.jpg width=270 height=480></td>
+  </tr>  
+   <tr>
+    <td><img src=https://user-images.githubusercontent.com/70502759/159025947-5f66ba21-6d49-4f6b-a273-163dbc0815a1.jpg width=270 height=480></td>
+    <td><img src=https://user-images.githubusercontent.com/70502759/159025974-d3356910-3429-4a4b-bb4c-42a79861c341.jpg width=270 height=480></td>
+     <td><img src=https://user-images.githubusercontent.com/70502759/159025994-5df73f50-492b-42be-811a-53f1bf6cec28.jpg width=270 height=480></td>
+  </tr>
+ </table>	
 
  BackBone in DETR 
 ------------------
